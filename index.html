@@ -2,8 +2,8 @@
 <html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <title>Dr. Arcade: Emergência</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ARCADE SHOW</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
     <style>
@@ -13,7 +13,6 @@
         font-family: 'VT323', monospace;
         overflow: hidden; /* Hide scrollbars for kiosk mode */
         user-select: none;
-        touch-action: manipulation; /* Optimizes touch for games */
         margin: 0;
         padding: 0;
       }
@@ -82,7 +81,7 @@
         z-index: 1;
       }
 
-      /* --- ANIMATIONS --- */
+      /* --- NEW ANIMATIONS --- */
       @keyframes shake {
         0%, 100% { transform: translateX(0); }
         10%, 30%, 50%, 70%, 90% { transform: translateX(-10px); }
@@ -129,6 +128,7 @@
   }
 }
 </script>
+<link rel="stylesheet" href="/index.css">
 </head>
   <body>
     <div class="retro-container">
@@ -137,5 +137,6 @@
     </div>
     <div id="root" style="position: relative; z-index: 10;"></div>
     <div class="scanlines"></div>
-  </body>
+  <script type="module" src="/index.tsx"></script>
+</body>
 </html>

@@ -19,18 +19,14 @@ const App: React.FC = () => {
   // STATE
   // ----------------------------
   const [gameState, setGameState] = useState<GameState>(GameState.PRESS_START);
-
   const [playerName, setPlayerName] = useState<string>("JOGADOR");
   const [selectedRole, setSelectedRole] = useState<GameRole>(GameRole.NURSE);
   const [selectedTopic, setSelectedTopic] = useState<GameTopic>(GameTopic.SEPSIS);
   const [highScores, setHighScores] = useState<ScoreEntry[]>([]);
-
   const [currentQuestion, setCurrentQuestion] = useState<Question | null>(null);
-
   const [selectedOption, setSelectedOption] = useState<number>(0);
   const [showExplanation, setShowExplanation] = useState<boolean>(false);
   const [timeLeft, setTimeLeft] = useState<number>(20);
-
   const [stats, setStats] = useState<PlayerStats>({
     name: "",
     score: 0,
@@ -40,16 +36,14 @@ const App: React.FC = () => {
     correctAnswers: 0,
     totalQuestions: 0,
   });
-
   const [visualFeedback, setVisualFeedback] = useState<"idle" | "correct" | "wrong">("idle");
   const [autoNextTime, setAutoNextTime] = useState<number>(6);
   const [scoreAnimation, setScoreAnimation] = useState<number | null>(null);
-
   const [musicVol, setMusicVol] = useState(0.6);
   const [sfxVol, setSfxVol] = useState(1.0);
-
   const [menuIndex, setMenuIndex] = useState(0);
   const [blink, setBlink] = useState(true);
+  const [isTouchDevice, setIsTouchDevice] = useState(false);
 
   // ----------------------------
   // REFS (timers)
@@ -74,6 +68,42 @@ const App: React.FC = () => {
     [GameRole.TECH]: "text-blue-400 border-blue-500 bg-blue-900/40",
     [GameRole.MULTI]: "text-yellow-400 border-yellow-500 bg-yellow-900/40",
   };
+
+  // ----------------------------
+  // DETECT TOUCH DEVICE
+  // ----------------------------
+  useEffect(() => {
+    const checkTouchDevice = () => {
+      return (
+        'ontouchstart' in window ||
+        navigator.maxTouchPoints > 0 ||
+        navigator.msMaxTouchPoints > 0
+      );
+    };
+    setIsTouchDevice(checkTouchDevice());
+  }, []);
+
+  // ----------------------------
+  // GLOBAL TOUCH FOR PRESS START
+  // ----------------------------
+  useEffect(() => {
+    if (gameState !== GameState.PRESS_START) return;
+    
+    const handleGlobalStart = () => {
+      console.log('🚀 Iniciando jogo...');
+      audioService.playSelect();
+      setGameState(GameState.HOME);
+    };
+    
+    // Adiciona evento para toda a tela apenas no PRESS_START
+    window.addEventListener('click', handleGlobalStart);
+    window.addEventListener('touchstart', handleGlobalStart);
+    
+    return () => {
+      window.removeEventListener('click', handleGlobalStart);
+      window.removeEventListener('touchstart', handleGlobalStart);
+    };
+  }, [gameState]);
 
   // ----------------------------
   // HELPERS: clear timers
@@ -344,52 +374,51 @@ const App: React.FC = () => {
   };
 
   const saveScore = async (snapshot: PlayerStats) => {
-  const newEntry: ScoreEntry = {
-    name: snapshot.name,
-    score: snapshot.score,
-    role: snapshot.role,
-    date: new Date().toLocaleDateString("pt-BR"),
+    const newEntry: ScoreEntry = {
+      name: snapshot.name,
+      score: snapshot.score,
+      role: snapshot.role,
+      date: new Date().toLocaleDateString("pt-BR"),
+    };
+
+    console.log("Tentando salvar score:", newEntry);
+    
+    try {
+      const updated = await scoreService.saveScore(newEntry);
+      setHighScores(updated);
+      console.log("Score salvo com sucesso, novo ranking:", updated);
+      return updated;
+    } catch (error) {
+      console.error("Erro ao salvar score:", error);
+      throw error;
+    }
   };
 
-  console.log("Tentando salvar score:", newEntry);
-  
-  try {
-    const updated = await scoreService.saveScore(newEntry);
-    setHighScores(updated);
-    console.log("Score salvo com sucesso, novo ranking:", updated);
-    return updated; // <-- ADICIONE ESTA LINHA
-  } catch (error) {
-    console.error("Erro ao salvar score:", error);
-    throw error; // <-- Lançar erro para ser capturado pelo caller
-  }
-};
-
   const nextRound = () => {
-  clearAutoNextTimer();
+    clearAutoNextTimer();
 
-  setStats((prev) => {
-    const finished = prev.totalQuestions >= QUESTIONS_PER_ROUND;
+    setStats((prev) => {
+      const finished = prev.totalQuestions >= QUESTIONS_PER_ROUND;
 
-    if (finished) {
-      setGameState(GameState.RESULT);
+      if (finished) {
+        setGameState(GameState.RESULT);
 
-      // ✅ Salva ranking ASSINCRONAMENTE sem bloquear
-      saveScore(prev).then(() => {
-        console.log("✅ Score salvo após fim de jogo");
-        if (prev.correctAnswers >= QUESTIONS_PER_ROUND * 0.7) {
-          audioService.playWin();
-        }
-      }).catch(error => {
-        console.error("❌ Erro ao salvar score final:", error);
-      });
+        saveScore(prev).then(() => {
+          console.log("✅ Score salvo após fim de jogo");
+          if (prev.correctAnswers >= QUESTIONS_PER_ROUND * 0.7) {
+            audioService.playWin();
+          }
+        }).catch(error => {
+          console.error("❌ Erro ao salvar score final:", error);
+        });
 
+        return prev;
+      }
+
+      void loadQuestion(selectedTopic, selectedRole);
       return prev;
-    }
-
-    void loadQuestion(selectedTopic, selectedRole);
-    return prev;
-  });
-};
+    });
+  };
 
   // ----------------------------
   // DEBUG EFFECTS
@@ -572,11 +601,14 @@ const App: React.FC = () => {
             blink ? "opacity-100" : "opacity-20"
           } transition-opacity duration-100`}
         >
-          PRESS START
+          {isTouchDevice ? 'TOQUE NA TELA PARA INICIAR' : 'PRESS START'}
         </span>
       </div>
       <div className="mt-12 text-gray-400 font-arcade text-xs md:text-sm bg-black/50 p-2 rounded">
         1UP | 10 QUESTÕES | RANKING LOCAL
+      </div>
+      <div className="mt-6 text-gray-500 text-sm animate-pulse">
+        {isTouchDevice ? '⚡ Toque em qualquer lugar para começar!' : '⚡ Pressione START para começar!'}
       </div>
     </div>
   );
@@ -590,6 +622,7 @@ const App: React.FC = () => {
         <button
           onMouseEnter={() => { setMenuIndex(0); audioService.playNavigate(); }}
           onClick={() => { setGameState(GameState.NAME_ENTRY); audioService.playSelect(); }}
+          onTouchStart={() => { setMenuIndex(0); setGameState(GameState.NAME_ENTRY); audioService.playSelect(); }}
           className={`w-full p-4 border-4 text-center text-xl font-arcade transition-all cursor-pointer ${menuIndex === 0 ? 'border-green-400 text-green-400 bg-green-900/60 scale-105 shadow-[0_0_20px_rgba(74,222,128,0.5)]' : 'border-gray-700 text-gray-500 bg-black/50'}`}
         >
           INICIAR GAME
@@ -597,6 +630,7 @@ const App: React.FC = () => {
         <button
           onMouseEnter={() => { setMenuIndex(1); audioService.playNavigate(); }}
           onClick={() => { setGameState(GameState.RANKING); audioService.playSelect(); }}
+          onTouchStart={() => { setMenuIndex(1); setGameState(GameState.RANKING); audioService.playSelect(); }}
           className={`w-full p-4 border-4 text-center text-xl font-arcade transition-all cursor-pointer ${menuIndex === 1 ? 'border-purple-400 text-purple-400 bg-purple-900/60 scale-105 shadow-[0_0_20px_rgba(192,132,252,0.5)]' : 'border-gray-700 text-gray-500 bg-black/50'}`}
         >
           RANKING (TOP 10)
@@ -605,6 +639,7 @@ const App: React.FC = () => {
           <div 
             onMouseEnter={() => { setMenuIndex(2); audioService.playNavigate(); }}
             onClick={() => setMusicVol(v => v >= 1 ? 0 : v + 0.1)}
+            onTouchStart={() => { setMenuIndex(2); setMusicVol(v => v >= 1 ? 0 : v + 0.1); }}
             className={`flex-1 p-3 border-2 text-center transition-all cursor-pointer bg-black/50 ${menuIndex === 2 ? 'border-blue-400' : 'border-gray-800'}`}
           >
             <div className="text-blue-300 mb-1 font-arcade text-xs">MÚSICA</div>
@@ -615,6 +650,7 @@ const App: React.FC = () => {
           <div 
             onMouseEnter={() => { setMenuIndex(3); audioService.playNavigate(); }}
             onClick={() => { setSfxVol(v => v >= 1 ? 0 : v + 0.1); audioService.playSelect(); }}
+            onTouchStart={() => { setMenuIndex(3); setSfxVol(v => v >= 1 ? 0 : v + 0.1); audioService.playSelect(); }}
             className={`flex-1 p-3 border-2 text-center transition-all cursor-pointer bg-black/50 ${menuIndex === 3 ? 'border-blue-400' : 'border-gray-800'}`}
           >
             <div className="text-blue-300 mb-1 font-arcade text-xs">SFX</div>
@@ -656,7 +692,8 @@ const App: React.FC = () => {
       </div>
       <button 
         onClick={() => { setGameState(GameState.HOME); audioService.playBack(); }}
-        className="mt-8 px-8 py-4 bg-red-900/80 border-2 border-red-500 text-white font-arcade hover:bg-red-700 hover:scale-105 transition-all"
+        onTouchStart={() => { setGameState(GameState.HOME); audioService.playBack(); }}
+        className="mt-8 px-8 py-4 bg-red-900/80 border-2 border-red-500 text-white font-arcade hover:bg-red-700 hover:scale-105 transition-all cursor-pointer"
       >
         VOLTAR
       </button>
@@ -672,6 +709,13 @@ const App: React.FC = () => {
             key={role} 
             onMouseEnter={() => { setMenuIndex(idx); audioService.playNavigate(); }}
             onClick={() => { 
+               setSelectedRole(role); 
+               setGameState(GameState.PROTOCOL_SELECT); 
+               setMenuIndex(0); 
+               audioService.playSelect(); 
+            }}
+            onTouchStart={() => { 
+               setMenuIndex(idx);
                setSelectedRole(role); 
                setGameState(GameState.PROTOCOL_SELECT); 
                setMenuIndex(0); 
@@ -702,6 +746,12 @@ const App: React.FC = () => {
              key={topic}
              onMouseEnter={() => { setMenuIndex(idx); audioService.playNavigate(); }}
              onClick={() => {
+                setSelectedTopic(topic);
+                startGame(selectedRole, topic);
+                audioService.playSelect();
+             }}
+             onTouchStart={() => {
+                setMenuIndex(idx);
                 setSelectedTopic(topic);
                 startGame(selectedRole, topic);
                 audioService.playSelect();
@@ -869,6 +919,7 @@ const App: React.FC = () => {
                   key={idx} 
                   onMouseEnter={() => { if (!showExplanation) { setSelectedOption(idx); audioService.playNavigate(); }}}
                   onClick={() => { if (!showExplanation) handleAnswerSubmission(idx); }}
+                  onTouchStart={() => { if (!showExplanation) { setSelectedOption(idx); handleAnswerSubmission(idx); }}}
                   disabled={showExplanation}
                   className={`p-6 border-3 rounded-xl text-lg font-bold transition-all duration-200 text-left flex items-center cursor-pointer ${style} ${hoverStyle} group relative overflow-hidden`}
                 >
@@ -882,7 +933,7 @@ const App: React.FC = () => {
                     <p className="text-lg leading-relaxed">{opt}</p>
                     {!showExplanation && idx === selectedOption && (
                       <div className="text-xs text-yellow-300 font-arcade mt-2 animate-pulse">
-                        PRESSIONE ENTER PARA CONFIRMAR
+                        {isTouchDevice ? 'TOQUE PARA CONFIRMAR' : 'PRESSIONE ENTER PARA CONFIRMAR'}
                       </div>
                     )}
                   </div>
@@ -906,7 +957,7 @@ const App: React.FC = () => {
                 <span>SELECIONAR</span>
               </div>
               <div className="flex items-center gap-2 text-sm text-gray-400 font-arcade">
-                <span className="bg-gray-800 px-3 py-1 rounded border border-gray-700">ENTER</span>
+                <span className="bg-gray-800 px-3 py-1 rounded border border-gray-700">{isTouchDevice ? 'TOQUE' : 'ENTER'}</span>
                 <span>CONFIRMAR</span>
               </div>
             </div>
@@ -915,6 +966,7 @@ const App: React.FC = () => {
           {showExplanation && (
             <div 
               onClick={() => nextRound()}
+              onTouchStart={() => nextRound()}
               className="fixed inset-0 md:absolute md:inset-x-0 md:bottom-0 md:top-auto md:left-1/2 md:-translate-x-1/2 md:w-[800px] bg-gradient-to-b from-black to-gray-900 border-4 border-white p-8 z-50 shadow-[0_0_200px_rgba(0,0,0,1)] animate-pop-in rounded-2xl overflow-hidden cursor-pointer"
             >
               <div className="absolute inset-0 opacity-10">
@@ -963,7 +1015,7 @@ const App: React.FC = () => {
                   />
                 </div>
                 <div className="text-center mt-3 text-xs text-gray-500 font-arcade">
-                  CLIQUE OU PRESSIONE ENTER PARA AVANÇAR
+                  {isTouchDevice ? 'TOQUE' : 'CLIQUE OU PRESSIONE ENTER'} PARA AVANÇAR
                 </div>
               </div>
             </div>
@@ -974,57 +1026,74 @@ const App: React.FC = () => {
   };
 
   const renderResult = () => {
-  const date = new Date().toLocaleDateString("pt-BR");
+    const date = new Date().toLocaleDateString("pt-BR");
 
-  return (
-    <div className="flex flex-col items-center justify-center h-full w-full space-y-6 z-20 select-none">
-      <h2 className="text-6xl text-white font-arcade glow-text">FIM DE JOGO</h2>
+    return (
+      <div className="flex flex-col items-center justify-center h-full w-full space-y-6 z-20 select-none">
+        <h2 className="text-6xl text-white font-arcade glow-text">FIM DE JOGO</h2>
         <div className="w-full max-w-lg bg-black/80 border-4 border-yellow-500 rounded-2xl p-8">
-        <div className="text-gray-300 font-arcade text-sm">JOGADOR</div>
-        <div className="text-white font-arcade text-3xl mb-4">{stats.name || playerName}</div>
+          <div className="text-gray-300 font-arcade text-sm">JOGADOR</div>
+          <div className="text-white font-arcade text-3xl mb-4">{stats.name || playerName}</div>
 
-        <div className="grid grid-cols-2 gap-4 font-arcade">
-          <div>
-            <div className="text-gray-400 text-xs">ROLE</div>
-            <div className="text-blue-300">{stats.role}</div>
-          </div>
-          <div>
-            <div className="text-gray-400 text-xs">DATA</div>
-            <div className="text-gray-200">{date}</div>
-          </div>
-          <div>
-            <div className="text-gray-400 text-xs">SCORE</div>
-            <div className="text-yellow-400 text-3xl">{stats.score}</div>
-          </div>
-          <div>
-            <div className="text-gray-400 text-xs">ACERTOS</div>
-            <div className="text-green-400">{stats.correctAnswers}/{QUESTIONS_PER_ROUND}</div>
+          <div className="grid grid-cols-2 gap-4 font-arcade">
+            <div>
+              <div className="text-gray-400 text-xs">ROLE</div>
+              <div className="text-blue-300">{stats.role}</div>
+            </div>
+            <div>
+              <div className="text-gray-400 text-xs">DATA</div>
+              <div className="text-gray-200">{date}</div>
+            </div>
+            <div>
+              <div className="text-gray-400 text-xs">SCORE</div>
+              <div className="text-yellow-400 text-3xl">{stats.score}</div>
+            </div>
+            <div>
+              <div className="text-gray-400 text-xs">ACERTOS</div>
+              <div className="text-green-400">{stats.correctAnswers}/{QUESTIONS_PER_ROUND}</div>
+            </div>
           </div>
         </div>
-      </div>
 
-      <div className="flex gap-4">
-        <button
-          className="px-6 py-4 border-2 border-green-500 text-green-400 font-arcade bg-black/60 hover:bg-green-900/60 transition-all"
-          onClick={() => setGameState(GameState.HOME)}
-        >
-          MENU
-        </button>
+        <div className="flex gap-4">
+          <button
+            onClick={() => setGameState(GameState.HOME)}
+            onTouchStart={() => setGameState(GameState.HOME)}
+            className="px-6 py-4 border-2 border-green-500 text-green-400 font-arcade bg-black/60 hover:bg-green-900/60 transition-all cursor-pointer"
+          >
+            MENU
+          </button>
 
-        <button
-          className="px-6 py-4 border-2 border-purple-500 text-purple-400 font-arcade bg-black/60 hover:bg-purple-900/60 transition-all"
-          onClick={() => setGameState(GameState.RANKING)}
-        >
-          RANKING
-        </button>
+          <button
+            onClick={() => setGameState(GameState.RANKING)}
+            onTouchStart={() => setGameState(GameState.RANKING)}
+            className="px-6 py-4 border-2 border-purple-500 text-purple-400 font-arcade bg-black/60 hover:bg-purple-900/60 transition-all cursor-pointer"
+          >
+            RANKING
+          </button>
+        </div>
       </div>
-    </div>
-  );
-};
+    );
+  };
 
   return (
     <div className="w-full h-screen bg-transparent overflow-hidden flex flex-col relative font-sans selection:bg-transparent">
       <ArcadeBackground />
+
+      {/* Overlay transparente para toque no PRESS_START */}
+      {gameState === GameState.PRESS_START && (
+        <div 
+          className="absolute inset-0 z-10 cursor-pointer"
+          onClick={() => {
+            audioService.playSelect();
+            setGameState(GameState.HOME);
+          }}
+          onTouchStart={() => {
+            audioService.playSelect();
+            setGameState(GameState.HOME);
+          }}
+        />
+      )}
 
       <div
         className={`absolute inset-0 transition-colors duration-1000 z-10 pointer-events-none 
