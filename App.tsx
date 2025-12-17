@@ -377,22 +377,27 @@ const App: React.FC = () => {
     const finished = prev.totalQuestions >= QUESTIONS_PER_ROUND;
 
     if (finished) {
-  // ✅ MOSTRA RESULT NA HORA (nunca trava)
-  setGameState(GameState.RESULT);
+      // ✅ MOSTRA RESULT NA HORA (nunca trava)
+      setGameState(GameState.RESULT);
 
-  // ✅ salva ranking sem bloquear UI
-  void (async () => {
-    try {
-      await saveScore(stats);
-      if (stats.correctAnswers >= QUESTIONS_PER_ROUND * 0.7) audioService.playWin();
-    } catch (e) {
-      console.error("Falha ao salvar score:", e);
+      // ✅ salva ranking sem bloquear UI
+      void (async () => {
+        try {
+          await saveScore(stats);
+          if (stats.correctAnswers >= QUESTIONS_PER_ROUND * 0.7) audioService.playWin();
+        } catch (e) {
+          console.error("Falha ao salvar score:", e);
+        }
+      })();
+
+      return prev;
     }
-  })();
 
-  return;
-}
-
+    // Se não terminou, carrega próxima questão
+    void loadQuestion(selectedTopic, selectedRole);
+    return prev;
+  });
+};
 
 
 
