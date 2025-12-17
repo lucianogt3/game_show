@@ -377,22 +377,22 @@ const App: React.FC = () => {
     const finished = prev.totalQuestions >= QUESTIONS_PER_ROUND;
 
     if (finished) {
-      Promise.resolve().then(async () => {
-        await saveScore(prev);
-        if (prev.correctAnswers >= QUESTIONS_PER_ROUND * 0.7) audioService.playWin();
-        setGameState(GameState.RESULT);
-      });
+  // ✅ MOSTRA RESULT NA HORA (nunca trava)
+  setGameState(GameState.RESULT);
 
-      return prev;
+  // ✅ salva ranking sem bloquear UI
+  void (async () => {
+    try {
+      await saveScore(stats);
+      if (stats.correctAnswers >= QUESTIONS_PER_ROUND * 0.7) audioService.playWin();
+    } catch (e) {
+      console.error("Falha ao salvar score:", e);
     }
+  })();
 
-    Promise.resolve().then(() => {
-      void loadQuestion(selectedTopic, selectedRole);
-    });
+  return;
+}
 
-    return prev;
-  });
-};
 
 
 
@@ -995,83 +995,56 @@ const App: React.FC = () => {
     );
   };
 
-  const renderResult = () => (
-    <div className="flex flex-col items-center justify-center h-full w-full space-y-8 z-20 select-none animate-pop-in">
-       <h2 className="text-7xl text-white font-arcade mb-4 animate-bounce glow-text">FIM DE JOGO</h2>
-       
-       <div className={`w-full max-w-md border-8 p-10 bg-gradient-to-br from-black/90 to-gray-900/90 text-center shadow-[0_0_80px_currentColor] rounded-2xl ${ROLE_COLORS[stats.role].split(' ')[1]} relative overflow-hidden`}>
-          {/* Confetti effect for good score */}
-          {stats.correctAnswers >= (QUESTIONS_PER_ROUND * 0.7) && (
-            <div className="absolute inset-0">
-              {[...Array(20)].map((_, i) => (
-                <div 
-                  key={i}
-                  className="absolute w-2 h-2 bg-yellow-500 animate-float"
-                  style={{
-                    left: `${Math.random() * 100}%`,
-                    animationDelay: `${Math.random() * 2}s`,
-                    animationDuration: `${2 + Math.random() * 2}s`
-                  }}
-                />
-              ))}
-            </div>
-          )}
-          
-          <div className="text-gray-400 font-arcade mb-3 text-sm uppercase tracking-wider">PERFIL: {stats.role}</div>
-          <div className="text-yellow-400 text-8xl font-arcade mb-8 glow-text animate-pulse">{stats.score}</div>
-          
-          <div className="space-y-4">
-            <div className="flex justify-between items-center border-b border-gray-700 pb-3">
-              <span className="text-white text-lg font-arcade">ACERTOS</span>
-              <span className={`text-2xl font-arcade font-bold ${stats.correctAnswers >= (QUESTIONS_PER_ROUND * 0.7) ? "text-green-400" : "text-red-400"}`}>
-                {stats.correctAnswers}/{QUESTIONS_PER_ROUND}
-              </span>
-            </div>
-            <div className="flex justify-between items-center border-b border-gray-700 pb-3">
-              <span className="text-white text-lg font-arcade">STREAK MÁX</span>
-              <span className="text-blue-400 text-2xl font-arcade font-bold">{stats.streak}</span>
-            </div>
-            <div className="flex justify-between items-center">
-              <span className="text-white text-lg font-arcade">PRECISÃO</span>
-              <span className="text-purple-400 text-2xl font-arcade font-bold">
-                {Math.round((stats.correctAnswers / QUESTIONS_PER_ROUND) * 100)}%
-              </span>
-            </div>
+  const renderResult = () => {
+  const date = new Date().toLocaleDateString("pt-BR");
+
+  return (
+    <div className="flex flex-col items-center justify-center h-full w-full space-y-6 z-20 select-none">
+      <h2 className="text-6xl text-white font-arcade glow-text">FIM DE JOGO</h2>
+
+      <div className="w-full max-w-lg bg-black/80 border-4 border-yellow-500 rounded-2xl p-8">
+        <div className="text-gray-300 font-arcade text-sm">JOGADOR</div>
+        <div className="text-white font-arcade text-3xl mb-4">{stats.name || playerName}</div>
+
+        <div className="grid grid-cols-2 gap-4 font-arcade">
+          <div>
+            <div className="text-gray-400 text-xs">ROLE</div>
+            <div className="text-blue-300">{stats.role}</div>
           </div>
-          
-          {/* Performance indicator */}
-          <div className="mt-6">
-            <div className="w-full bg-gray-800 h-4 rounded-full overflow-hidden">
-              <div 
-                className={`h-full ${stats.correctAnswers >= (QUESTIONS_PER_ROUND * 0.7) ? 'bg-gradient-to-r from-green-500 to-emerald-400' : 'bg-gradient-to-r from-red-500 to-orange-400'}`}
-                style={{ width: `${(stats.correctAnswers / QUESTIONS_PER_ROUND) * 100}%` }}
-              />
-            </div>
+          <div>
+            <div className="text-gray-400 text-xs">DATA</div>
+            <div className="text-gray-200">{date}</div>
           </div>
-       </div>
-       
-       <div className="flex flex-col md:flex-row gap-6 w-full max-w-md">
-         <button 
-           className="flex-1 p-5 border-4 border-green-500 text-green-400 font-arcade hover:bg-green-900/60 transition-all hover:scale-105 bg-black/60 rounded-xl text-xl group"
-           onClick={() => setGameState(GameState.HOME)}
-         >
-           <div className="flex items-center justify-center gap-3">
-             <span>🏠</span>
-             <span>MENU PRINCIPAL</span>
-           </div>
-         </button>
-         <button 
-           className="flex-1 p-5 border-4 border-purple-500 text-purple-400 font-arcade hover:bg-purple-900/60 transition-all hover:scale-105 bg-black/60 rounded-xl text-xl group"
-           onClick={() => setGameState(GameState.RANKING)}
-         >
-           <div className="flex items-center justify-center gap-3">
-             <span>🏆</span>
-             <span>VER RANKING</span>
-           </div>
-         </button>
-       </div>
+          <div>
+            <div className="text-gray-400 text-xs">SCORE</div>
+            <div className="text-yellow-400 text-3xl">{stats.score}</div>
+          </div>
+          <div>
+            <div className="text-gray-400 text-xs">ACERTOS</div>
+            <div className="text-green-400">{stats.correctAnswers}/{QUESTIONS_PER_ROUND}</div>
+          </div>
+        </div>
+      </div>
+
+      <div className="flex gap-4">
+        <button
+          className="px-6 py-4 border-2 border-green-500 text-green-400 font-arcade bg-black/60"
+          onClick={() => setGameState(GameState.HOME)}
+        >
+          MENU
+        </button>
+
+        <button
+          className="px-6 py-4 border-2 border-purple-500 text-purple-400 font-arcade bg-black/60"
+          onClick={() => setGameState(GameState.RANKING)}
+        >
+          RANKING
+        </button>
+      </div>
     </div>
   );
+};
+
 
     return (
     <div className="w-full h-screen bg-transparent overflow-hidden flex flex-col relative font-sans selection:bg-transparent">
