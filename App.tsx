@@ -50,7 +50,6 @@ const App: React.FC = () => {
 
   const [menuIndex, setMenuIndex] = useState(0);
   const [blink, setBlink] = useState(true);
-  const [isTouchDevice, setIsTouchDevice] = useState(false);
 
   // ----------------------------
   // REFS (timers)
@@ -75,27 +74,6 @@ const App: React.FC = () => {
     [GameRole.TECH]: "text-blue-400 border-blue-500 bg-blue-900/40",
     [GameRole.MULTI]: "text-yellow-400 border-yellow-500 bg-yellow-900/40",
   };
-
-  // ----------------------------
-  // INITIALIZE: Detectar dispositivo tátil
-  // ----------------------------
-  useEffect(() => {
-    const checkTouchDevice = () => {
-      const touchDetected = 
-        'ontouchstart' in window ||
-        navigator.maxTouchPoints > 0 ||
-        (navigator as any).msMaxTouchPoints > 0 ||
-        window.matchMedia("(pointer: coarse)").matches;
-      
-      setIsTouchDevice(touchDetected);
-      console.log("📱 Dispositivo tátil detectado:", touchDetected);
-    };
-
-    checkTouchDevice();
-    window.addEventListener('resize', checkTouchDevice);
-    
-    return () => window.removeEventListener('resize', checkTouchDevice);
-  }, []);
 
   // ----------------------------
   // HELPERS: clear timers
@@ -366,51 +344,52 @@ const App: React.FC = () => {
   };
 
   const saveScore = async (snapshot: PlayerStats) => {
-    const newEntry: ScoreEntry = {
-      name: snapshot.name,
-      score: snapshot.score,
-      role: snapshot.role,
-      date: new Date().toLocaleDateString("pt-BR"),
-    };
-
-    console.log("Tentando salvar score:", newEntry);
-    
-    try {
-      const updated = await scoreService.saveScore(newEntry);
-      setHighScores(updated);
-      console.log("Score salvo com sucesso, novo ranking:", updated);
-      return updated;
-    } catch (error) {
-      console.error("Erro ao salvar score:", error);
-      throw error;
-    }
+  const newEntry: ScoreEntry = {
+    name: snapshot.name,
+    score: snapshot.score,
+    role: snapshot.role,
+    date: new Date().toLocaleDateString("pt-BR"),
   };
+
+  console.log("Tentando salvar score:", newEntry);
+  
+  try {
+    const updated = await scoreService.saveScore(newEntry);
+    setHighScores(updated);
+    console.log("Score salvo com sucesso, novo ranking:", updated);
+    return updated; // <-- ADICIONE ESTA LINHA
+  } catch (error) {
+    console.error("Erro ao salvar score:", error);
+    throw error; // <-- Lançar erro para ser capturado pelo caller
+  }
+};
 
   const nextRound = () => {
-    clearAutoNextTimer();
+  clearAutoNextTimer();
 
-    setStats((prev) => {
-      const finished = prev.totalQuestions >= QUESTIONS_PER_ROUND;
+  setStats((prev) => {
+    const finished = prev.totalQuestions >= QUESTIONS_PER_ROUND;
 
-      if (finished) {
-        setGameState(GameState.RESULT);
+    if (finished) {
+      setGameState(GameState.RESULT);
 
-        saveScore(prev).then(() => {
-          console.log("✅ Score salvo após fim de jogo");
-          if (prev.correctAnswers >= QUESTIONS_PER_ROUND * 0.7) {
-            audioService.playWin();
-          }
-        }).catch(error => {
-          console.error("❌ Erro ao salvar score final:", error);
-        });
+      // ✅ Salva ranking ASSINCRONAMENTE sem bloquear
+      saveScore(prev).then(() => {
+        console.log("✅ Score salvo após fim de jogo");
+        if (prev.correctAnswers >= QUESTIONS_PER_ROUND * 0.7) {
+          audioService.playWin();
+        }
+      }).catch(error => {
+        console.error("❌ Erro ao salvar score final:", error);
+      });
 
-        return prev;
-      }
-
-      void loadQuestion(selectedTopic, selectedRole);
       return prev;
-    });
-  };
+    }
+
+    void loadQuestion(selectedTopic, selectedRole);
+    return prev;
+  });
+};
 
   // ----------------------------
   // DEBUG EFFECTS
@@ -421,7 +400,7 @@ const App: React.FC = () => {
   }, [stats, gameState]);
 
   // ----------------------------
-  // INPUT - Teclado e Toque
+  // INPUT
   // ----------------------------
   const handleInput = useCallback(
     (key: string) => {
@@ -438,7 +417,7 @@ const App: React.FC = () => {
 
       // PRESS START
       if (gameState === GameState.PRESS_START) {
-        if (key === "Enter" || key === " " || key === "z" || key === "a" || key === "b" || key === "touch") {
+        if (key === "Enter" || key === " " || key === "z" || key === "a" || key === "b") {
           (async () => {
             await audioService.unlock();
             audioService.playSelect();
@@ -466,7 +445,7 @@ const App: React.FC = () => {
             setSfxVol((v) => Math.min(1, Math.max(0, v + delta)));
             audioService.playNavigate();
           }
-        } else if (key === "Enter" || key === " " || key === "z" || key === "touch") {
+        } else if (key === "Enter" || key === " " || key === "z") {
           if (menuIndex === 0) {
             setGameState(GameState.NAME_ENTRY);
             audioService.playSelect();
@@ -480,7 +459,7 @@ const App: React.FC = () => {
 
       // RANKING
       if (gameState === GameState.RANKING) {
-        if (key === "Enter" || key === " " || key === "z" || key === "Backspace" || key === "touch") {
+        if (key === "Enter" || key === " " || key === "z" || key === "Backspace") {
           setGameState(GameState.HOME);
           audioService.playBack();
         }
@@ -495,7 +474,7 @@ const App: React.FC = () => {
         } else if (key === "ArrowDown") {
           setMenuIndex((p) => (p < ROLES.length - 1 ? p + 1 : 0));
           audioService.playNavigate();
-        } else if (key === "Enter" || key === " " || key === "z" || key === "touch") {
+        } else if (key === "Enter" || key === " " || key === "z") {
           setSelectedRole(ROLES[menuIndex]);
           setGameState(GameState.PROTOCOL_SELECT);
           setMenuIndex(0);
@@ -512,7 +491,7 @@ const App: React.FC = () => {
         } else if (key === "ArrowDown") {
           setMenuIndex((p) => (p < TOPICS.length - 1 ? p + 1 : 0));
           audioService.playNavigate();
-        } else if (key === "Enter" || key === " " || key === "z" || key === "touch") {
+        } else if (key === "Enter" || key === " " || key === "z") {
           const topic = TOPICS[menuIndex];
           setSelectedTopic(topic);
           void startGame(selectedRole, topic);
@@ -529,7 +508,7 @@ const App: React.FC = () => {
         } else if (key === "ArrowDown") {
           setSelectedOption((p) => (p < 3 ? p + 1 : 0));
           audioService.playNavigate();
-        } else if (key === "Enter" || key === " " || key === "z" || key === "touch") {
+        } else if (key === "Enter" || key === " " || key === "z") {
           handleAnswerSubmission(selectedOption);
         }
 
@@ -543,7 +522,7 @@ const App: React.FC = () => {
 
       // EXPLANATION / RESULT
       if ((gameState === GameState.PLAYING && showExplanation) || gameState === GameState.RESULT) {
-        if (key === "Enter" || key === " " || key === "z" || key === "touch") {
+        if (key === "Enter" || key === " " || key === "z") {
           if (gameState === GameState.RESULT) setGameState(GameState.HOME);
           else nextRound();
         }
@@ -573,23 +552,17 @@ const App: React.FC = () => {
   // RENDERS
   // ----------------------------
   const renderPressStart = () => (
-    <div 
-      className="flex flex-col items-center justify-center h-full w-full select-none z-20 cursor-pointer"
-      onClick={() => { 
-        setGameState(GameState.HOME); 
-        audioService.playSelect(); 
-      }}
-    >
+    <div className="flex flex-col items-center justify-center h-full w-full select-none z-20">
       <div className="mb-16 text-center space-y-2 animate-float">
         <h1
           className="text-6xl md:text-9xl text-yellow-400 font-arcade glow-text"
           style={{ textShadow: "4px 4px 0px #8B0000" }}
         >
-          DR. ARCADE
+          ARCADE SHOW
         </h1>
         <div className="bg-black/80 px-4 py-2 inline-block border-2 border-red-600 rounded">
           <h2 className="text-2xl md:text-4xl text-white font-arcade tracking-[0.3em]">
-            EMERGÊNCIA
+            HOSPITAL SANTA MÔNICA
           </h2>
         </div>
       </div>
@@ -599,7 +572,7 @@ const App: React.FC = () => {
             blink ? "opacity-100" : "opacity-20"
           } transition-opacity duration-100`}
         >
-          {isTouchDevice ? 'TOQUE NA TELA' : 'PRESS START'}
+          PRESS START
         </span>
       </div>
       <div className="mt-12 text-gray-400 font-arcade text-xs md:text-sm bg-black/50 p-2 rounded">
@@ -683,7 +656,7 @@ const App: React.FC = () => {
       </div>
       <button 
         onClick={() => { setGameState(GameState.HOME); audioService.playBack(); }}
-        className="mt-8 px-8 py-4 bg-red-900/80 border-2 border-red-500 text-white font-arcade hover:bg-red-700 hover:scale-105 transition-all cursor-pointer"
+        className="mt-8 px-8 py-4 bg-red-900/80 border-2 border-red-500 text-white font-arcade hover:bg-red-700 hover:scale-105 transition-all"
       >
         VOLTAR
       </button>
@@ -909,7 +882,7 @@ const App: React.FC = () => {
                     <p className="text-lg leading-relaxed">{opt}</p>
                     {!showExplanation && idx === selectedOption && (
                       <div className="text-xs text-yellow-300 font-arcade mt-2 animate-pulse">
-                        {isTouchDevice ? 'TOQUE PARA CONFIRMAR' : 'PRESSIONE ENTER PARA CONFIRMAR'}
+                        PRESSIONE ENTER PARA CONFIRMAR
                       </div>
                     )}
                   </div>
@@ -922,7 +895,7 @@ const App: React.FC = () => {
             })}
           </div>
 
-          {!showExplanation && !isTouchDevice && (
+          {!showExplanation && (
             <div className="flex justify-center gap-8 mt-4">
               <div className="flex items-center gap-2 text-sm text-gray-400 font-arcade">
                 <span className="bg-gray-800 px-3 py-1 rounded border border-gray-700">↑↓</span>
@@ -990,7 +963,7 @@ const App: React.FC = () => {
                   />
                 </div>
                 <div className="text-center mt-3 text-xs text-gray-500 font-arcade">
-                  {isTouchDevice ? 'TOQUE PARA AVANÇAR' : 'CLIQUE OU PRESSIONE ENTER PARA AVANÇAR'}
+                  CLIQUE OU PRESSIONE ENTER PARA AVANÇAR
                 </div>
               </div>
             </div>
@@ -1001,53 +974,53 @@ const App: React.FC = () => {
   };
 
   const renderResult = () => {
-    const date = new Date().toLocaleDateString("pt-BR");
+  const date = new Date().toLocaleDateString("pt-BR");
 
-    return (
-      <div className="flex flex-col items-center justify-center h-full w-full space-y-6 z-20 select-none">
-        <h2 className="text-6xl text-white font-arcade glow-text">FIM DE JOGO</h2>
+  return (
+    <div className="flex flex-col items-center justify-center h-full w-full space-y-6 z-20 select-none">
+      <h2 className="text-6xl text-white font-arcade glow-text">FIM DE JOGO</h2>
         <div className="w-full max-w-lg bg-black/80 border-4 border-yellow-500 rounded-2xl p-8">
-          <div className="text-gray-300 font-arcade text-sm">JOGADOR</div>
-          <div className="text-white font-arcade text-3xl mb-4">{stats.name || playerName}</div>
+        <div className="text-gray-300 font-arcade text-sm">JOGADOR</div>
+        <div className="text-white font-arcade text-3xl mb-4">{stats.name || playerName}</div>
 
-          <div className="grid grid-cols-2 gap-4 font-arcade">
-            <div>
-              <div className="text-gray-400 text-xs">ROLE</div>
-              <div className="text-blue-300">{stats.role}</div>
-            </div>
-            <div>
-              <div className="text-gray-400 text-xs">DATA</div>
-              <div className="text-gray-200">{date}</div>
-            </div>
-            <div>
-              <div className="text-gray-400 text-xs">SCORE</div>
-              <div className="text-yellow-400 text-3xl">{stats.score}</div>
-            </div>
-            <div>
-              <div className="text-gray-400 text-xs">ACERTOS</div>
-              <div className="text-green-400">{stats.correctAnswers}/{QUESTIONS_PER_ROUND}</div>
-            </div>
+        <div className="grid grid-cols-2 gap-4 font-arcade">
+          <div>
+            <div className="text-gray-400 text-xs">ROLE</div>
+            <div className="text-blue-300">{stats.role}</div>
+          </div>
+          <div>
+            <div className="text-gray-400 text-xs">DATA</div>
+            <div className="text-gray-200">{date}</div>
+          </div>
+          <div>
+            <div className="text-gray-400 text-xs">SCORE</div>
+            <div className="text-yellow-400 text-3xl">{stats.score}</div>
+          </div>
+          <div>
+            <div className="text-gray-400 text-xs">ACERTOS</div>
+            <div className="text-green-400">{stats.correctAnswers}/{QUESTIONS_PER_ROUND}</div>
           </div>
         </div>
-
-        <div className="flex gap-4">
-          <button
-            className="px-6 py-4 border-2 border-green-500 text-green-400 font-arcade bg-black/60 hover:bg-green-900/60 transition-all cursor-pointer"
-            onClick={() => setGameState(GameState.HOME)}
-          >
-            MENU
-          </button>
-
-          <button
-            className="px-6 py-4 border-2 border-purple-500 text-purple-400 font-arcade bg-black/60 hover:bg-purple-900/60 transition-all cursor-pointer"
-            onClick={() => setGameState(GameState.RANKING)}
-          >
-            RANKING
-          </button>
-        </div>
       </div>
-    );
-  };
+
+      <div className="flex gap-4">
+        <button
+          className="px-6 py-4 border-2 border-green-500 text-green-400 font-arcade bg-black/60 hover:bg-green-900/60 transition-all"
+          onClick={() => setGameState(GameState.HOME)}
+        >
+          MENU
+        </button>
+
+        <button
+          className="px-6 py-4 border-2 border-purple-500 text-purple-400 font-arcade bg-black/60 hover:bg-purple-900/60 transition-all"
+          onClick={() => setGameState(GameState.RANKING)}
+        >
+          RANKING
+        </button>
+      </div>
+    </div>
+  );
+};
 
   return (
     <div className="w-full h-screen bg-transparent overflow-hidden flex flex-col relative font-sans selection:bg-transparent">
