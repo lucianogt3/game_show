@@ -15,30 +15,39 @@ const COL = "rankings";
 
 export const scoreService = {
   async getScores(): Promise<ScoreEntry[]> {
-    const q = query(collection(db, COL), orderBy("score", "desc"), limit(10));
-    const snap = await getDocs(q);
+    try {
+      const q = query(collection(db, COL), orderBy("score", "desc"), limit(10));
+      const snap = await getDocs(q);
 
-    return snap.docs.map((d) => {
-      const data = d.data() as any;
-      return {
-        name: data.name ?? "JOGADOR",
-        score: Number(data.score ?? 0),
-        role: data.role ?? "NURSE",
-        date: data.date ?? "",
-      } as ScoreEntry;
-    });
+      return snap.docs.map((d) => {
+        const data = d.data() as any;
+        return {
+          name: data.name ?? "JOGADOR",
+          score: Number(data.score ?? 0),
+          role: data.role ?? "NURSE",
+          date: data.date ?? "",
+        } as ScoreEntry;
+      });
+    } catch (err) {
+      console.error("[scoreService.getScores] erro:", err);
+      return []; // não quebra a UI
+    }
   },
 
   async saveScore(entry: ScoreEntry): Promise<ScoreEntry[]> {
-    await addDoc(collection(db, COL), {
-      name: entry.name,
-      score: entry.score,
-      role: entry.role,
-      date: entry.date,
-      createdAt: serverTimestamp(),
-    });
+    try {
+      await addDoc(collection(db, COL), {
+        name: entry.name,
+        score: entry.score,
+        role: entry.role,
+        date: entry.date,
+        createdAt: serverTimestamp(),
+      });
+    } catch (err) {
+      console.error("[scoreService.saveScore] erro:", err);
+      // NÃO trava o jogo — segue o fluxo
+    }
 
-    // retorna atualizado
     return this.getScores();
   },
 };
