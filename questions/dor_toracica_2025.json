@@ -1,0 +1,1535 @@
+{
+  "meta": {
+    "tema": "DOR_TORACICA",
+    "versao": "2025.12",
+    "descricao": "Banco de questões para treinamento estilo arcade (DOR_TORACICA). Ajuste conforme protocolo institucional.",
+    "referencias": [
+      {
+        "titulo": "SCA/Dor torácica – princípios (ECG precoce, estratificação, troponina seriada, reperfusão no STEMI)",
+        "fonte": "SBC/AHA/ESC",
+        "observacao": "Ajustar ao protocolo local"
+      },
+      {
+        "titulo": "Fluxos hospitalares de dor torácica – tempos porta-ECG e porta-balão",
+        "fonte": "Protocolos hospitalares",
+        "observacao": "Ajustar ao protocolo local"
+      }
+    ],
+    "total_questoes": 100,
+    "schema": {
+      "especialidade": [
+        "ENFERMEIRO",
+        "MEDICO",
+        "TECNICO",
+        "MULTI"
+      ],
+      "dificuldade": [
+        "BASICO",
+        "INTERMEDIARIO",
+        "AVANCADO"
+      ]
+    }
+  },
+  "questoes": [
+    {
+      "id": "DTC_ENF_001",
+      "especialidade": "ENFERMEIRO",
+      "dificuldade": "BASICO",
+      "enunciado": "Dor torácica suspeita de SCA: tempo ideal para primeiro ECG é:",
+      "opcoes": [
+        "30 min",
+        "60 min",
+        "10 min",
+        "2 horas"
+      ],
+      "correta": 2,
+      "explicacao": "ECG precoce (ex.: ≤10 min) é meta comum em fluxos de dor torácica.",
+      "tempo_max": 20
+    },
+    {
+      "id": "DTC_ENF_002",
+      "especialidade": "ENFERMEIRO",
+      "dificuldade": "BASICO",
+      "enunciado": "Sintoma típico de SCA além da dor pode incluir:",
+      "opcoes": [
+        "Sudorese fria e náusea",
+        "Coceira",
+        "Dor no pé",
+        "Tosse crônica isolada"
+      ],
+      "correta": 0,
+      "explicacao": "Sintomas autonômicos são comuns na SCA.",
+      "tempo_max": 20
+    },
+    {
+      "id": "DTC_ENF_003",
+      "especialidade": "ENFERMEIRO",
+      "dificuldade": "BASICO",
+      "enunciado": "Primeira prioridade na sala é:",
+      "opcoes": [
+        "Avaliar ABC e sinais vitais, monitorizar",
+        "Dar alimento",
+        "Aguardar médico",
+        "Liberar deambulação"
+      ],
+      "correta": 0,
+      "explicacao": "Estabilização e monitorização são imediatas.",
+      "tempo_max": 20
+    },
+    {
+      "id": "DTC_ENF_004",
+      "especialidade": "ENFERMEIRO",
+      "dificuldade": "BASICO",
+      "enunciado": "Qual exame laboratorial é central para lesão miocárdica?",
+      "opcoes": [
+        "Troponina",
+        "TSH",
+        "Ureia",
+        "Vitamina D"
+      ],
+      "correta": 0,
+      "explicacao": "Troponina é marcador de lesão miocárdica.",
+      "tempo_max": 20
+    },
+    {
+      "id": "DTC_ENF_005",
+      "especialidade": "ENFERMEIRO",
+      "dificuldade": "BASICO",
+      "enunciado": "Em suspeita de SCA, uma conduta de enfermagem imediata é:",
+      "opcoes": [
+        "Monitor cardíaco e acesso venoso",
+        "Banho completo",
+        "Fisioterapia",
+        "Dieta normal"
+      ],
+      "correta": 0,
+      "explicacao": "Monitorização e acesso agilizam terapias.",
+      "tempo_max": 20
+    },
+    {
+      "id": "DTC_ENF_006",
+      "especialidade": "ENFERMEIRO",
+      "dificuldade": "INTERMEDIARIO",
+      "enunciado": "No ECG, supra de ST sugere:",
+      "opcoes": [
+        "IAM com oclusão aguda (STEMI)",
+        "Ansiedade",
+        "Normalidade",
+        "Asma"
+      ],
+      "correta": 0,
+      "explicacao": "Supra de ST pode indicar oclusão aguda.",
+      "tempo_max": 20
+    },
+    {
+      "id": "DTC_ENF_007",
+      "especialidade": "ENFERMEIRO",
+      "dificuldade": "INTERMEDIARIO",
+      "enunciado": "Dor torácica: oxigênio deve ser usado:",
+      "opcoes": [
+        "Se hipóxia (SpO2 baixa) ou conforme protocolo",
+        "Sempre 15 L/min para todos",
+        "Nunca",
+        "Apenas por conforto"
+      ],
+      "correta": 0,
+      "explicacao": "Oxigênio é titulado, especialmente se houver hipóxia.",
+      "tempo_max": 20
+    },
+    {
+      "id": "DTC_ENF_008",
+      "especialidade": "ENFERMEIRO",
+      "dificuldade": "INTERMEDIARIO",
+      "enunciado": "Uma ação que reduz tempo para tratamento é:",
+      "opcoes": [
+        "Fluxo porta-ECG e alerta cardiologia quando STEMI",
+        "Aguardar troponina única",
+        "Enviar para casa",
+        "Dar analgésico e observar"
+      ],
+      "correta": 0,
+      "explicacao": "Ativar fluxo reduz tempo para reperfusão.",
+      "tempo_max": 20
+    },
+    {
+      "id": "DTC_ENF_009",
+      "especialidade": "ENFERMEIRO",
+      "dificuldade": "INTERMEDIARIO",
+      "enunciado": "Na SCA, dor persistente e instabilidade exigem:",
+      "opcoes": [
+        "Reavaliação imediata e escalonamento",
+        "Aguardar 6h",
+        "Alta",
+        "Somente dieta"
+      ],
+      "correta": 0,
+      "explicacao": "Instabilidade é sinal de gravidade.",
+      "tempo_max": 20
+    },
+    {
+      "id": "DTC_ENF_010",
+      "especialidade": "ENFERMEIRO",
+      "dificuldade": "INTERMEDIARIO",
+      "enunciado": "Em suspeita de IAM, registrar início da dor é importante porque:",
+      "opcoes": [
+        "Define janela e urgência de reperfusão",
+        "Define dieta",
+        "Define leito",
+        "Define antibiótico"
+      ],
+      "correta": 0,
+      "explicacao": "Tempo de sintomas orienta urgência.",
+      "tempo_max": 20
+    },
+    {
+      "id": "DTC_ENF_011",
+      "especialidade": "ENFERMEIRO",
+      "dificuldade": "INTERMEDIARIO",
+      "enunciado": "Após medicação sublingual (ex.: nitrato), você deve monitorar:",
+      "opcoes": [
+        "PA e sintomas (risco de hipotensão)",
+        "Somente temperatura",
+        "Somente diurese",
+        "Somente dor no pé"
+      ],
+      "correta": 0,
+      "explicacao": "Nitratos podem reduzir PA; monitorar.",
+      "tempo_max": 20
+    },
+    {
+      "id": "DTC_ENF_012",
+      "especialidade": "ENFERMEIRO",
+      "dificuldade": "INTERMEDIARIO",
+      "enunciado": "O que NÃO deve atrasar ECG em dor torácica?",
+      "opcoes": [
+        "Burocracia de cadastro",
+        "Checar sinais vitais",
+        "Colocar monitor",
+        "Acesso venoso"
+      ],
+      "correta": 0,
+      "explicacao": "ECG é prioridade imediata no fluxo.",
+      "tempo_max": 20
+    },
+    {
+      "id": "DTC_ENF_013",
+      "especialidade": "ENFERMEIRO",
+      "dificuldade": "AVANCADO",
+      "enunciado": "Em suspeita de dissecção aórtica, uma pista clínica é:",
+      "opcoes": [
+        "Dor súbita intensa com irradiação para dorso",
+        "Dor leve pós exercício",
+        "Prurido",
+        "Tosse"
+      ],
+      "correta": 0,
+      "explicacao": "Dissecção: dor súbita intensa, pode irradiar para dorso.",
+      "tempo_max": 20
+    },
+    {
+      "id": "DTC_ENF_014",
+      "especialidade": "ENFERMEIRO",
+      "dificuldade": "AVANCADO",
+      "enunciado": "Se suspeita de SCA com supra de ST, objetivo de fluxo é reduzir:",
+      "opcoes": [
+        "Tempo porta-balão/porta-agulha conforme protocolo",
+        "Tempo de visita",
+        "Tempo de jejum",
+        "Tempo de internação"
+      ],
+      "correta": 0,
+      "explicacao": "Reperfusão rápida melhora prognóstico.",
+      "tempo_max": 20
+    },
+    {
+      "id": "DTC_ENF_015",
+      "especialidade": "ENFERMEIRO",
+      "dificuldade": "AVANCADO",
+      "enunciado": "Em pacientes com risco de sangramento, antiagregação/anticoagulação exige:",
+      "opcoes": [
+        "Avaliação criteriosa e protocolo",
+        "Sempre dose máxima",
+        "Nunca usar",
+        "Ignorar risco"
+      ],
+      "correta": 0,
+      "explicacao": "Segurança depende de risco/benefício.",
+      "tempo_max": 20
+    },
+    {
+      "id": "DTC_ENF_016",
+      "especialidade": "ENFERMEIRO",
+      "dificuldade": "AVANCADO",
+      "enunciado": "Troponina pode ser normal no início; por isso:",
+      "opcoes": [
+        "Pode ser necessária dosagem seriada conforme protocolo",
+        "Uma dosagem basta sempre",
+        "Não serve",
+        "Só em STEMI"
+      ],
+      "correta": 0,
+      "explicacao": "Troponina pode elevar com o tempo; seguir fluxos seriados.",
+      "tempo_max": 20
+    },
+    {
+      "id": "DTC_ENF_017",
+      "especialidade": "ENFERMEIRO",
+      "dificuldade": "AVANCADO",
+      "enunciado": "Sinais de choque (hipoperfusão) em dor torácica exigem:",
+      "opcoes": [
+        "Atendimento imediato e suporte avançado",
+        "Aguardar exames",
+        "Alta",
+        "Somente analgesia"
+      ],
+      "correta": 0,
+      "explicacao": "Choque é emergência.",
+      "tempo_max": 20
+    },
+    {
+      "id": "DTC_ENF_018",
+      "especialidade": "ENFERMEIRO",
+      "dificuldade": "AVANCADO",
+      "enunciado": "Em suspeita de tromboembolismo pulmonar (TEP), achado pode ser:",
+      "opcoes": [
+        "Dispneia súbita e taquicardia",
+        "Prurido",
+        "Dor no punho",
+        "Gripe leve"
+      ],
+      "correta": 0,
+      "explicacao": "TEP: dispneia súbita, taquicardia, dor pleurítica em alguns casos.",
+      "tempo_max": 20
+    },
+    {
+      "id": "DTC_ENF_019",
+      "especialidade": "ENFERMEIRO",
+      "dificuldade": "AVANCADO",
+      "enunciado": "Em dor torácica, comunicação efetiva com equipe inclui:",
+      "opcoes": [
+        "ECG, dor, PA, risco, troponina e horário de início",
+        "Mensagem vaga",
+        "Somente áudio",
+        "Sem dados"
+      ],
+      "correta": 0,
+      "explicacao": "Dados objetivos aceleram decisões.",
+      "tempo_max": 20
+    },
+    {
+      "id": "DTC_ENF_020",
+      "especialidade": "ENFERMEIRO",
+      "dificuldade": "AVANCADO",
+      "enunciado": "Se suspeita de SCA com supra de ST, objetivo de fluxo é reduzir: (variação)",
+      "opcoes": [
+        "Tempo porta-balão/porta-agulha conforme protocolo",
+        "Tempo de visita",
+        "Tempo de jejum",
+        "Tempo de internação"
+      ],
+      "correta": 0,
+      "explicacao": "Reperfusão rápida melhora prognóstico.",
+      "tempo_max": 20
+    },
+    {
+      "id": "DTC_ENF_021",
+      "especialidade": "ENFERMEIRO",
+      "dificuldade": "AVANCADO",
+      "enunciado": "Em suspeita de dissecção aórtica, uma pista clínica é: (variação)",
+      "opcoes": [
+        "Dor súbita intensa com irradiação para dorso",
+        "Dor leve pós exercício",
+        "Prurido",
+        "Tosse"
+      ],
+      "correta": 0,
+      "explicacao": "Dissecção: dor súbita intensa, pode irradiar para dorso.",
+      "tempo_max": 20
+    },
+    {
+      "id": "DTC_ENF_022",
+      "especialidade": "ENFERMEIRO",
+      "dificuldade": "AVANCADO",
+      "enunciado": "Em suspeita de tromboembolismo pulmonar (TEP), achado pode ser: (variação)",
+      "opcoes": [
+        "Dispneia súbita e taquicardia",
+        "Prurido",
+        "Dor no punho",
+        "Gripe leve"
+      ],
+      "correta": 0,
+      "explicacao": "TEP: dispneia súbita, taquicardia, dor pleurítica em alguns casos.",
+      "tempo_max": 20
+    },
+    {
+      "id": "DTC_ENF_023",
+      "especialidade": "ENFERMEIRO",
+      "dificuldade": "INTERMEDIARIO",
+      "enunciado": "Após medicação sublingual (ex.: nitrato), você deve monitorar: (variação)",
+      "opcoes": [
+        "PA e sintomas (risco de hipotensão)",
+        "Somente temperatura",
+        "Somente diurese",
+        "Somente dor no pé"
+      ],
+      "correta": 0,
+      "explicacao": "Nitratos podem reduzir PA; monitorar.",
+      "tempo_max": 20
+    },
+    {
+      "id": "DTC_ENF_024",
+      "especialidade": "ENFERMEIRO",
+      "dificuldade": "AVANCADO",
+      "enunciado": "Se suspeita de SCA com supra de ST, objetivo de fluxo é reduzir: (variação)",
+      "opcoes": [
+        "Tempo porta-balão/porta-agulha conforme protocolo",
+        "Tempo de visita",
+        "Tempo de jejum",
+        "Tempo de internação"
+      ],
+      "correta": 0,
+      "explicacao": "Reperfusão rápida melhora prognóstico.",
+      "tempo_max": 20
+    },
+    {
+      "id": "DTC_ENF_025",
+      "especialidade": "ENFERMEIRO",
+      "dificuldade": "INTERMEDIARIO",
+      "enunciado": "No ECG, supra de ST sugere: (variação)",
+      "opcoes": [
+        "IAM com oclusão aguda (STEMI)",
+        "Ansiedade",
+        "Normalidade",
+        "Asma"
+      ],
+      "correta": 0,
+      "explicacao": "Supra de ST pode indicar oclusão aguda.",
+      "tempo_max": 20
+    },
+    {
+      "id": "DTC_MED_001",
+      "especialidade": "MEDICO",
+      "dificuldade": "BASICO",
+      "enunciado": "Dor torácica: meta comum de ECG inicial é:",
+      "opcoes": [
+        "≤10 min",
+        "≤60 min",
+        "≤2h",
+        "Não importa"
+      ],
+      "correta": 0,
+      "explicacao": "ECG precoce é ponto central do fluxo.",
+      "tempo_max": 20
+    },
+    {
+      "id": "DTC_MED_002",
+      "especialidade": "MEDICO",
+      "dificuldade": "BASICO",
+      "enunciado": "Supra de ST no ECG sugere:",
+      "opcoes": [
+        "STEMI/oclusão aguda",
+        "Pericardite sempre",
+        "Ansiedade",
+        "Asma"
+      ],
+      "correta": 0,
+      "explicacao": "Supra pode indicar IAM com oclusão aguda.",
+      "tempo_max": 20
+    },
+    {
+      "id": "DTC_MED_003",
+      "especialidade": "MEDICO",
+      "dificuldade": "BASICO",
+      "enunciado": "Biomarcador central de necrose miocárdica:",
+      "opcoes": [
+        "Troponina",
+        "PCR",
+        "TSH",
+        "Ureia"
+      ],
+      "correta": 0,
+      "explicacao": "Troponina é marcador principal.",
+      "tempo_max": 20
+    },
+    {
+      "id": "DTC_MED_004",
+      "especialidade": "MEDICO",
+      "dificuldade": "BASICO",
+      "enunciado": "Conduta imediata em STEMI inclui:",
+      "opcoes": [
+        "Ativar reperfusão (hemodinâmica/trombólise conforme protocolo)",
+        "Aguardar troponina",
+        "Alta",
+        "Antibiótico"
+      ],
+      "correta": 0,
+      "explicacao": "Tempo para reperfusão é crítico.",
+      "tempo_max": 20
+    },
+    {
+      "id": "DTC_MED_005",
+      "especialidade": "MEDICO",
+      "dificuldade": "BASICO",
+      "enunciado": "Dor torácica pode ser equivalente anginoso em:",
+      "opcoes": [
+        "Idosos/diabéticos com dispneia/fadiga",
+        "Apenas jovens",
+        "Apenas atletas",
+        "Apenas crianças"
+      ],
+      "correta": 0,
+      "explicacao": "Apresentações atípicas ocorrem.",
+      "tempo_max": 20
+    },
+    {
+      "id": "DTC_MED_006",
+      "especialidade": "MEDICO",
+      "dificuldade": "INTERMEDIARIO",
+      "enunciado": "Estratificação de risco pode usar:",
+      "opcoes": [
+        "HEART/TIMI (conforme protocolo)",
+        "APGAR",
+        "Braden",
+        "SOFA"
+      ],
+      "correta": 0,
+      "explicacao": "Scores ajudam estratificar risco na dor torácica.",
+      "tempo_max": 20
+    },
+    {
+      "id": "DTC_MED_007",
+      "especialidade": "MEDICO",
+      "dificuldade": "INTERMEDIARIO",
+      "enunciado": "Troponina seriada é necessária porque:",
+      "opcoes": [
+        "Pode estar normal no início e elevar depois",
+        "Sempre positiva na chegada",
+        "Não muda",
+        "Só em STEMI"
+      ],
+      "correta": 0,
+      "explicacao": "Cinética da troponina exige seriadas em muitos fluxos.",
+      "tempo_max": 20
+    },
+    {
+      "id": "DTC_MED_008",
+      "especialidade": "MEDICO",
+      "dificuldade": "INTERMEDIARIO",
+      "enunciado": "Causas perigosas de dor torácica incluem:",
+      "opcoes": [
+        "SCA, dissecção aórtica, TEP, pneumotórax hipertensivo",
+        "Gastrite leve apenas",
+        "Dermatite",
+        "Rinite"
+      ],
+      "correta": 0,
+      "explicacao": "Diferenciais críticos devem ser considerados.",
+      "tempo_max": 20
+    },
+    {
+      "id": "DTC_MED_009",
+      "especialidade": "MEDICO",
+      "dificuldade": "INTERMEDIARIO",
+      "enunciado": "Nitroglicerina é contraindicada em:",
+      "opcoes": [
+        "Hipotensão importante e uso recente de inibidor PDE5",
+        "Qualquer dor",
+        "Hipertensão leve",
+        "Tosse"
+      ],
+      "correta": 0,
+      "explicacao": "Risco de hipotensão grave em cenários específicos.",
+      "tempo_max": 20
+    },
+    {
+      "id": "DTC_MED_010",
+      "especialidade": "MEDICO",
+      "dificuldade": "INTERMEDIARIO",
+      "enunciado": "Em STEMI, meta de tempo porta-balão costuma ser:",
+      "opcoes": [
+        "Minimizar (ex.: ≤90 min conforme metas locais)",
+        "≥6h",
+        "Não importa",
+        "Apenas após 24h"
+      ],
+      "correta": 0,
+      "explicacao": "Metas de tempo reduzem mortalidade.",
+      "tempo_max": 20
+    },
+    {
+      "id": "DTC_MED_011",
+      "especialidade": "MEDICO",
+      "dificuldade": "INTERMEDIARIO",
+      "enunciado": "Em suspeita de pericardite, achado pode ser:",
+      "opcoes": [
+        "Dor que melhora ao sentar inclinado",
+        "Dor piora com exercício sempre",
+        "Febre ausente sempre",
+        "Dor no pé"
+      ],
+      "correta": 0,
+      "explicacao": "Pericardite: dor posicional/pleurítica em muitos casos.",
+      "tempo_max": 20
+    },
+    {
+      "id": "DTC_MED_012",
+      "especialidade": "MEDICO",
+      "dificuldade": "INTERMEDIARIO",
+      "enunciado": "Em TEP, exame confirmatório depende de:",
+      "opcoes": [
+        "Probabilidade clínica + angioTC/USG e protocolo",
+        "Somente ECG",
+        "Somente troponina",
+        "Somente raio-x"
+      ],
+      "correta": 0,
+      "explicacao": "Diagnóstico depende de probabilidade e imagem.",
+      "tempo_max": 20
+    },
+    {
+      "id": "DTC_MED_013",
+      "especialidade": "MEDICO",
+      "dificuldade": "AVANCADO",
+      "enunciado": "Em choque cardiogênico, conduta inicial inclui:",
+      "opcoes": [
+        "Suporte hemodinâmico e reperfusão quando indicada",
+        "Alta",
+        "Aguardar 6h",
+        "Somente analgesia"
+      ],
+      "correta": 0,
+      "explicacao": "Choque cardiogênico é emergência.",
+      "tempo_max": 20
+    },
+    {
+      "id": "DTC_MED_014",
+      "especialidade": "MEDICO",
+      "dificuldade": "AVANCADO",
+      "enunciado": "Um erro de fluxo é:",
+      "opcoes": [
+        "Atrasar ECG esperando exames",
+        "ECG precoce",
+        "Ativar hemodinâmica",
+        "Monitorizar"
+      ],
+      "correta": 0,
+      "explicacao": "ECG é prioridade e não deve atrasar.",
+      "tempo_max": 20
+    },
+    {
+      "id": "DTC_MED_015",
+      "especialidade": "MEDICO",
+      "dificuldade": "AVANCADO",
+      "enunciado": "Em dor torácica com suspeita de dissecção, anticoagulação deve ser:",
+      "opcoes": [
+        "Evitada até excluir dissecção",
+        "Administrada imediatamente sempre",
+        "Irrelevante",
+        "Obrigatória"
+      ],
+      "correta": 0,
+      "explicacao": "Dissecção muda conduta; excluir antes de anticoagular.",
+      "tempo_max": 20
+    },
+    {
+      "id": "DTC_MED_016",
+      "especialidade": "MEDICO",
+      "dificuldade": "AVANCADO",
+      "enunciado": "Angina instável/NSTEMI pode requerer:",
+      "opcoes": [
+        "Antiagregação/anticoagulação e estratégia invasiva conforme risco",
+        "Somente antibiótico",
+        "Alta sempre",
+        "Somente oxigênio"
+      ],
+      "correta": 0,
+      "explicacao": "Estratégia depende de risco/fluxo.",
+      "tempo_max": 20
+    },
+    {
+      "id": "DTC_MED_017",
+      "especialidade": "MEDICO",
+      "dificuldade": "AVANCADO",
+      "enunciado": "Em pneumotórax hipertensivo, pista clínica é:",
+      "opcoes": [
+        "Dispneia grave, hipotensão e desvio traqueal (às vezes)",
+        "Prurido",
+        "Cólica",
+        "Cefaleia leve"
+      ],
+      "correta": 0,
+      "explicacao": "É causa crítica de dor/dispneia e choque.",
+      "tempo_max": 20
+    },
+    {
+      "id": "DTC_MED_018",
+      "especialidade": "MEDICO",
+      "dificuldade": "AVANCADO",
+      "enunciado": "Na dor torácica, avaliação inclui:",
+      "opcoes": [
+        "ECG seriado se sintomas persistem",
+        "Apenas um ECG",
+        "Nunca repetir",
+        "Só depois da alta"
+      ],
+      "correta": 0,
+      "explicacao": "ECG pode mudar; repetir conforme evolução.",
+      "tempo_max": 20
+    },
+    {
+      "id": "DTC_MED_019",
+      "especialidade": "MEDICO",
+      "dificuldade": "AVANCADO",
+      "enunciado": "Em suspeita de SCA, analgesia deve:",
+      "opcoes": [
+        "Não atrasar terapia principal e ser monitorizada",
+        "Ser única conduta",
+        "Substituir reperfusão",
+        "Evitar sempre"
+      ],
+      "correta": 0,
+      "explicacao": "Analgesia é adjuvante; terapia definitiva é central.",
+      "tempo_max": 20
+    },
+    {
+      "id": "DTC_MED_020",
+      "especialidade": "MEDICO",
+      "dificuldade": "AVANCADO",
+      "enunciado": "Um objetivo de segurança é reconhecer:",
+      "opcoes": [
+        "Causas fatais de dor torácica além de SCA",
+        "Somente gastrite",
+        "Somente ansiedade",
+        "Somente trauma"
+      ],
+      "correta": 0,
+      "explicacao": "Diferenciais críticos devem ser lembrados.",
+      "tempo_max": 20
+    },
+    {
+      "id": "DTC_MED_021",
+      "especialidade": "MEDICO",
+      "dificuldade": "BASICO",
+      "enunciado": "Conduta imediata em STEMI inclui: (variação)",
+      "opcoes": [
+        "Ativar reperfusão (hemodinâmica/trombólise conforme protocolo)",
+        "Aguardar troponina",
+        "Alta",
+        "Antibiótico"
+      ],
+      "correta": 0,
+      "explicacao": "Tempo para reperfusão é crítico.",
+      "tempo_max": 20
+    },
+    {
+      "id": "DTC_MED_022",
+      "especialidade": "MEDICO",
+      "dificuldade": "INTERMEDIARIO",
+      "enunciado": "Troponina seriada é necessária porque: (variação)",
+      "opcoes": [
+        "Pode estar normal no início e elevar depois",
+        "Sempre positiva na chegada",
+        "Não muda",
+        "Só em STEMI"
+      ],
+      "correta": 0,
+      "explicacao": "Cinética da troponina exige seriadas em muitos fluxos.",
+      "tempo_max": 20
+    },
+    {
+      "id": "DTC_MED_023",
+      "especialidade": "MEDICO",
+      "dificuldade": "INTERMEDIARIO",
+      "enunciado": "Em STEMI, meta de tempo porta-balão costuma ser: (variação)",
+      "opcoes": [
+        "Minimizar (ex.: ≤90 min conforme metas locais)",
+        "≥6h",
+        "Não importa",
+        "Apenas após 24h"
+      ],
+      "correta": 0,
+      "explicacao": "Metas de tempo reduzem mortalidade.",
+      "tempo_max": 20
+    },
+    {
+      "id": "DTC_MED_024",
+      "especialidade": "MEDICO",
+      "dificuldade": "INTERMEDIARIO",
+      "enunciado": "Nitroglicerina é contraindicada em: (variação)",
+      "opcoes": [
+        "Hipotensão importante e uso recente de inibidor PDE5",
+        "Qualquer dor",
+        "Hipertensão leve",
+        "Tosse"
+      ],
+      "correta": 0,
+      "explicacao": "Risco de hipotensão grave em cenários específicos.",
+      "tempo_max": 20
+    },
+    {
+      "id": "DTC_MED_025",
+      "especialidade": "MEDICO",
+      "dificuldade": "AVANCADO",
+      "enunciado": "Em suspeita de SCA, analgesia deve: (variação)",
+      "opcoes": [
+        "Não atrasar terapia principal e ser monitorizada",
+        "Ser única conduta",
+        "Substituir reperfusão",
+        "Evitar sempre"
+      ],
+      "correta": 0,
+      "explicacao": "Analgesia é adjuvante; terapia definitiva é central.",
+      "tempo_max": 20
+    },
+    {
+      "id": "DTC_TEC_001",
+      "especialidade": "TECNICO",
+      "dificuldade": "BASICO",
+      "enunciado": "Dor torácica: sua prioridade é levar o paciente para ECG em:",
+      "opcoes": [
+        "Até 10 minutos",
+        "1 hora",
+        "2 horas",
+        "Somente se piorar"
+      ],
+      "correta": 0,
+      "explicacao": "ECG precoce é meta do fluxo.",
+      "tempo_max": 20
+    },
+    {
+      "id": "DTC_TEC_002",
+      "especialidade": "TECNICO",
+      "dificuldade": "BASICO",
+      "enunciado": "Enquanto aguarda ECG, você deve:",
+      "opcoes": [
+        "Monitorizar sinais vitais e avisar se instável",
+        "Dar alimento",
+        "Deixar caminhar",
+        "Aguardar sem checar"
+      ],
+      "correta": 0,
+      "explicacao": "Monitorização identifica instabilidade.",
+      "tempo_max": 20
+    },
+    {
+      "id": "DTC_TEC_003",
+      "especialidade": "TECNICO",
+      "dificuldade": "BASICO",
+      "enunciado": "Qual sinal sugere gravidade e deve ser comunicado?",
+      "opcoes": [
+        "Hipotensão e sudorese fria",
+        "Prurido",
+        "Dor no pé",
+        "Rinite"
+      ],
+      "correta": 0,
+      "explicacao": "Sinais de choque/instabilidade são críticos.",
+      "tempo_max": 20
+    },
+    {
+      "id": "DTC_TEC_004",
+      "especialidade": "TECNICO",
+      "dificuldade": "BASICO",
+      "enunciado": "Acesso venoso é importante porque:",
+      "opcoes": [
+        "Permite medicações e coleta rápida",
+        "Serve só para soro",
+        "Não ajuda",
+        "Só na alta"
+      ],
+      "correta": 0,
+      "explicacao": "Agiliza terapias e exames.",
+      "tempo_max": 20
+    },
+    {
+      "id": "DTC_TEC_005",
+      "especialidade": "TECNICO",
+      "dificuldade": "INTERMEDIARIO",
+      "enunciado": "Se o paciente desmaia/síncope com dor, você deve:",
+      "opcoes": [
+        "Acionar equipe imediatamente e checar ABC",
+        "Ignorar",
+        "Dar água",
+        "Aguardar"
+      ],
+      "correta": 0,
+      "explicacao": "Síncope pode indicar gravidade.",
+      "tempo_max": 20
+    },
+    {
+      "id": "DTC_TEC_006",
+      "especialidade": "TECNICO",
+      "dificuldade": "INTERMEDIARIO",
+      "enunciado": "Após nitrato, você deve checar:",
+      "opcoes": [
+        "PA e sintomas (risco de hipotensão)",
+        "Somente temperatura",
+        "Somente diurese",
+        "Somente fome"
+      ],
+      "correta": 0,
+      "explicacao": "Nitrato pode reduzir PA.",
+      "tempo_max": 20
+    },
+    {
+      "id": "DTC_TEC_007",
+      "especialidade": "TECNICO",
+      "dificuldade": "INTERMEDIARIO",
+      "enunciado": "Se dor e dispneia pioram, sua ação é:",
+      "opcoes": [
+        "Avisar equipe e intensificar vigilância",
+        "Aguardar 6h",
+        "Alta",
+        "Somente analgesia"
+      ],
+      "correta": 0,
+      "explicacao": "Piora clínica exige resposta imediata.",
+      "tempo_max": 20
+    },
+    {
+      "id": "DTC_TEC_008",
+      "especialidade": "TECNICO",
+      "dificuldade": "AVANCADO",
+      "enunciado": "Se paciente apresenta parada, prioridade é:",
+      "opcoes": [
+        "RCP e acionamento de suporte avançado",
+        "Aguardar ECG",
+        "Dar alimento",
+        "Transferir sem compressões"
+      ],
+      "correta": 0,
+      "explicacao": "PCR é emergência imediata.",
+      "tempo_max": 20
+    },
+    {
+      "id": "DTC_TEC_009",
+      "especialidade": "TECNICO",
+      "dificuldade": "AVANCADO",
+      "enunciado": "Uma ação que evita erro é:",
+      "opcoes": [
+        "Identificação correta antes de medicação/coleta",
+        "Trocar pulseira",
+        "Aplicar sem conferir",
+        "Ignorar alergias"
+      ],
+      "correta": 0,
+      "explicacao": "Segurança do paciente.",
+      "tempo_max": 20
+    },
+    {
+      "id": "DTC_TEC_010",
+      "especialidade": "TECNICO",
+      "dificuldade": "BASICO",
+      "enunciado": "Enquanto aguarda ECG, você deve: (variação)",
+      "opcoes": [
+        "Monitorizar sinais vitais e avisar se instável",
+        "Dar alimento",
+        "Deixar caminhar",
+        "Aguardar sem checar"
+      ],
+      "correta": 0,
+      "explicacao": "Monitorização identifica instabilidade.",
+      "tempo_max": 20
+    },
+    {
+      "id": "DTC_TEC_011",
+      "especialidade": "TECNICO",
+      "dificuldade": "BASICO",
+      "enunciado": "Enquanto aguarda ECG, você deve: (variação)",
+      "opcoes": [
+        "Monitorizar sinais vitais e avisar se instável",
+        "Dar alimento",
+        "Deixar caminhar",
+        "Aguardar sem checar"
+      ],
+      "correta": 0,
+      "explicacao": "Monitorização identifica instabilidade.",
+      "tempo_max": 20
+    },
+    {
+      "id": "DTC_TEC_012",
+      "especialidade": "TECNICO",
+      "dificuldade": "INTERMEDIARIO",
+      "enunciado": "Se o paciente desmaia/síncope com dor, você deve: (variação)",
+      "opcoes": [
+        "Acionar equipe imediatamente e checar ABC",
+        "Ignorar",
+        "Dar água",
+        "Aguardar"
+      ],
+      "correta": 0,
+      "explicacao": "Síncope pode indicar gravidade.",
+      "tempo_max": 20
+    },
+    {
+      "id": "DTC_TEC_013",
+      "especialidade": "TECNICO",
+      "dificuldade": "BASICO",
+      "enunciado": "Enquanto aguarda ECG, você deve: (variação) (variação)",
+      "opcoes": [
+        "Monitorizar sinais vitais e avisar se instável",
+        "Dar alimento",
+        "Deixar caminhar",
+        "Aguardar sem checar"
+      ],
+      "correta": 0,
+      "explicacao": "Monitorização identifica instabilidade.",
+      "tempo_max": 20
+    },
+    {
+      "id": "DTC_TEC_014",
+      "especialidade": "TECNICO",
+      "dificuldade": "AVANCADO",
+      "enunciado": "Uma ação que evita erro é: (variação)",
+      "opcoes": [
+        "Identificação correta antes de medicação/coleta",
+        "Trocar pulseira",
+        "Aplicar sem conferir",
+        "Ignorar alergias"
+      ],
+      "correta": 0,
+      "explicacao": "Segurança do paciente.",
+      "tempo_max": 20
+    },
+    {
+      "id": "DTC_TEC_015",
+      "especialidade": "TECNICO",
+      "dificuldade": "BASICO",
+      "enunciado": "Enquanto aguarda ECG, você deve: (variação) (variação)",
+      "opcoes": [
+        "Monitorizar sinais vitais e avisar se instável",
+        "Dar alimento",
+        "Deixar caminhar",
+        "Aguardar sem checar"
+      ],
+      "correta": 0,
+      "explicacao": "Monitorização identifica instabilidade.",
+      "tempo_max": 20
+    },
+    {
+      "id": "DTC_TEC_016",
+      "especialidade": "TECNICO",
+      "dificuldade": "BASICO",
+      "enunciado": "Enquanto aguarda ECG, você deve: (variação) (variação)",
+      "opcoes": [
+        "Monitorizar sinais vitais e avisar se instável",
+        "Dar alimento",
+        "Deixar caminhar",
+        "Aguardar sem checar"
+      ],
+      "correta": 0,
+      "explicacao": "Monitorização identifica instabilidade.",
+      "tempo_max": 20
+    },
+    {
+      "id": "DTC_TEC_017",
+      "especialidade": "TECNICO",
+      "dificuldade": "AVANCADO",
+      "enunciado": "Uma ação que evita erro é: (variação) (variação)",
+      "opcoes": [
+        "Identificação correta antes de medicação/coleta",
+        "Trocar pulseira",
+        "Aplicar sem conferir",
+        "Ignorar alergias"
+      ],
+      "correta": 0,
+      "explicacao": "Segurança do paciente.",
+      "tempo_max": 20
+    },
+    {
+      "id": "DTC_TEC_018",
+      "especialidade": "TECNICO",
+      "dificuldade": "AVANCADO",
+      "enunciado": "Uma ação que evita erro é: (variação)",
+      "opcoes": [
+        "Identificação correta antes de medicação/coleta",
+        "Trocar pulseira",
+        "Aplicar sem conferir",
+        "Ignorar alergias"
+      ],
+      "correta": 0,
+      "explicacao": "Segurança do paciente.",
+      "tempo_max": 20
+    },
+    {
+      "id": "DTC_TEC_019",
+      "especialidade": "TECNICO",
+      "dificuldade": "INTERMEDIARIO",
+      "enunciado": "Se dor e dispneia pioram, sua ação é: (variação)",
+      "opcoes": [
+        "Avisar equipe e intensificar vigilância",
+        "Aguardar 6h",
+        "Alta",
+        "Somente analgesia"
+      ],
+      "correta": 0,
+      "explicacao": "Piora clínica exige resposta imediata.",
+      "tempo_max": 20
+    },
+    {
+      "id": "DTC_TEC_020",
+      "especialidade": "TECNICO",
+      "dificuldade": "BASICO",
+      "enunciado": "Enquanto aguarda ECG, você deve: (variação) (variação)",
+      "opcoes": [
+        "Monitorizar sinais vitais e avisar se instável",
+        "Dar alimento",
+        "Deixar caminhar",
+        "Aguardar sem checar"
+      ],
+      "correta": 0,
+      "explicacao": "Monitorização identifica instabilidade.",
+      "tempo_max": 20
+    },
+    {
+      "id": "DTC_TEC_021",
+      "especialidade": "TECNICO",
+      "dificuldade": "BASICO",
+      "enunciado": "Enquanto aguarda ECG, você deve: (variação) (variação)",
+      "opcoes": [
+        "Monitorizar sinais vitais e avisar se instável",
+        "Dar alimento",
+        "Deixar caminhar",
+        "Aguardar sem checar"
+      ],
+      "correta": 0,
+      "explicacao": "Monitorização identifica instabilidade.",
+      "tempo_max": 20
+    },
+    {
+      "id": "DTC_TEC_022",
+      "especialidade": "TECNICO",
+      "dificuldade": "BASICO",
+      "enunciado": "Enquanto aguarda ECG, você deve: (variação) (variação) (variação)",
+      "opcoes": [
+        "Monitorizar sinais vitais e avisar se instável",
+        "Dar alimento",
+        "Deixar caminhar",
+        "Aguardar sem checar"
+      ],
+      "correta": 0,
+      "explicacao": "Monitorização identifica instabilidade.",
+      "tempo_max": 20
+    },
+    {
+      "id": "DTC_TEC_023",
+      "especialidade": "TECNICO",
+      "dificuldade": "INTERMEDIARIO",
+      "enunciado": "Se o paciente desmaia/síncope com dor, você deve: (variação) (variação)",
+      "opcoes": [
+        "Acionar equipe imediatamente e checar ABC",
+        "Ignorar",
+        "Dar água",
+        "Aguardar"
+      ],
+      "correta": 0,
+      "explicacao": "Síncope pode indicar gravidade.",
+      "tempo_max": 20
+    },
+    {
+      "id": "DTC_TEC_024",
+      "especialidade": "TECNICO",
+      "dificuldade": "BASICO",
+      "enunciado": "Dor torácica: sua prioridade é levar o paciente para ECG em: (variação)",
+      "opcoes": [
+        "Até 10 minutos",
+        "1 hora",
+        "2 horas",
+        "Somente se piorar"
+      ],
+      "correta": 0,
+      "explicacao": "ECG precoce é meta do fluxo.",
+      "tempo_max": 20
+    },
+    {
+      "id": "DTC_TEC_025",
+      "especialidade": "TECNICO",
+      "dificuldade": "BASICO",
+      "enunciado": "Enquanto aguarda ECG, você deve: (variação) (variação)",
+      "opcoes": [
+        "Monitorizar sinais vitais e avisar se instável",
+        "Dar alimento",
+        "Deixar caminhar",
+        "Aguardar sem checar"
+      ],
+      "correta": 0,
+      "explicacao": "Monitorização identifica instabilidade.",
+      "tempo_max": 20
+    },
+    {
+      "id": "DTC_MUL_001",
+      "especialidade": "MULTI",
+      "dificuldade": "BASICO",
+      "enunciado": "No fluxo de dor torácica, o passo inicial mais crítico é:",
+      "opcoes": [
+        "ECG rápido e avaliação ABC",
+        "Aguardar troponina",
+        "Dar dieta",
+        "Dar alta"
+      ],
+      "correta": 0,
+      "explicacao": "ECG precoce + estabilização são centrais.",
+      "tempo_max": 20
+    },
+    {
+      "id": "DTC_MUL_002",
+      "especialidade": "MULTI",
+      "dificuldade": "INTERMEDIARIO",
+      "enunciado": "Supra de ST no ECG exige:",
+      "opcoes": [
+        "Ativar reperfusão imediatamente conforme protocolo",
+        "Aguardar 6h",
+        "Somente analgesia",
+        "Apenas repetir troponina"
+      ],
+      "correta": 0,
+      "explicacao": "STEMI é tempo-dependente.",
+      "tempo_max": 20
+    },
+    {
+      "id": "DTC_MUL_003",
+      "especialidade": "MULTI",
+      "dificuldade": "INTERMEDIARIO",
+      "enunciado": "Troponina deve ser interpretada com:",
+      "opcoes": [
+        "Cinética/seriada e quadro clínico",
+        "Uma coleta basta sempre",
+        "Somente ECG",
+        "Somente raio-x"
+      ],
+      "correta": 0,
+      "explicacao": "Cinética e clínica são essenciais.",
+      "tempo_max": 20
+    },
+    {
+      "id": "DTC_MUL_004",
+      "especialidade": "MULTI",
+      "dificuldade": "AVANCADO",
+      "enunciado": "Diferenciais fatais de dor torácica incluem:",
+      "opcoes": [
+        "SCA, dissecção, TEP, pneumotórax hipertensivo",
+        "Gastrite leve apenas",
+        "Dermatite",
+        "Rinite"
+      ],
+      "correta": 0,
+      "explicacao": "Lista de emergências deve ser lembrada.",
+      "tempo_max": 20
+    },
+    {
+      "id": "DTC_MUL_005",
+      "especialidade": "MULTI",
+      "dificuldade": "AVANCADO",
+      "enunciado": "Meta de qualidade comum no fluxo é reduzir:",
+      "opcoes": [
+        "Porta-ECG e porta-reperfusão",
+        "Tempo de visita",
+        "Tempo de jejum",
+        "Tempo de cadastro"
+      ],
+      "correta": 0,
+      "explicacao": "Metas de tempo melhoram desfechos.",
+      "tempo_max": 20
+    },
+    {
+      "id": "DTC_MUL_006",
+      "especialidade": "MULTI",
+      "dificuldade": "AVANCADO",
+      "enunciado": "Diferenciais fatais de dor torácica incluem: (variação)",
+      "opcoes": [
+        "SCA, dissecção, TEP, pneumotórax hipertensivo",
+        "Gastrite leve apenas",
+        "Dermatite",
+        "Rinite"
+      ],
+      "correta": 0,
+      "explicacao": "Lista de emergências deve ser lembrada.",
+      "tempo_max": 20
+    },
+    {
+      "id": "DTC_MUL_007",
+      "especialidade": "MULTI",
+      "dificuldade": "AVANCADO",
+      "enunciado": "Meta de qualidade comum no fluxo é reduzir: (variação)",
+      "opcoes": [
+        "Porta-ECG e porta-reperfusão",
+        "Tempo de visita",
+        "Tempo de jejum",
+        "Tempo de cadastro"
+      ],
+      "correta": 0,
+      "explicacao": "Metas de tempo melhoram desfechos.",
+      "tempo_max": 20
+    },
+    {
+      "id": "DTC_MUL_008",
+      "especialidade": "MULTI",
+      "dificuldade": "INTERMEDIARIO",
+      "enunciado": "Supra de ST no ECG exige: (variação)",
+      "opcoes": [
+        "Ativar reperfusão imediatamente conforme protocolo",
+        "Aguardar 6h",
+        "Somente analgesia",
+        "Apenas repetir troponina"
+      ],
+      "correta": 0,
+      "explicacao": "STEMI é tempo-dependente.",
+      "tempo_max": 20
+    },
+    {
+      "id": "DTC_MUL_009",
+      "especialidade": "MULTI",
+      "dificuldade": "AVANCADO",
+      "enunciado": "Meta de qualidade comum no fluxo é reduzir: (variação)",
+      "opcoes": [
+        "Porta-ECG e porta-reperfusão",
+        "Tempo de visita",
+        "Tempo de jejum",
+        "Tempo de cadastro"
+      ],
+      "correta": 0,
+      "explicacao": "Metas de tempo melhoram desfechos.",
+      "tempo_max": 20
+    },
+    {
+      "id": "DTC_MUL_010",
+      "especialidade": "MULTI",
+      "dificuldade": "INTERMEDIARIO",
+      "enunciado": "Supra de ST no ECG exige: (variação)",
+      "opcoes": [
+        "Ativar reperfusão imediatamente conforme protocolo",
+        "Aguardar 6h",
+        "Somente analgesia",
+        "Apenas repetir troponina"
+      ],
+      "correta": 0,
+      "explicacao": "STEMI é tempo-dependente.",
+      "tempo_max": 20
+    },
+    {
+      "id": "DTC_MUL_011",
+      "especialidade": "MULTI",
+      "dificuldade": "AVANCADO",
+      "enunciado": "Diferenciais fatais de dor torácica incluem: (variação)",
+      "opcoes": [
+        "SCA, dissecção, TEP, pneumotórax hipertensivo",
+        "Gastrite leve apenas",
+        "Dermatite",
+        "Rinite"
+      ],
+      "correta": 0,
+      "explicacao": "Lista de emergências deve ser lembrada.",
+      "tempo_max": 20
+    },
+    {
+      "id": "DTC_MUL_012",
+      "especialidade": "MULTI",
+      "dificuldade": "INTERMEDIARIO",
+      "enunciado": "Troponina deve ser interpretada com: (variação)",
+      "opcoes": [
+        "Cinética/seriada e quadro clínico",
+        "Uma coleta basta sempre",
+        "Somente ECG",
+        "Somente raio-x"
+      ],
+      "correta": 0,
+      "explicacao": "Cinética e clínica são essenciais.",
+      "tempo_max": 20
+    },
+    {
+      "id": "DTC_MUL_013",
+      "especialidade": "MULTI",
+      "dificuldade": "INTERMEDIARIO",
+      "enunciado": "Supra de ST no ECG exige: (variação)",
+      "opcoes": [
+        "Ativar reperfusão imediatamente conforme protocolo",
+        "Aguardar 6h",
+        "Somente analgesia",
+        "Apenas repetir troponina"
+      ],
+      "correta": 0,
+      "explicacao": "STEMI é tempo-dependente.",
+      "tempo_max": 20
+    },
+    {
+      "id": "DTC_MUL_014",
+      "especialidade": "MULTI",
+      "dificuldade": "BASICO",
+      "enunciado": "No fluxo de dor torácica, o passo inicial mais crítico é: (variação)",
+      "opcoes": [
+        "ECG rápido e avaliação ABC",
+        "Aguardar troponina",
+        "Dar dieta",
+        "Dar alta"
+      ],
+      "correta": 0,
+      "explicacao": "ECG precoce + estabilização são centrais.",
+      "tempo_max": 20
+    },
+    {
+      "id": "DTC_MUL_015",
+      "especialidade": "MULTI",
+      "dificuldade": "BASICO",
+      "enunciado": "No fluxo de dor torácica, o passo inicial mais crítico é: (variação)",
+      "opcoes": [
+        "ECG rápido e avaliação ABC",
+        "Aguardar troponina",
+        "Dar dieta",
+        "Dar alta"
+      ],
+      "correta": 0,
+      "explicacao": "ECG precoce + estabilização são centrais.",
+      "tempo_max": 20
+    },
+    {
+      "id": "DTC_MUL_016",
+      "especialidade": "MULTI",
+      "dificuldade": "INTERMEDIARIO",
+      "enunciado": "Troponina deve ser interpretada com: (variação)",
+      "opcoes": [
+        "Cinética/seriada e quadro clínico",
+        "Uma coleta basta sempre",
+        "Somente ECG",
+        "Somente raio-x"
+      ],
+      "correta": 0,
+      "explicacao": "Cinética e clínica são essenciais.",
+      "tempo_max": 20
+    },
+    {
+      "id": "DTC_MUL_017",
+      "especialidade": "MULTI",
+      "dificuldade": "AVANCADO",
+      "enunciado": "Diferenciais fatais de dor torácica incluem: (variação)",
+      "opcoes": [
+        "SCA, dissecção, TEP, pneumotórax hipertensivo",
+        "Gastrite leve apenas",
+        "Dermatite",
+        "Rinite"
+      ],
+      "correta": 0,
+      "explicacao": "Lista de emergências deve ser lembrada.",
+      "tempo_max": 20
+    },
+    {
+      "id": "DTC_MUL_018",
+      "especialidade": "MULTI",
+      "dificuldade": "INTERMEDIARIO",
+      "enunciado": "Troponina deve ser interpretada com: (variação)",
+      "opcoes": [
+        "Cinética/seriada e quadro clínico",
+        "Uma coleta basta sempre",
+        "Somente ECG",
+        "Somente raio-x"
+      ],
+      "correta": 0,
+      "explicacao": "Cinética e clínica são essenciais.",
+      "tempo_max": 20
+    },
+    {
+      "id": "DTC_MUL_019",
+      "especialidade": "MULTI",
+      "dificuldade": "BASICO",
+      "enunciado": "No fluxo de dor torácica, o passo inicial mais crítico é: (variação)",
+      "opcoes": [
+        "ECG rápido e avaliação ABC",
+        "Aguardar troponina",
+        "Dar dieta",
+        "Dar alta"
+      ],
+      "correta": 0,
+      "explicacao": "ECG precoce + estabilização são centrais.",
+      "tempo_max": 20
+    },
+    {
+      "id": "DTC_MUL_020",
+      "especialidade": "MULTI",
+      "dificuldade": "AVANCADO",
+      "enunciado": "Diferenciais fatais de dor torácica incluem: (variação)",
+      "opcoes": [
+        "SCA, dissecção, TEP, pneumotórax hipertensivo",
+        "Gastrite leve apenas",
+        "Dermatite",
+        "Rinite"
+      ],
+      "correta": 0,
+      "explicacao": "Lista de emergências deve ser lembrada.",
+      "tempo_max": 20
+    },
+    {
+      "id": "DTC_MUL_021",
+      "especialidade": "MULTI",
+      "dificuldade": "AVANCADO",
+      "enunciado": "Meta de qualidade comum no fluxo é reduzir: (variação)",
+      "opcoes": [
+        "Porta-ECG e porta-reperfusão",
+        "Tempo de visita",
+        "Tempo de jejum",
+        "Tempo de cadastro"
+      ],
+      "correta": 0,
+      "explicacao": "Metas de tempo melhoram desfechos.",
+      "tempo_max": 20
+    },
+    {
+      "id": "DTC_MUL_022",
+      "especialidade": "MULTI",
+      "dificuldade": "BASICO",
+      "enunciado": "No fluxo de dor torácica, o passo inicial mais crítico é: (variação)",
+      "opcoes": [
+        "ECG rápido e avaliação ABC",
+        "Aguardar troponina",
+        "Dar dieta",
+        "Dar alta"
+      ],
+      "correta": 0,
+      "explicacao": "ECG precoce + estabilização são centrais.",
+      "tempo_max": 20
+    },
+    {
+      "id": "DTC_MUL_023",
+      "especialidade": "MULTI",
+      "dificuldade": "INTERMEDIARIO",
+      "enunciado": "Supra de ST no ECG exige: (variação)",
+      "opcoes": [
+        "Ativar reperfusão imediatamente conforme protocolo",
+        "Aguardar 6h",
+        "Somente analgesia",
+        "Apenas repetir troponina"
+      ],
+      "correta": 0,
+      "explicacao": "STEMI é tempo-dependente.",
+      "tempo_max": 20
+    },
+    {
+      "id": "DTC_MUL_024",
+      "especialidade": "MULTI",
+      "dificuldade": "INTERMEDIARIO",
+      "enunciado": "Supra de ST no ECG exige: (variação)",
+      "opcoes": [
+        "Ativar reperfusão imediatamente conforme protocolo",
+        "Aguardar 6h",
+        "Somente analgesia",
+        "Apenas repetir troponina"
+      ],
+      "correta": 0,
+      "explicacao": "STEMI é tempo-dependente.",
+      "tempo_max": 20
+    },
+    {
+      "id": "DTC_MUL_025",
+      "especialidade": "MULTI",
+      "dificuldade": "INTERMEDIARIO",
+      "enunciado": "Supra de ST no ECG exige: (variação)",
+      "opcoes": [
+        "Ativar reperfusão imediatamente conforme protocolo",
+        "Aguardar 6h",
+        "Somente analgesia",
+        "Apenas repetir troponina"
+      ],
+      "correta": 0,
+      "explicacao": "STEMI é tempo-dependente.",
+      "tempo_max": 20
+    }
+  ]
+}

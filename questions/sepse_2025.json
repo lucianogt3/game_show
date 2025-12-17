@@ -1,0 +1,1540 @@
+{
+  "meta": {
+    "tema": "SEPSE",
+    "versao": "2025.12",
+    "descricao": "Banco de questões para treinamento estilo arcade (Sepse). Ajuste conforme protocolo institucional.",
+    "referencias": [
+      {
+        "titulo": "Surviving Sepsis Campaign – Hour-1 Bundle (measure lactate; obtain cultures; antibiotics; fluids; vasopressors if needed)",
+        "fonte": "SCCM/SSC",
+        "source_ref": "turn0search8"
+      },
+      {
+        "titulo": "Surviving Sepsis Campaign 2021 – fluid 30 mL/kg suggestion; early management principles",
+        "fonte": "SSC 2021",
+        "source_ref": "turn0search4"
+      },
+      {
+        "titulo": "Exemplo de protocolo brasileiro (2025) – rotinas e responsabilidades por categoria (bundle/6h)",
+        "fonte": "Protocolo Brasil",
+        "source_ref": "turn0search5"
+      }
+    ],
+    "schema": {
+      "especialidade": [
+        "ENFERMEIRO",
+        "MEDICO",
+        "TECNICO",
+        "MULTI"
+      ],
+      "dificuldade": [
+        "BASICO",
+        "INTERMEDIARIO",
+        "AVANCANCADO"
+      ]
+    },
+    "total_questoes": 100
+  },
+  "questoes": [
+    {
+      "id": "SEP_ENF_001",
+      "especialidade": "ENFERMEIRO",
+      "dificuldade": "BASICO",
+      "enunciado": "Na suspeita de sepse, qual atitude imediata é mais alinhada ao bundle inicial?",
+      "opcoes": [
+        "Aguardar exames para confirmar",
+        "Acionar protocolo/bundle e iniciar monitorização",
+        "Administrar antitérmico e liberar",
+        "Ofertar oxigênio e observar"
+      ],
+      "correta": 1,
+      "explicacao": "Tempo é crítico: acionar protocolo e iniciar medidas iniciais/monitorização.",
+      "tempo_max": 20
+    },
+    {
+      "id": "SEP_ENF_002",
+      "especialidade": "ENFERMEIRO",
+      "dificuldade": "BASICO",
+      "enunciado": "Qual achado sugere deterioração perfusional e deve ser comunicado de imediato?",
+      "opcoes": [
+        "PA baixa/taquicardia com alteração do nível de consciência",
+        "Prurido leve",
+        "Dor muscular pós-esforço",
+        "Náusea isolada após alimentação"
+      ],
+      "correta": 0,
+      "explicacao": "Instabilidade hemodinâmica e alteração de sensório são alertas de gravidade.",
+      "tempo_max": 20
+    },
+    {
+      "id": "SEP_ENF_003",
+      "especialidade": "ENFERMEIRO",
+      "dificuldade": "BASICO",
+      "enunciado": "No fluxo de sepse, qual exame é usado precocemente para estratificar gravidade/perfusão?",
+      "opcoes": [
+        "Lactato",
+        "TSH",
+        "Vitamina D",
+        "Ácido úrico"
+      ],
+      "correta": 0,
+      "explicacao": "Lactato auxilia a identificar hipoperfusão/gravidade e acompanhar resposta.",
+      "tempo_max": 20
+    },
+    {
+      "id": "SEP_ENF_004",
+      "especialidade": "ENFERMEIRO",
+      "dificuldade": "BASICO",
+      "enunciado": "Antes do antibiótico, quando possível sem atrasar, recomenda-se:",
+      "opcoes": [
+        "Coletar hemoculturas/culturas",
+        "Administrar analgésico e aguardar",
+        "Trocar curativo e observar",
+        "Liberar dieta"
+      ],
+      "correta": 0,
+      "explicacao": "Culturas antes do antibiótico, sem atrasar início do tratamento.",
+      "tempo_max": 20
+    },
+    {
+      "id": "SEP_ENF_005",
+      "especialidade": "ENFERMEIRO",
+      "dificuldade": "BASICO",
+      "enunciado": "Ao preparar reposição volêmica no choque séptico, a solução inicial mais comum é:",
+      "opcoes": [
+        "Cristaloide isotônico",
+        "Água destilada",
+        "Glicose 50%",
+        "Soro hipertônico como rotina"
+      ],
+      "correta": 0,
+      "explicacao": "Cristaloides são primeira escolha na ressuscitação inicial em muitos protocolos.",
+      "tempo_max": 20
+    },
+    {
+      "id": "SEP_ENF_006",
+      "especialidade": "ENFERMEIRO",
+      "dificuldade": "INTERMEDIARIO",
+      "enunciado": "Meta inicial frequente para PAM na ressuscitação é:",
+      "opcoes": [
+        "≥45 mmHg",
+        "≥55 mmHg",
+        "≥65 mmHg",
+        "≥85 mmHg"
+      ],
+      "correta": 2,
+      "explicacao": "Meta inicial comum: PAM ≥65 mmHg (ajustar à condição do paciente e protocolo local).",
+      "tempo_max": 20
+    },
+    {
+      "id": "SEP_ENF_007",
+      "especialidade": "ENFERMEIRO",
+      "dificuldade": "INTERMEDIARIO",
+      "enunciado": "Parâmetros úteis para acompanhar resposta à ressuscitação incluem:",
+      "opcoes": [
+        "Diurese, perfusão periférica e tendência do lactato",
+        "Somente temperatura",
+        "Somente hemograma",
+        "Somente dor referida"
+      ],
+      "correta": 0,
+      "explicacao": "Resposta é multimodal: perfusão e tendência de marcadores.",
+      "tempo_max": 20
+    },
+    {
+      "id": "SEP_ENF_008",
+      "especialidade": "ENFERMEIRO",
+      "dificuldade": "INTERMEDIARIO",
+      "enunciado": "Persistindo hipotensão após fluidos, protocolo geralmente prevê:",
+      "opcoes": [
+        "Iniciar vasopressor conforme prescrição e monitorar",
+        "Dar diurético de rotina",
+        "Aguardar 6 horas",
+        "Suspender coletas"
+      ],
+      "correta": 0,
+      "explicacao": "Se refratário a volume, vasopressor é escalonamento típico.",
+      "tempo_max": 20
+    },
+    {
+      "id": "SEP_ENF_009",
+      "especialidade": "ENFERMEIRO",
+      "dificuldade": "INTERMEDIARIO",
+      "enunciado": "Qual prática reduz atrasos e falhas no cuidado de sepse?",
+      "opcoes": [
+        "Checklist do protocolo com horários (tempo zero/bundle)",
+        "Anotar tudo depois",
+        "Evitar comunicação multiprofissional",
+        "Esperar liberação no fim do plantão"
+      ],
+      "correta": 0,
+      "explicacao": "Checklists e tempos melhoram execução e segurança.",
+      "tempo_max": 20
+    },
+    {
+      "id": "SEP_ENF_010",
+      "especialidade": "ENFERMEIRO",
+      "dificuldade": "INTERMEDIARIO",
+      "enunciado": "Via preferencial para noradrenalina (quando disponível) é:",
+      "opcoes": [
+        "Acesso venoso central",
+        "Via oral",
+        "Intramuscular",
+        "Subcutânea"
+      ],
+      "correta": 0,
+      "explicacao": "Preferência por via central; protocolos podem permitir periférico temporário com vigilância.",
+      "tempo_max": 20
+    },
+    {
+      "id": "SEP_ENF_011",
+      "especialidade": "ENFERMEIRO",
+      "dificuldade": "INTERMEDIARIO",
+      "enunciado": "Meta de diurese frequentemente usada na reanimação inicial é:",
+      "opcoes": [
+        "≥0,5 mL/kg/h",
+        "≥0,1 mL/kg/h",
+        "≥2,0 mL/kg/h",
+        "Diurese não é relevante"
+      ],
+      "correta": 0,
+      "explicacao": "Diurese é marcador de perfusão renal.",
+      "tempo_max": 20
+    },
+    {
+      "id": "SEP_ENF_012",
+      "especialidade": "ENFERMEIRO",
+      "dificuldade": "INTERMEDIARIO",
+      "enunciado": "Qual ação de enfermagem é essencial após iniciar vasopressor?",
+      "opcoes": [
+        "Monitorização hemodinâmica e reavaliações frequentes",
+        "Retirar monitor para conforto",
+        "Suspender balanço hídrico",
+        "Evitar reavaliações"
+      ],
+      "correta": 0,
+      "explicacao": "Vasopressor exige vigilância contínua e segurança do acesso.",
+      "tempo_max": 20
+    },
+    {
+      "id": "SEP_ENF_013",
+      "especialidade": "ENFERMEIRO",
+      "dificuldade": "INTERMEDIARIO",
+      "enunciado": "Ao administrar volume rápido, em cardiopatas/idosos, você deve vigiar:",
+      "opcoes": [
+        "Sinais de sobrecarga/edema pulmonar",
+        "Aumento de apetite",
+        "Dor de cabeça leve",
+        "Prurido"
+      ],
+      "correta": 0,
+      "explicacao": "Ressuscitação deve ser reavaliada para evitar sobrecarga.",
+      "tempo_max": 20
+    },
+    {
+      "id": "SEP_ENF_014",
+      "especialidade": "ENFERMEIRO",
+      "dificuldade": "INTERMEDIARIO",
+      "enunciado": "Na coleta de culturas, boa prática fundamental é:",
+      "opcoes": [
+        "Técnica asséptica rigorosa",
+        "Coletar sem higiene de mãos",
+        "Reutilizar materiais",
+        "Guardar frascos abertos"
+      ],
+      "correta": 0,
+      "explicacao": "Contaminação gera resultados falsos e condutas inadequadas.",
+      "tempo_max": 20
+    },
+    {
+      "id": "SEP_ENF_015",
+      "especialidade": "ENFERMEIRO",
+      "dificuldade": "AVANCADO",
+      "enunciado": "Além de PAM, um parâmetro de perfusão no leito que pode ajudar é:",
+      "opcoes": [
+        "Perfusão periférica/tempo de enchimento capilar",
+        "Circunferência abdominal",
+        "IMC",
+        "Dor crônica"
+      ],
+      "correta": 0,
+      "explicacao": "Perfusão periférica pode complementar avaliação hemodinâmica.",
+      "tempo_max": 20
+    },
+    {
+      "id": "SEP_ENF_016",
+      "especialidade": "ENFERMEIRO",
+      "dificuldade": "AVANCADO",
+      "enunciado": "Qual registro é mais importante para auditoria do protocolo de sepse?",
+      "opcoes": [
+        "Horários: reconhecimento, lactato, culturas, antibiótico, fluidos/vasopressor",
+        "Somente nome do paciente",
+        "Somente assinatura",
+        "Somente temperatura"
+      ],
+      "correta": 0,
+      "explicacao": "Protocolos usam tempos como indicadores de qualidade.",
+      "tempo_max": 20
+    },
+    {
+      "id": "SEP_ENF_017",
+      "especialidade": "ENFERMEIRO",
+      "dificuldade": "AVANCADO",
+      "enunciado": "Em suspeita de sepse, qual comunicação acelera decisão clínica?",
+      "opcoes": [
+        "SBAR com sinais vitais, lactato, foco provável e tempo de início",
+        "Mensagem vaga: 'tá ruim'",
+        "Somente áudio sem dados",
+        "Não comunicar"
+      ],
+      "correta": 0,
+      "explicacao": "Comunicação estruturada reduz tempo de resposta.",
+      "tempo_max": 20
+    },
+    {
+      "id": "SEP_ENF_018",
+      "especialidade": "ENFERMEIRO",
+      "dificuldade": "AVANCADO",
+      "enunciado": "Se a 1ª dose de antibiótico atrasou, conduta de melhoria é:",
+      "opcoes": [
+        "Registrar causa e horário para melhoria do processo",
+        "Apagar horários",
+        "Culpar alguém",
+        "Ignorar"
+      ],
+      "correta": 0,
+      "explicacao": "Dados de processo sustentam melhoria contínua.",
+      "tempo_max": 20
+    },
+    {
+      "id": "SEP_ENF_019",
+      "especialidade": "ENFERMEIRO",
+      "dificuldade": "AVANCADO",
+      "enunciado": "Achado que pode indicar disfunção orgânica neurológica em sepse:",
+      "opcoes": [
+        "Delirium/rebaixamento agudo",
+        "Afta",
+        "Dor antiga no ombro",
+        "Halitose"
+      ],
+      "correta": 0,
+      "explicacao": "Alteração aguda de consciência é sinal de gravidade.",
+      "tempo_max": 20
+    },
+    {
+      "id": "SEP_ENF_020",
+      "especialidade": "ENFERMEIRO",
+      "dificuldade": "AVANCADO",
+      "enunciado": "Quando há piora rápida e foco incerto, o fluxo adequado é:",
+      "opcoes": [
+        "Escalonar avaliação imediatamente e seguir protocolo",
+        "Aguardar 12h",
+        "Liberar para casa",
+        "Suspender monitorização"
+      ],
+      "correta": 0,
+      "explicacao": "Sepse é tempo-dependente; escalonar rapidamente.",
+      "tempo_max": 20
+    },
+    {
+      "id": "SEP_ENF_021",
+      "especialidade": "ENFERMEIRO",
+      "dificuldade": "AVANCADO",
+      "enunciado": "Reavaliações do bundle costumam ocorrer em marcos como:",
+      "opcoes": [
+        "1h/3h/6h (depende do protocolo do serviço)",
+        "Somente 24h depois",
+        "Somente na alta",
+        "Nunca"
+      ],
+      "correta": 0,
+      "explicacao": "Bundles têm marcos de reavaliação variáveis por instituição.",
+      "tempo_max": 20
+    },
+    {
+      "id": "SEP_ENF_022",
+      "especialidade": "ENFERMEIRO",
+      "dificuldade": "AVANCADO",
+      "enunciado": "Em pacientes com risco de extravasamento em acesso periférico, cuidado é:",
+      "opcoes": [
+        "Vigilância frequente do sítio e escalonamento para acesso adequado",
+        "Deixar sem checar",
+        "Fixar frouxo",
+        "Ignorar dor"
+      ],
+      "correta": 0,
+      "explicacao": "Segurança do acesso evita lesão tecidual e atrasos.",
+      "tempo_max": 20
+    },
+    {
+      "id": "SEP_ENF_023",
+      "especialidade": "ENFERMEIRO",
+      "dificuldade": "AVANCADO",
+      "enunciado": "Uma ação prática para reduzir atrasos é:",
+      "opcoes": [
+        "Kit/fluxo de sepse pronto (materiais + coletas + rotas)",
+        "Aumentar burocracia",
+        "Evitar checklist",
+        "Deixar para depois"
+      ],
+      "correta": 0,
+      "explicacao": "Padronização reduz tempo de execução.",
+      "tempo_max": 20
+    },
+    {
+      "id": "SEP_ENF_024",
+      "especialidade": "ENFERMEIRO",
+      "dificuldade": "AVANCADO",
+      "enunciado": "Ao coletar lactato, uma boa prática é:",
+      "opcoes": [
+        "Identificar corretamente e enviar rapidamente",
+        "Guardar para o fim do plantão",
+        "Aquecer a amostra",
+        "Misturar com soro"
+      ],
+      "correta": 0,
+      "explicacao": "Fatores pré-analíticos impactam resultados.",
+      "tempo_max": 20
+    },
+    {
+      "id": "SEP_ENF_025",
+      "especialidade": "ENFERMEIRO",
+      "dificuldade": "AVANCADO",
+      "enunciado": "No controle de foco, o enfermeiro ajuda ao:",
+      "opcoes": [
+        "Articular equipe e preparar paciente para procedimentos quando indicados",
+        "Evitar comunicação",
+        "Suspender coletas",
+        "Ignorar sinais"
+      ],
+      "correta": 0,
+      "explicacao": "Coordenação do cuidado acelera intervenções.",
+      "tempo_max": 20
+    },
+    {
+      "id": "SEP_MED_001",
+      "especialidade": "MEDICO",
+      "dificuldade": "BASICO",
+      "enunciado": "Sepse é definida como disfunção orgânica causada por:",
+      "opcoes": [
+        "Resposta desregulada à infecção",
+        "Infecção leve sem repercussão",
+        "Falta de vitaminas",
+        "Estresse emocional"
+      ],
+      "correta": 0,
+      "explicacao": "Definição moderna: disfunção orgânica por resposta desregulada à infecção.",
+      "tempo_max": 20
+    },
+    {
+      "id": "SEP_MED_002",
+      "especialidade": "MEDICO",
+      "dificuldade": "BASICO",
+      "enunciado": "Choque séptico, de forma geral, envolve:",
+      "opcoes": [
+        "Hipotensão que sempre responde a fluidos",
+        "Necessidade de vasopressor para manter PAM adequada e sinais de hipoperfusão",
+        "Dor torácica típica",
+        "Hipertermia isolada"
+      ],
+      "correta": 1,
+      "explicacao": "Critérios variam, mas inclui vasopressor + hipoperfusão.",
+      "tempo_max": 20
+    },
+    {
+      "id": "SEP_MED_003",
+      "especialidade": "MEDICO",
+      "dificuldade": "BASICO",
+      "enunciado": "No bundle inicial, recomenda-se medir lactato e:",
+      "opcoes": [
+        "Repetir se elevado e acompanhar tendência",
+        "Ignorar se normal",
+        "Medir somente na alta",
+        "Coletar apenas se febre"
+      ],
+      "correta": 0,
+      "explicacao": "Tendência do lactato ajuda a guiar resposta.",
+      "tempo_max": 20
+    },
+    {
+      "id": "SEP_MED_004",
+      "especialidade": "MEDICO",
+      "dificuldade": "BASICO",
+      "enunciado": "Recomendação comum de reposição volêmica inicial em choque séptico:",
+      "opcoes": [
+        "10 mL/kg",
+        "20 mL/kg",
+        "30 mL/kg",
+        "60 mL/kg"
+      ],
+      "correta": 2,
+      "explicacao": "Diretrizes sugerem pelo menos 30 mL/kg em hipoperfusão/choque (individualizar).",
+      "tempo_max": 20
+    },
+    {
+      "id": "SEP_MED_005",
+      "especialidade": "MEDICO",
+      "dificuldade": "BASICO",
+      "enunciado": "Vasopressor de primeira linha mais comum no choque séptico:",
+      "opcoes": [
+        "Noradrenalina",
+        "Dopamina sempre",
+        "Adrenalina sempre",
+        "Vasopressina isolada"
+      ],
+      "correta": 0,
+      "explicacao": "Noradrenalina é primeira linha em muitas diretrizes.",
+      "tempo_max": 20
+    },
+    {
+      "id": "SEP_MED_006",
+      "especialidade": "MEDICO",
+      "dificuldade": "INTERMEDIARIO",
+      "enunciado": "Alvo inicial comum de PAM na ressuscitação do choque séptico:",
+      "opcoes": [
+        "≥55",
+        "≥60",
+        "≥65",
+        "≥80"
+      ],
+      "correta": 2,
+      "explicacao": "Meta inicial frequente: PAM ≥65 mmHg (ajustar conforme contexto).",
+      "tempo_max": 20
+    },
+    {
+      "id": "SEP_MED_007",
+      "especialidade": "MEDICO",
+      "dificuldade": "INTERMEDIARIO",
+      "enunciado": "Antibiótico na sepse deve ser administrado:",
+      "opcoes": [
+        "O mais cedo possível após reconhecimento",
+        "Somente após 12h",
+        "Após TC obrigatória",
+        "Somente se febre"
+      ],
+      "correta": 0,
+      "explicacao": "Reduzir tempo para antibiótico é central no bundle.",
+      "tempo_max": 20
+    },
+    {
+      "id": "SEP_MED_008",
+      "especialidade": "MEDICO",
+      "dificuldade": "INTERMEDIARIO",
+      "enunciado": "Hemoculturas devem ser coletadas:",
+      "opcoes": [
+        "Antes do antibiótico, se não atrasar início",
+        "Após a 2ª dose",
+        "Somente se PCR alto",
+        "Somente em UTI"
+      ],
+      "correta": 0,
+      "explicacao": "Culturas antes do ATB quando possível.",
+      "tempo_max": 20
+    },
+    {
+      "id": "SEP_MED_009",
+      "especialidade": "MEDICO",
+      "dificuldade": "INTERMEDIARIO",
+      "enunciado": "Persistindo hipotensão após fluidos, conduta típica:",
+      "opcoes": [
+        "Iniciar vasopressor e reavaliar perfusão",
+        "Repetir hemograma apenas",
+        "Suspender medidas",
+        "Alta"
+      ],
+      "correta": 0,
+      "explicacao": "Escalonamento para vasopressor é comum no choque.",
+      "tempo_max": 20
+    },
+    {
+      "id": "SEP_MED_010",
+      "especialidade": "MEDICO",
+      "dificuldade": "INTERMEDIARIO",
+      "enunciado": "Parâmetros úteis para resposta à ressuscitação incluem:",
+      "opcoes": [
+        "PAM, lactato, diurese, perfusão periférica",
+        "Somente FC",
+        "Somente temperatura",
+        "Somente glicemia"
+      ],
+      "correta": 0,
+      "explicacao": "Avaliação combinada é mais segura.",
+      "tempo_max": 20
+    },
+    {
+      "id": "SEP_MED_011",
+      "especialidade": "MEDICO",
+      "dificuldade": "INTERMEDIARIO",
+      "enunciado": "Ferramentas para triagem/estratificação podem incluir:",
+      "opcoes": [
+        "SOFA/qSOFA (conforme contexto)",
+        "Somente leucócitos",
+        "Somente febre",
+        "Somente dor"
+      ],
+      "correta": 0,
+      "explicacao": "Ferramentas auxiliam, mas não substituem julgamento clínico.",
+      "tempo_max": 20
+    },
+    {
+      "id": "SEP_MED_012",
+      "especialidade": "MEDICO",
+      "dificuldade": "INTERMEDIARIO",
+      "enunciado": "Controle de foco (source control) significa:",
+      "opcoes": [
+        "Identificar e controlar fonte (drenagem/remoção/dispositivo) quando indicado",
+        "Somente aumentar oxigênio",
+        "Apenas analgésico",
+        "Somente vitamina"
+      ],
+      "correta": 0,
+      "explicacao": "Controle de foco é componente essencial do tratamento.",
+      "tempo_max": 20
+    },
+    {
+      "id": "SEP_MED_013",
+      "especialidade": "MEDICO",
+      "dificuldade": "INTERMEDIARIO",
+      "enunciado": "Após bolus, a reavaliação deve considerar:",
+      "opcoes": [
+        "Perfusão e sinais de sobrecarga",
+        "Apenas cor da pele",
+        "Apenas dor",
+        "Apenas peso"
+      ],
+      "correta": 0,
+      "explicacao": "Evitar sobrecarga e garantir perfusão.",
+      "tempo_max": 20
+    },
+    {
+      "id": "SEP_MED_014",
+      "especialidade": "MEDICO",
+      "dificuldade": "INTERMEDIARIO",
+      "enunciado": "Em choque séptico refratário, uma estratégia possível é:",
+      "opcoes": [
+        "Adicionar vasopressina/considerar adrenalina conforme protocolo",
+        "Suspender vasopressor",
+        "Só analgesia",
+        "Alta"
+      ],
+      "correta": 0,
+      "explicacao": "Escalonamento depende do protocolo e resposta do paciente.",
+      "tempo_max": 20
+    },
+    {
+      "id": "SEP_MED_015",
+      "especialidade": "MEDICO",
+      "dificuldade": "INTERMEDIARIO",
+      "enunciado": "Quando a suspeita de foco urinário é alta, cultura indicada:",
+      "opcoes": [
+        "Urocultura conforme coleta adequada",
+        "Nunca",
+        "Apenas hemocultura",
+        "Somente após 72h"
+      ],
+      "correta": 0,
+      "explicacao": "Coletas direcionadas ao foco provável.",
+      "tempo_max": 20
+    },
+    {
+      "id": "SEP_MED_016",
+      "especialidade": "MEDICO",
+      "dificuldade": "AVANCADO",
+      "enunciado": "Hidrocortisona pode ser considerada em:",
+      "opcoes": [
+        "Choque refratário apesar de fluidos + vasopressor",
+        "Sepse leve sem hipotensão",
+        "Febre isolada",
+        "PCR elevado isolado"
+      ],
+      "correta": 0,
+      "explicacao": "Em alguns protocolos, choque refratário é indicação.",
+      "tempo_max": 20
+    },
+    {
+      "id": "SEP_MED_017",
+      "especialidade": "MEDICO",
+      "dificuldade": "AVANCADO",
+      "enunciado": "Se lactato persistir elevado apesar de medidas, isso sugere:",
+      "opcoes": [
+        "Hipoperfusão/gravidade e necessidade de reavaliar conduta",
+        "Cura completa",
+        "Erro sempre",
+        "Apenas ansiedade"
+      ],
+      "correta": 0,
+      "explicacao": "Lactato alto pode refletir hipoperfusão e gravidade.",
+      "tempo_max": 20
+    },
+    {
+      "id": "SEP_MED_018",
+      "especialidade": "MEDICO",
+      "dificuldade": "AVANCADO",
+      "enunciado": "Uma meta de qualidade frequentemente monitorada em sepse é:",
+      "opcoes": [
+        "Tempo até antibiótico e cumprimento do bundle",
+        "Número de refeições",
+        "Horas de visita",
+        "IMC médio"
+      ],
+      "correta": 0,
+      "explicacao": "Indicadores de processo sustentam qualidade.",
+      "tempo_max": 20
+    },
+    {
+      "id": "SEP_MED_019",
+      "especialidade": "MEDICO",
+      "dificuldade": "AVANCADO",
+      "enunciado": "Em ventilação mecânica por sepse/SDRA, abordagem recomendada inclui:",
+      "opcoes": [
+        "Estratégia protetora pulmonar (quando aplicável)",
+        "Volume corrente alto sempre",
+        "Evitar PEEP",
+        "Sem monitorização"
+      ],
+      "correta": 0,
+      "explicacao": "Suporte ventilatório deve ser individualizado e protetor quando indicado.",
+      "tempo_max": 20
+    },
+    {
+      "id": "SEP_MED_020",
+      "especialidade": "MEDICO",
+      "dificuldade": "AVANCADO",
+      "enunciado": "Em idosos/frágeis, ressuscitação volêmica deve ser:",
+      "opcoes": [
+        "Individualizada com reavaliações frequentes",
+        "Sempre 60 mL/kg",
+        "Sempre mínima",
+        "Nunca reavaliar"
+      ],
+      "correta": 0,
+      "explicacao": "Risco de sobrecarga exige reavaliação frequente.",
+      "tempo_max": 20
+    },
+    {
+      "id": "SEP_MED_021",
+      "especialidade": "MEDICO",
+      "dificuldade": "AVANCADO",
+      "enunciado": "Em sepse com suspeita de cateter como foco, conduta pode incluir:",
+      "opcoes": [
+        "Avaliar remoção/troca do dispositivo e culturas conforme protocolo",
+        "Manter sempre",
+        "Ignorar sinais locais",
+        "Só antitérmico"
+      ],
+      "correta": 0,
+      "explicacao": "Controle de foco pode envolver dispositivos.",
+      "tempo_max": 20
+    },
+    {
+      "id": "SEP_MED_022",
+      "especialidade": "MEDICO",
+      "dificuldade": "AVANCADO",
+      "enunciado": "Se após antibiótico adequado o paciente piora, prioridade é:",
+      "opcoes": [
+        "Reavaliar foco, cobertura, culturas, e necessidade de source control",
+        "Aguardar 48h sem reavaliar",
+        "Suspender vasopressor",
+        "Alta"
+      ],
+      "correta": 0,
+      "explicacao": "Piora exige reavaliação rápida.",
+      "tempo_max": 20
+    },
+    {
+      "id": "SEP_MED_023",
+      "especialidade": "MEDICO",
+      "dificuldade": "AVANCADO",
+      "enunciado": "Um erro comum a evitar em sepse é:",
+      "opcoes": [
+        "Aguardar confirmação completa antes de iniciar bundle",
+        "Coletar culturas cedo",
+        "Iniciar antibiótico cedo",
+        "Reavaliar perfusão"
+      ],
+      "correta": 0,
+      "explicacao": "Atraso no bundle aumenta risco.",
+      "tempo_max": 20
+    },
+    {
+      "id": "SEP_MED_024",
+      "especialidade": "MEDICO",
+      "dificuldade": "AVANCADO",
+      "enunciado": "Em choque, além de PAM, objetivos práticos de perfusão incluem:",
+      "opcoes": [
+        "Diurese e perfusão periférica/estado mental",
+        "Somente leucócitos",
+        "Somente febre",
+        "Somente glicemia"
+      ],
+      "correta": 0,
+      "explicacao": "Perfusão é desfecho intermediário chave.",
+      "tempo_max": 20
+    },
+    {
+      "id": "SEP_MED_025",
+      "especialidade": "MEDICO",
+      "dificuldade": "AVANCADO",
+      "enunciado": "No time multiprofissional, o alinhamento do “tempo zero” serve para:",
+      "opcoes": [
+        "Definir marco de reconhecimento e acelerar intervenções",
+        "Aumentar burocracia",
+        "Atrasar antibiótico",
+        "Evitar checklist"
+      ],
+      "correta": 0,
+      "explicacao": "Tempo zero melhora organização e auditoria.",
+      "tempo_max": 20
+    },
+    {
+      "id": "SEP_TEC_001",
+      "especialidade": "TECNICO",
+      "dificuldade": "BASICO",
+      "enunciado": "Ao identificar paciente com suspeita de sepse, sua prioridade é:",
+      "opcoes": [
+        "Avisar a equipe e iniciar monitorização conforme rotina",
+        "Esperar o médico passar",
+        "Dar água e observar",
+        "Levar para caminhar"
+      ],
+      "correta": 0,
+      "explicacao": "Ação rápida e comunicação reduzem atrasos.",
+      "tempo_max": 20
+    },
+    {
+      "id": "SEP_TEC_002",
+      "especialidade": "TECNICO",
+      "dificuldade": "BASICO",
+      "enunciado": "Qual prática ajuda a evitar contaminação de culturas/coletas?",
+      "opcoes": [
+        "Higiene de mãos e técnica asséptica",
+        "Reutilizar material",
+        "Coletar sem EPIs",
+        "Deixar frasco aberto"
+      ],
+      "correta": 0,
+      "explicacao": "Técnica correta evita resultados falsos.",
+      "tempo_max": 20
+    },
+    {
+      "id": "SEP_TEC_003",
+      "especialidade": "TECNICO",
+      "dificuldade": "BASICO",
+      "enunciado": "Sinais vitais em suspeita de sepse devem ser:",
+      "opcoes": [
+        "Checados seriados e registrados com horário",
+        "Anotados só no fim do plantão",
+        "Feitos só 1 vez",
+        "Ignorados"
+      ],
+      "correta": 0,
+      "explicacao": "Tendência é essencial em paciente instável.",
+      "tempo_max": 20
+    },
+    {
+      "id": "SEP_TEC_004",
+      "especialidade": "TECNICO",
+      "dificuldade": "BASICO",
+      "enunciado": "Em paciente com queda de pressão, você deve:",
+      "opcoes": [
+        "Comunicar imediatamente e checar sinais vitais",
+        "Dar alimento",
+        "Deixar dormir",
+        "Aguardar"
+      ],
+      "correta": 0,
+      "explicacao": "Hipotensão é sinal de gravidade.",
+      "tempo_max": 20
+    },
+    {
+      "id": "SEP_TEC_005",
+      "especialidade": "TECNICO",
+      "dificuldade": "BASICO",
+      "enunciado": "Para facilitar terapias e coletas, costuma-se priorizar:",
+      "opcoes": [
+        "Punção de acessos calibrosos quando possível",
+        "Somente via oral",
+        "Somente curativo",
+        "Somente termômetro"
+      ],
+      "correta": 0,
+      "explicacao": "Acesso venoso adequado agiliza o bundle.",
+      "tempo_max": 20
+    },
+    {
+      "id": "SEP_TEC_006",
+      "especialidade": "TECNICO",
+      "dificuldade": "INTERMEDIARIO",
+      "enunciado": "Qual item do bundle você ajuda diretamente a acelerar?",
+      "opcoes": [
+        "Coleta e envio rápido de exames/culturas",
+        "Planejar alta",
+        "Marcar consulta",
+        "Organizar visitas"
+      ],
+      "correta": 0,
+      "explicacao": "Logística rápida reduz tempo de tratamento.",
+      "tempo_max": 20
+    },
+    {
+      "id": "SEP_TEC_007",
+      "especialidade": "TECNICO",
+      "dificuldade": "INTERMEDIARIO",
+      "enunciado": "Durante reposição volêmica, você deve observar:",
+      "opcoes": [
+        "Sinais de desconforto respiratório/sobrecarga",
+        "Somente fome",
+        "Somente prurido",
+        "Somente sono"
+      ],
+      "correta": 0,
+      "explicacao": "Volume exige vigilância clínica.",
+      "tempo_max": 20
+    },
+    {
+      "id": "SEP_TEC_008",
+      "especialidade": "TECNICO",
+      "dificuldade": "INTERMEDIARIO",
+      "enunciado": "Quando o paciente inicia vasopressor, o cuidado inclui:",
+      "opcoes": [
+        "Monitorização frequente e checagem do acesso",
+        "Suspender controle de PA",
+        "Retirar acesso",
+        "Reduzir observação"
+      ],
+      "correta": 0,
+      "explicacao": "Vasopressor requer vigilância e segurança do sítio.",
+      "tempo_max": 20
+    },
+    {
+      "id": "SEP_TEC_009",
+      "especialidade": "TECNICO",
+      "dificuldade": "INTERMEDIARIO",
+      "enunciado": "Qual achado urinário sugere piora perfusional?",
+      "opcoes": [
+        "Diurese muito baixa",
+        "Urina mais amarela",
+        "Aumento de sede",
+        "Polifagia"
+      ],
+      "correta": 0,
+      "explicacao": "Oligúria é sinal de hipoperfusão.",
+      "tempo_max": 20
+    },
+    {
+      "id": "SEP_TEC_010",
+      "especialidade": "TECNICO",
+      "dificuldade": "INTERMEDIARIO",
+      "enunciado": "Para reduzir erros, o registro deve conter:",
+      "opcoes": [
+        "Horário e valores de sinais vitais/intervenções",
+        "Somente nome",
+        "Somente leito",
+        "Somente data"
+      ],
+      "correta": 0,
+      "explicacao": "Registro completo ajuda decisão clínica.",
+      "tempo_max": 20
+    },
+    {
+      "id": "SEP_TEC_011",
+      "especialidade": "TECNICO",
+      "dificuldade": "INTERMEDIARIO",
+      "enunciado": "Em sepse, qual ação é inadequada?",
+      "opcoes": [
+        "Esperar melhorar antes de avisar",
+        "Checar sinais vitais e avisar",
+        "Ajudar coletas",
+        "Apoiar monitorização"
+      ],
+      "correta": 0,
+      "explicacao": "Esperar piora atrasa cuidado crítico.",
+      "tempo_max": 20
+    },
+    {
+      "id": "SEP_TEC_012",
+      "especialidade": "TECNICO",
+      "dificuldade": "INTERMEDIARIO",
+      "enunciado": "Na administração de terapias, checagem essencial é:",
+      "opcoes": [
+        "Identificação do paciente e prescrição correta",
+        "Somente cor do frasco",
+        "Somente horário",
+        "Somente temperatura"
+      ],
+      "correta": 0,
+      "explicacao": "Segurança do paciente: identificação e conferência.",
+      "tempo_max": 20
+    },
+    {
+      "id": "SEP_TEC_013",
+      "especialidade": "TECNICO",
+      "dificuldade": "INTERMEDIARIO",
+      "enunciado": "Se o paciente piora respiratoriamente durante infusão, você deve:",
+      "opcoes": [
+        "Interromper e comunicar equipe, checar sinais e suporte",
+        "Ignorar",
+        "Dar água",
+        "Levar ao banho"
+      ],
+      "correta": 0,
+      "explicacao": "Piora respiratória exige resposta imediata.",
+      "tempo_max": 20
+    },
+    {
+      "id": "SEP_TEC_014",
+      "especialidade": "TECNICO",
+      "dificuldade": "INTERMEDIARIO",
+      "enunciado": "Bundle em sepse é:",
+      "opcoes": [
+        "Conjunto de medidas padronizadas com tempo",
+        "Nome do antibiótico",
+        "Tipo de dieta",
+        "Exame de imagem"
+      ],
+      "correta": 0,
+      "explicacao": "Bundle = pacote de intervenções em janela de tempo.",
+      "tempo_max": 20
+    },
+    {
+      "id": "SEP_TEC_015",
+      "especialidade": "TECNICO",
+      "dificuldade": "INTERMEDIARIO",
+      "enunciado": "Na suspeita de sepse, o mais importante é:",
+      "opcoes": [
+        "Tempo e comunicação",
+        "Aparência do quarto",
+        "Organizar pertences",
+        "Trocar lençol antes"
+      ],
+      "correta": 0,
+      "explicacao": "Tempo impacta desfecho.",
+      "tempo_max": 20
+    },
+    {
+      "id": "SEP_TEC_016",
+      "especialidade": "TECNICO",
+      "dificuldade": "AVANCADO",
+      "enunciado": "Com acesso para vasopressor, cuidado inclui:",
+      "opcoes": [
+        "Avaliar extravasamento/dor e curativo",
+        "Manipular sem assepsia",
+        "Desconectar para aliviar",
+        "Evitar checagem"
+      ],
+      "correta": 0,
+      "explicacao": "Segurança do acesso evita lesão e falha terapêutica.",
+      "tempo_max": 20
+    },
+    {
+      "id": "SEP_TEC_017",
+      "especialidade": "TECNICO",
+      "dificuldade": "AVANCADO",
+      "enunciado": "Uma melhoria de processo útil é:",
+      "opcoes": [
+        "Kit de sepse pronto (materiais e fluxo)",
+        "Menos registros",
+        "Aguardar resultados",
+        "Evitar protocolo"
+      ],
+      "correta": 0,
+      "explicacao": "Padronização reduz atraso e erro.",
+      "tempo_max": 20
+    },
+    {
+      "id": "SEP_TEC_018",
+      "especialidade": "TECNICO",
+      "dificuldade": "AVANCADO",
+      "enunciado": "Sinal neurológico de gravidade que exige alerta:",
+      "opcoes": [
+        "Rebaixamento agudo de consciência",
+        "Dor leve em ombro",
+        "Sono habitual",
+        "Unha quebrada"
+      ],
+      "correta": 0,
+      "explicacao": "Alteração neurológica pode ser disfunção orgânica.",
+      "tempo_max": 20
+    },
+    {
+      "id": "SEP_TEC_019",
+      "especialidade": "TECNICO",
+      "dificuldade": "AVANCADO",
+      "enunciado": "Para evitar erro de medicação, é essencial:",
+      "opcoes": [
+        "Dupla checagem e conferência de alergias",
+        "Aplicar sem conferir",
+        "Trocar frascos",
+        "Ignorar prescrição"
+      ],
+      "correta": 0,
+      "explicacao": "Segurança medicamentosa é crítica.",
+      "tempo_max": 20
+    },
+    {
+      "id": "SEP_TEC_020",
+      "especialidade": "TECNICO",
+      "dificuldade": "AVANCADO",
+      "enunciado": "Se lactato veio alto e paciente piorou, ação é:",
+      "opcoes": [
+        "Comunicar imediatamente e intensificar vigilância",
+        "Esperar 6h",
+        "Dar dieta",
+        "Alta"
+      ],
+      "correta": 0,
+      "explicacao": "Lactato alto + piora = alerta.",
+      "tempo_max": 20
+    },
+    {
+      "id": "SEP_TEC_021",
+      "especialidade": "TECNICO",
+      "dificuldade": "AVANCADO",
+      "enunciado": "Para reduzir contaminação de hemocultura, passo crítico é:",
+      "opcoes": [
+        "Antissepsia adequada do sítio e frasco",
+        "Tocar luvas em superfícies e coletar",
+        "Reutilizar agulha",
+        "Coletar sem limpeza"
+      ],
+      "correta": 0,
+      "explicacao": "Contaminação atrapalha conduta.",
+      "tempo_max": 20
+    },
+    {
+      "id": "SEP_TEC_022",
+      "especialidade": "TECNICO",
+      "dificuldade": "AVANCADO",
+      "enunciado": "Objetivo de processo do serviço em sepse é:",
+      "opcoes": [
+        "Reduzir tempo para antibiótico e cumprir bundle",
+        "Aumentar espera",
+        "Diminuir monitorização",
+        "Reduzir comunicação"
+      ],
+      "correta": 0,
+      "explicacao": "Indicadores de tempo orientam qualidade.",
+      "tempo_max": 20
+    },
+    {
+      "id": "SEP_TEC_023",
+      "especialidade": "TECNICO",
+      "dificuldade": "AVANCADO",
+      "enunciado": "Ao usar bomba de infusão, é essencial:",
+      "opcoes": [
+        "Programação correta e monitorização do acesso",
+        "Desligar alarmes sempre",
+        "Ignorar extravasamento",
+        "Trocar drogas sem aviso"
+      ],
+      "correta": 0,
+      "explicacao": "Erros de infusão podem ser graves.",
+      "tempo_max": 20
+    },
+    {
+      "id": "SEP_TEC_024",
+      "especialidade": "TECNICO",
+      "dificuldade": "AVANCADO",
+      "enunciado": "Organizar o “tempo zero” ajuda a:",
+      "opcoes": [
+        "Priorizar coletas/terapias e reduzir atrasos",
+        "Atrasar antibiótico",
+        "Evitar checklist",
+        "Ignorar sinais vitais"
+      ],
+      "correta": 0,
+      "explicacao": "Tempo zero organiza o fluxo do protocolo.",
+      "tempo_max": 20
+    },
+    {
+      "id": "SEP_TEC_025",
+      "especialidade": "TECNICO",
+      "dificuldade": "AVANCADO",
+      "enunciado": "Durante o bundle, você pode apoiar ao:",
+      "opcoes": [
+        "Garantir coleta/rotas e avisar mudanças clínicas",
+        "Evitar comunicação",
+        "Fazer só curativo",
+        "Ignorar sinais"
+      ],
+      "correta": 0,
+      "explicacao": "Apoio logístico acelera cuidado crítico.",
+      "tempo_max": 20
+    },
+    {
+      "id": "SEP_MUL_001",
+      "especialidade": "MULTI",
+      "dificuldade": "BASICO",
+      "enunciado": "Sepse exige abordagem tempo-dependente porque:",
+      "opcoes": [
+        "Atrasos no tratamento inicial pioram desfechos",
+        "Sempre melhora sozinha",
+        "Só afeta jovens",
+        "É sempre viral leve"
+      ],
+      "correta": 0,
+      "explicacao": "Intervenções precoces melhoram prognóstico.",
+      "tempo_max": 20
+    },
+    {
+      "id": "SEP_MUL_002",
+      "especialidade": "MULTI",
+      "dificuldade": "BASICO",
+      "enunciado": "Elementos comuns do Hour-1 bundle incluem:",
+      "opcoes": [
+        "Lactato, culturas, antibiótico, fluidos, vasopressor se indicado",
+        "Somente radiografia",
+        "Somente hemograma",
+        "Somente dieta"
+      ],
+      "correta": 0,
+      "explicacao": "Bundle concentra intervenções iniciais essenciais.",
+      "tempo_max": 20
+    },
+    {
+      "id": "SEP_MUL_003",
+      "especialidade": "MULTI",
+      "dificuldade": "BASICO",
+      "enunciado": "Vasopressor de primeira linha frequentemente recomendado:",
+      "opcoes": [
+        "Noradrenalina",
+        "Atenolol",
+        "Morfina",
+        "Insulina"
+      ],
+      "correta": 0,
+      "explicacao": "Noradrenalina é recomendação frequente.",
+      "tempo_max": 20
+    },
+    {
+      "id": "SEP_MUL_004",
+      "especialidade": "MULTI",
+      "dificuldade": "BASICO",
+      "enunciado": "Reposição volêmica inicial em hipoperfusão/choque (referência comum):",
+      "opcoes": [
+        "30 mL/kg",
+        "5 mL/kg",
+        "100 mL/kg",
+        "1 mL/kg"
+      ],
+      "correta": 0,
+      "explicacao": "Diretrizes sugerem pelo menos 30 mL/kg nas primeiras horas (individualizar).",
+      "tempo_max": 20
+    },
+    {
+      "id": "SEP_MUL_005",
+      "especialidade": "MULTI",
+      "dificuldade": "BASICO",
+      "enunciado": "Meta inicial de PAM frequentemente citada:",
+      "opcoes": [
+        "≥65 mmHg",
+        "≥40 mmHg",
+        "≥95 mmHg",
+        "≥120 mmHg"
+      ],
+      "correta": 0,
+      "explicacao": "Meta PAM ≥65 mmHg é comum em protocolos.",
+      "tempo_max": 20
+    },
+    {
+      "id": "SEP_MUL_006",
+      "especialidade": "MULTI",
+      "dificuldade": "INTERMEDIARIO",
+      "enunciado": "Culturas devem ser coletadas:",
+      "opcoes": [
+        "Antes do antibiótico, sem atrasar início",
+        "Após 3 doses",
+        "Somente se PCR alto",
+        "Somente em UTI"
+      ],
+      "correta": 0,
+      "explicacao": "Coletar culturas antes do ATB quando possível.",
+      "tempo_max": 20
+    },
+    {
+      "id": "SEP_MUL_007",
+      "especialidade": "MULTI",
+      "dificuldade": "INTERMEDIARIO",
+      "enunciado": "Monitorar diurese é importante pois:",
+      "opcoes": [
+        "Reflete perfusão renal e resposta",
+        "Define alergias",
+        "Indica apenas hidratação",
+        "Não tem utilidade"
+      ],
+      "correta": 0,
+      "explicacao": "Oligúria pode indicar hipoperfusão.",
+      "tempo_max": 20
+    },
+    {
+      "id": "SEP_MUL_008",
+      "especialidade": "MULTI",
+      "dificuldade": "INTERMEDIARIO",
+      "enunciado": "Uma estratégia de melhoria do protocolo é:",
+      "opcoes": [
+        "Mapear tempos (tempo zero) e cumprir bundle",
+        "Evitar checklist",
+        "Anotar depois",
+        "Ignorar indicadores"
+      ],
+      "correta": 0,
+      "explicacao": "Indicadores sustentam melhoria.",
+      "tempo_max": 20
+    },
+    {
+      "id": "SEP_MUL_009",
+      "especialidade": "MULTI",
+      "dificuldade": "INTERMEDIARIO",
+      "enunciado": "Source control significa:",
+      "opcoes": [
+        "Controlar foco (drenagem/remoção/dispositivo) quando indicado",
+        "Dar vitaminas",
+        "Apenas analgesia",
+        "Somente repouso"
+      ],
+      "correta": 0,
+      "explicacao": "Controle de foco complementa antibiótico.",
+      "tempo_max": 20
+    },
+    {
+      "id": "SEP_MUL_010",
+      "especialidade": "MULTI",
+      "dificuldade": "INTERMEDIARIO",
+      "enunciado": "Sinal de disfunção orgânica pode ser:",
+      "opcoes": [
+        "Alteração aguda de consciência",
+        "Unha quebrada",
+        "Dor crônica antiga",
+        "Cansaço pós treino"
+      ],
+      "correta": 0,
+      "explicacao": "Alteração de consciência é sinal de gravidade.",
+      "tempo_max": 20
+    },
+    {
+      "id": "SEP_MUL_011",
+      "especialidade": "MULTI",
+      "dificuldade": "AVANCADO",
+      "enunciado": "Após iniciar terapias, reavaliação deve focar:",
+      "opcoes": [
+        "Perfusão e resposta (lactato/diurese/hemodinâmica)",
+        "Somente febre",
+        "Somente leucócitos",
+        "Somente apetite"
+      ],
+      "correta": 0,
+      "explicacao": "Ajustar conduta conforme resposta.",
+      "tempo_max": 20
+    },
+    {
+      "id": "SEP_MUL_012",
+      "especialidade": "MULTI",
+      "dificuldade": "AVANCADO",
+      "enunciado": "Se persistir choque apesar de volume e vasopressor, o time deve:",
+      "opcoes": [
+        "Reavaliar causas, escalonar suporte e revisar foco/antibiótico",
+        "Dar alta",
+        "Suspender cuidados",
+        "Aguardar 12h"
+      ],
+      "correta": 0,
+      "explicacao": "Choque refratário exige reavaliação e escalonamento.",
+      "tempo_max": 20
+    },
+    {
+      "id": "SEP_MUL_013",
+      "especialidade": "MULTI",
+      "dificuldade": "INTERMEDIARIO",
+      "enunciado": "Uma estratégia de melhoria do protocolo é: (variação)",
+      "opcoes": [
+        "Mapear tempos (tempo zero) e cumprir bundle",
+        "Evitar checklist",
+        "Anotar depois",
+        "Ignorar indicadores"
+      ],
+      "correta": 0,
+      "explicacao": "Indicadores sustentam melhoria.",
+      "tempo_max": 20
+    },
+    {
+      "id": "SEP_MUL_014",
+      "especialidade": "MULTI",
+      "dificuldade": "AVANCADO",
+      "enunciado": "Após iniciar terapias, reavaliação deve focar: (variação)",
+      "opcoes": [
+        "Perfusão e resposta (lactato/diurese/hemodinâmica)",
+        "Somente febre",
+        "Somente leucócitos",
+        "Somente apetite"
+      ],
+      "correta": 0,
+      "explicacao": "Ajustar conduta conforme resposta.",
+      "tempo_max": 20
+    },
+    {
+      "id": "SEP_MUL_015",
+      "especialidade": "MULTI",
+      "dificuldade": "AVANCADO",
+      "enunciado": "Se persistir choque apesar de volume e vasopressor, o time deve: (variação)",
+      "opcoes": [
+        "Reavaliar causas, escalonar suporte e revisar foco/antibiótico",
+        "Dar alta",
+        "Suspender cuidados",
+        "Aguardar 12h"
+      ],
+      "correta": 0,
+      "explicacao": "Choque refratário exige reavaliação e escalonamento.",
+      "tempo_max": 20
+    },
+    {
+      "id": "SEP_MUL_016",
+      "especialidade": "MULTI",
+      "dificuldade": "INTERMEDIARIO",
+      "enunciado": "Uma estratégia de melhoria do protocolo é: (variação)",
+      "opcoes": [
+        "Mapear tempos (tempo zero) e cumprir bundle",
+        "Evitar checklist",
+        "Anotar depois",
+        "Ignorar indicadores"
+      ],
+      "correta": 0,
+      "explicacao": "Indicadores sustentam melhoria.",
+      "tempo_max": 20
+    },
+    {
+      "id": "SEP_MUL_017",
+      "especialidade": "MULTI",
+      "dificuldade": "BASICO",
+      "enunciado": "Sepse exige abordagem tempo-dependente porque: (variação)",
+      "opcoes": [
+        "Atrasos no tratamento inicial pioram desfechos",
+        "Sempre melhora sozinha",
+        "Só afeta jovens",
+        "É sempre viral leve"
+      ],
+      "correta": 0,
+      "explicacao": "Intervenções precoces melhoram prognóstico.",
+      "tempo_max": 20
+    },
+    {
+      "id": "SEP_MUL_018",
+      "especialidade": "MULTI",
+      "dificuldade": "INTERMEDIARIO",
+      "enunciado": "Source control significa: (variação)",
+      "opcoes": [
+        "Controlar foco (drenagem/remoção/dispositivo) quando indicado",
+        "Dar vitaminas",
+        "Apenas analgesia",
+        "Somente repouso"
+      ],
+      "correta": 0,
+      "explicacao": "Controle de foco complementa antibiótico.",
+      "tempo_max": 20
+    },
+    {
+      "id": "SEP_MUL_019",
+      "especialidade": "MULTI",
+      "dificuldade": "INTERMEDIARIO",
+      "enunciado": "Culturas devem ser coletadas: (variação)",
+      "opcoes": [
+        "Antes do antibiótico, sem atrasar início",
+        "Após 3 doses",
+        "Somente se PCR alto",
+        "Somente em UTI"
+      ],
+      "correta": 0,
+      "explicacao": "Coletar culturas antes do ATB quando possível.",
+      "tempo_max": 20
+    },
+    {
+      "id": "SEP_MUL_020",
+      "especialidade": "MULTI",
+      "dificuldade": "INTERMEDIARIO",
+      "enunciado": "Source control significa: (variação)",
+      "opcoes": [
+        "Controlar foco (drenagem/remoção/dispositivo) quando indicado",
+        "Dar vitaminas",
+        "Apenas analgesia",
+        "Somente repouso"
+      ],
+      "correta": 0,
+      "explicacao": "Controle de foco complementa antibiótico.",
+      "tempo_max": 20
+    },
+    {
+      "id": "SEP_MUL_021",
+      "especialidade": "MULTI",
+      "dificuldade": "BASICO",
+      "enunciado": "Elementos comuns do Hour-1 bundle incluem: (variação)",
+      "opcoes": [
+        "Lactato, culturas, antibiótico, fluidos, vasopressor se indicado",
+        "Somente radiografia",
+        "Somente hemograma",
+        "Somente dieta"
+      ],
+      "correta": 0,
+      "explicacao": "Bundle concentra intervenções iniciais essenciais.",
+      "tempo_max": 20
+    },
+    {
+      "id": "SEP_MUL_022",
+      "especialidade": "MULTI",
+      "dificuldade": "INTERMEDIARIO",
+      "enunciado": "Sinal de disfunção orgânica pode ser: (variação)",
+      "opcoes": [
+        "Alteração aguda de consciência",
+        "Unha quebrada",
+        "Dor crônica antiga",
+        "Cansaço pós treino"
+      ],
+      "correta": 0,
+      "explicacao": "Alteração de consciência é sinal de gravidade.",
+      "tempo_max": 20
+    },
+    {
+      "id": "SEP_MUL_023",
+      "especialidade": "MULTI",
+      "dificuldade": "INTERMEDIARIO",
+      "enunciado": "Culturas devem ser coletadas: (variação)",
+      "opcoes": [
+        "Antes do antibiótico, sem atrasar início",
+        "Após 3 doses",
+        "Somente se PCR alto",
+        "Somente em UTI"
+      ],
+      "correta": 0,
+      "explicacao": "Coletar culturas antes do ATB quando possível.",
+      "tempo_max": 20
+    },
+    {
+      "id": "SEP_MUL_024",
+      "especialidade": "MULTI",
+      "dificuldade": "AVANCADO",
+      "enunciado": "Após iniciar terapias, reavaliação deve focar: (variação)",
+      "opcoes": [
+        "Perfusão e resposta (lactato/diurese/hemodinâmica)",
+        "Somente febre",
+        "Somente leucócitos",
+        "Somente apetite"
+      ],
+      "correta": 0,
+      "explicacao": "Ajustar conduta conforme resposta.",
+      "tempo_max": 20
+    },
+    {
+      "id": "SEP_MUL_025",
+      "especialidade": "MULTI",
+      "dificuldade": "INTERMEDIARIO",
+      "enunciado": "Sinal de disfunção orgânica pode ser: (variação)",
+      "opcoes": [
+        "Alteração aguda de consciência",
+        "Unha quebrada",
+        "Dor crônica antiga",
+        "Cansaço pós treino"
+      ],
+      "correta": 0,
+      "explicacao": "Alteração de consciência é sinal de gravidade.",
+      "tempo_max": 20
+    }
+  ]
+}

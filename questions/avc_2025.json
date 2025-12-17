@@ -1,0 +1,2061 @@
+{
+  "meta": {
+    "tema": "AVC",
+    "versao": "2025.12",
+    "descricao": "Banco de questões para treinamento estilo arcade (AVC). Ajuste conforme protocolo institucional.",
+    "referencias": [
+      {
+        "titulo": "Diretrizes de AVC isquêmico agudo – princípios (TC sem contraste, janela trombólise, metas de PA)",
+        "fonte": "AHA/ASA & sociedades",
+        "observacao": "Ajustar ao protocolo local"
+      },
+      {
+        "titulo": "Fluxo Ictus hospitalar – triagem, NIHSS, tempos porta-TC/porta-agulha",
+        "fonte": "Protocolos hospitalares",
+        "observacao": "Ajustar ao protocolo local"
+      }
+    ],
+    "total_questoes": 100,
+    "schema": {
+      "especialidade": [
+        "ENFERMEIRO",
+        "MEDICO",
+        "TECNICO",
+        "MULTI"
+      ],
+      "dificuldade": [
+        "BASICO",
+        "INTERMEDIARIO",
+        "AVANCADO"
+      ]
+    }
+  },
+  "questoes": [
+    {
+      "id": "AVC_ENF_001",
+      "especialidade": "ENFERMEIRO",
+      "dificuldade": "BASICO",
+      "enunciado": "Suspeita de AVC: qual é a ação imediata mais correta no fluxo?",
+      "opcoes": [
+        "Aguardar melhora espontânea",
+        "Acionar Protocolo Ictus e monitorizar",
+        "Dar água e deitar",
+        "Administrar sedativo"
+      ],
+      "correta": 1,
+      "explicacao": "Ativar o fluxo Ictus rapidamente reduz tempo para diagnóstico e terapia.",
+      "tempo_max": 20
+    },
+    {
+      "id": "AVC_ENF_002",
+      "especialidade": "ENFERMEIRO",
+      "dificuldade": "BASICO",
+      "enunciado": "Sinal típico de AVC que deve disparar alerta:",
+      "opcoes": [
+        "Desvio de rima facial e fraqueza em um lado",
+        "Dor no pé",
+        "Prurido",
+        "Cólica abdominal"
+      ],
+      "correta": 0,
+      "explicacao": "Sinais focais súbitos sugerem AVC.",
+      "tempo_max": 20
+    },
+    {
+      "id": "AVC_ENF_003",
+      "especialidade": "ENFERMEIRO",
+      "dificuldade": "BASICO",
+      "enunciado": "Qual exame é prioritário para diferenciar AVC isquêmico vs hemorrágico?",
+      "opcoes": [
+        "TC de crânio sem contraste",
+        "Raio-X de tórax",
+        "USG de abdome",
+        "ECG"
+      ],
+      "correta": 0,
+      "explicacao": "TC sem contraste é exame inicial habitual para excluir hemorragia.",
+      "tempo_max": 20
+    },
+    {
+      "id": "AVC_ENF_004",
+      "especialidade": "ENFERMEIRO",
+      "dificuldade": "BASICO",
+      "enunciado": "Enquanto aguarda imagem, qual cuidado de enfermagem é essencial?",
+      "opcoes": [
+        "Checar glicemia capilar",
+        "Ofertar refeição",
+        "Administrar anticoagulante",
+        "Mobilizar para caminhar"
+      ],
+      "correta": 0,
+      "explicacao": "Hipoglicemia pode mimetizar AVC e deve ser checada precocemente.",
+      "tempo_max": 20
+    },
+    {
+      "id": "AVC_ENF_005",
+      "especialidade": "ENFERMEIRO",
+      "dificuldade": "BASICO",
+      "enunciado": "Em paciente com suspeita de AVC, a via aérea deve ser priorizada se houver:",
+      "opcoes": [
+        "Rebaixamento de consciência/risco de aspiração",
+        "Dor leve",
+        "Ansiedade",
+        "Tosse antiga"
+      ],
+      "correta": 0,
+      "explicacao": "Proteção de via aérea é prioridade em rebaixamento.",
+      "tempo_max": 20
+    },
+    {
+      "id": "AVC_ENF_006",
+      "especialidade": "ENFERMEIRO",
+      "dificuldade": "INTERMEDIARIO",
+      "enunciado": "Na triagem, registrar o tempo de início dos sintomas é crucial porque:",
+      "opcoes": [
+        "Define janela de terapias de reperfusão",
+        "Define tipo sanguíneo",
+        "Define dieta",
+        "Define setor de internação"
+      ],
+      "correta": 0,
+      "explicacao": "Tempo de início orienta elegibilidade para trombólise/trombectomia.",
+      "tempo_max": 20
+    },
+    {
+      "id": "AVC_ENF_007",
+      "especialidade": "ENFERMEIRO",
+      "dificuldade": "INTERMEDIARIO",
+      "enunciado": "Qual escala é frequentemente usada para quantificar déficit neurológico agudo?",
+      "opcoes": [
+        "NIHSS",
+        "APGAR",
+        "Glasgow apenas",
+        "Braden"
+      ],
+      "correta": 0,
+      "explicacao": "NIHSS é referência comum para déficit no AVC agudo.",
+      "tempo_max": 20
+    },
+    {
+      "id": "AVC_ENF_008",
+      "especialidade": "ENFERMEIRO",
+      "dificuldade": "INTERMEDIARIO",
+      "enunciado": "Suspeita de AVC: conduta com pressão arterial deve ser:",
+      "opcoes": [
+        "Seguir metas do protocolo (varia conforme reperfusão)",
+        "Baixar sempre para 120/80 imediatamente",
+        "Ignorar PA",
+        "Dar diurético de rotina"
+      ],
+      "correta": 0,
+      "explicacao": "Metas de PA variam; seguir protocolo do serviço.",
+      "tempo_max": 20
+    },
+    {
+      "id": "AVC_ENF_009",
+      "especialidade": "ENFERMEIRO",
+      "dificuldade": "INTERMEDIARIO",
+      "enunciado": "Antes de trombólise, uma meta de PA frequentemente exigida é:",
+      "opcoes": [
+        "<185/110 mmHg",
+        "<220/140 mmHg",
+        "<140/90 mmHg sempre",
+        "<100/60 mmHg"
+      ],
+      "correta": 0,
+      "explicacao": "Muitos protocolos exigem PA <185/110 para trombólise.",
+      "tempo_max": 20
+    },
+    {
+      "id": "AVC_ENF_010",
+      "especialidade": "ENFERMEIRO",
+      "dificuldade": "INTERMEDIARIO",
+      "enunciado": "Qual medida ajuda a prevenir aspiração no AVC com disfagia suspeita?",
+      "opcoes": [
+        "Manter NPO até avaliação de deglutição",
+        "Ofertar água para testar",
+        "Dar dieta normal",
+        "Usar canudo"
+      ],
+      "correta": 0,
+      "explicacao": "Teste/avaliação de deglutição antes de alimentação.",
+      "tempo_max": 20
+    },
+    {
+      "id": "AVC_ENF_011",
+      "especialidade": "ENFERMEIRO",
+      "dificuldade": "INTERMEDIARIO",
+      "enunciado": "O que NÃO deve ser feito rotineiramente antes de excluir hemorragia na TC?",
+      "opcoes": [
+        "Administrar AAS/antiagregante",
+        "Checar glicemia",
+        "Monitorização",
+        "Avaliar sinais"
+      ],
+      "correta": 0,
+      "explicacao": "Antiagregante antes de excluir hemorragia pode ser prejudicial.",
+      "tempo_max": 20
+    },
+    {
+      "id": "AVC_ENF_012",
+      "especialidade": "ENFERMEIRO",
+      "dificuldade": "INTERMEDIARIO",
+      "enunciado": "Após trombólise, qual monitorização é crítica nas primeiras horas?",
+      "opcoes": [
+        "Neurológica e sinais vitais frequentes",
+        "Somente dor",
+        "Somente diurese",
+        "Somente temperatura"
+      ],
+      "correta": 0,
+      "explicacao": "Risco de sangramento e piora neurológica exige vigilância.",
+      "tempo_max": 20
+    },
+    {
+      "id": "AVC_ENF_013",
+      "especialidade": "ENFERMEIRO",
+      "dificuldade": "INTERMEDIARIO",
+      "enunciado": "Em AVC, hipertermia deve ser manejada porque:",
+      "opcoes": [
+        "Piora desfecho neurológico",
+        "Melhora perfusão cerebral",
+        "É irrelevante",
+        "Evita sangramento"
+      ],
+      "correta": 0,
+      "explicacao": "Febre associa-se a piores desfechos; tratar conforme protocolo.",
+      "tempo_max": 20
+    },
+    {
+      "id": "AVC_ENF_014",
+      "especialidade": "ENFERMEIRO",
+      "dificuldade": "AVANCADO",
+      "enunciado": "Na suspeita de AVC com hipoglicemia, a prioridade é:",
+      "opcoes": [
+        "Corrigir glicemia e reavaliar déficit",
+        "Dar AAS imediato",
+        "Levar direto para trombólise",
+        "Ignorar glicemia"
+      ],
+      "correta": 0,
+      "explicacao": "Hipoglicemia pode simular AVC; corrigir e reavaliar.",
+      "tempo_max": 20
+    },
+    {
+      "id": "AVC_ENF_015",
+      "especialidade": "ENFERMEIRO",
+      "dificuldade": "AVANCADO",
+      "enunciado": "Sinais de hemorragia intracraniana após trombólise podem incluir:",
+      "opcoes": [
+        "Piora neurológica súbita e cefaleia intensa",
+        "Melhora da fala",
+        "Apetite aumentado",
+        "Prurido"
+      ],
+      "correta": 0,
+      "explicacao": "Piora súbita exige investigação imediata.",
+      "tempo_max": 20
+    },
+    {
+      "id": "AVC_ENF_016",
+      "especialidade": "ENFERMEIRO",
+      "dificuldade": "AVANCADO",
+      "enunciado": "Em trombectomia, um objetivo de fluxo é reduzir:",
+      "opcoes": [
+        "Tempo porta-punção e porta-reperfusão",
+        "Tempo de internação",
+        "Tempo de visita",
+        "Tempo de jejum"
+      ],
+      "correta": 0,
+      "explicacao": "Tempo é cérebro; reduzir tempos do fluxo.",
+      "tempo_max": 20
+    },
+    {
+      "id": "AVC_ENF_017",
+      "especialidade": "ENFERMEIRO",
+      "dificuldade": "AVANCADO",
+      "enunciado": "Durante transporte para TC, o que é essencial?",
+      "opcoes": [
+        "Monitorização/oxigênio conforme necessidade e segurança",
+        "Retirar monitor",
+        "Suspender vias",
+        "Levar sem identificação"
+      ],
+      "correta": 0,
+      "explicacao": "Segurança e monitorização durante deslocamento.",
+      "tempo_max": 20
+    },
+    {
+      "id": "AVC_ENF_018",
+      "especialidade": "ENFERMEIRO",
+      "dificuldade": "AVANCADO",
+      "enunciado": "Em AVC extenso com edema, uma prioridade de enfermagem é:",
+      "opcoes": [
+        "Vigilância neurológica e sinais de hipertensão intracraniana",
+        "Ofertar líquidos livres",
+        "Mobilização agressiva",
+        "Suspender cabeceira"
+      ],
+      "correta": 0,
+      "explicacao": "HIC pode complicar; vigilância é fundamental.",
+      "tempo_max": 20
+    },
+    {
+      "id": "AVC_ENF_019",
+      "especialidade": "ENFERMEIRO",
+      "dificuldade": "AVANCADO",
+      "enunciado": "Em suspeita de AVC em paciente anticoagulado, o fluxo deve:",
+      "opcoes": [
+        "Informar uso/última dose e seguir protocolo de reversão/conduta",
+        "Ignorar",
+        "Dar AAS",
+        "Dar trombólise sem checar"
+      ],
+      "correta": 0,
+      "explicacao": "Anticoagulação altera elegibilidade e conduta.",
+      "tempo_max": 20
+    },
+    {
+      "id": "AVC_ENF_020",
+      "especialidade": "ENFERMEIRO",
+      "dificuldade": "AVANCADO",
+      "enunciado": "Após AVC, prevenção de lesão por pressão deve ser:",
+      "opcoes": [
+        "Iniciada precocemente com mudanças de decúbito e avaliação",
+        "Feita só na alta",
+        "Ignorada",
+        "Apenas curativo"
+      ],
+      "correta": 0,
+      "explicacao": "Imobilidade aumenta risco; prevenção precoce.",
+      "tempo_max": 20
+    },
+    {
+      "id": "AVC_ENF_021",
+      "especialidade": "ENFERMEIRO",
+      "dificuldade": "AVANCADO",
+      "enunciado": "Qual conduta melhora comunicação com equipe no AVC agudo?",
+      "opcoes": [
+        "SBAR com último horário normal, NIHSS, glicemia e PA",
+        "Mensagem vaga",
+        "Somente áudio",
+        "Sem comunicar"
+      ],
+      "correta": 0,
+      "explicacao": "Dados objetivos aceleram decisões.",
+      "tempo_max": 20
+    },
+    {
+      "id": "AVC_ENF_022",
+      "especialidade": "ENFERMEIRO",
+      "dificuldade": "AVANCADO",
+      "enunciado": "No AVC, glicemia alvo deve evitar:",
+      "opcoes": [
+        "Hipoglicemia e hiperglicemia importantes",
+        "Somente hipoglicemia",
+        "Somente hiperglicemia",
+        "Nenhuma importa"
+      ],
+      "correta": 0,
+      "explicacao": "Extremos glicêmicos pioram desfecho; seguir metas locais.",
+      "tempo_max": 20
+    },
+    {
+      "id": "AVC_ENF_023",
+      "especialidade": "ENFERMEIRO",
+      "dificuldade": "AVANCADO",
+      "enunciado": "Sinais de trombose venosa profunda em paciente imobilizado exigem:",
+      "opcoes": [
+        "Avaliação e medidas profiláticas conforme protocolo",
+        "Ignorar",
+        "Massagem forte",
+        "Alta"
+      ],
+      "correta": 0,
+      "explicacao": "Imobilidade aumenta risco; prevenção e vigilância.",
+      "tempo_max": 20
+    },
+    {
+      "id": "AVC_ENF_024",
+      "especialidade": "ENFERMEIRO",
+      "dificuldade": "AVANCADO",
+      "enunciado": "Após estabilização, reabilitação deve iniciar:",
+      "opcoes": [
+        "O quanto antes conforme segurança clínica",
+        "Somente após 30 dias",
+        "Nunca",
+        "Apenas em casa"
+      ],
+      "correta": 0,
+      "explicacao": "Reabilitação precoce melhora recuperação (quando seguro).",
+      "tempo_max": 20
+    },
+    {
+      "id": "AVC_ENF_025",
+      "especialidade": "ENFERMEIRO",
+      "dificuldade": "AVANCADO",
+      "enunciado": "No AVC com disfagia confirmada, cuidado inclui:",
+      "opcoes": [
+        "Adaptação de dieta/terapia fono e prevenção de aspiração",
+        "Dieta normal",
+        "Água livre",
+        "Ignorar tosse"
+      ],
+      "correta": 0,
+      "explicacao": "Disfagia aumenta risco de pneumonia aspirativa.",
+      "tempo_max": 20
+    },
+    {
+      "id": "AVC_MED_001",
+      "especialidade": "MEDICO",
+      "dificuldade": "BASICO",
+      "enunciado": "Exame inicial para excluir hemorragia em AVC agudo:",
+      "opcoes": [
+        "TC sem contraste",
+        "RM com contraste sempre",
+        "Raio-X de tórax",
+        "USG carotídeo"
+      ],
+      "correta": 0,
+      "explicacao": "TC sem contraste é exame inicial usual.",
+      "tempo_max": 20
+    },
+    {
+      "id": "AVC_MED_002",
+      "especialidade": "MEDICO",
+      "dificuldade": "BASICO",
+      "enunciado": "Janela clássica para trombólise IV (quando elegível) é em torno de:",
+      "opcoes": [
+        "4,5 horas",
+        "24 horas",
+        "12 horas",
+        "1 hora"
+      ],
+      "correta": 0,
+      "explicacao": "Muitos protocolos usam até 4,5h (critérios específicos).",
+      "tempo_max": 20
+    },
+    {
+      "id": "AVC_MED_003",
+      "especialidade": "MEDICO",
+      "dificuldade": "BASICO",
+      "enunciado": "NIHSS é utilizado para:",
+      "opcoes": [
+        "Quantificar gravidade do déficit neurológico",
+        "Calcular dose de heparina",
+        "Avaliar dor torácica",
+        "Avaliar risco de queda"
+      ],
+      "correta": 0,
+      "explicacao": "NIHSS padroniza gravidade do déficit.",
+      "tempo_max": 20
+    },
+    {
+      "id": "AVC_MED_004",
+      "especialidade": "MEDICO",
+      "dificuldade": "BASICO",
+      "enunciado": "No AVC isquêmico, prioridade terapêutica quando elegível:",
+      "opcoes": [
+        "Reperfusão (trombólise/trombectomia)",
+        "Antibiótico",
+        "Diurético",
+        "Anti-histamínico"
+      ],
+      "correta": 0,
+      "explicacao": "Reperfusão precoce é chave quando indicada.",
+      "tempo_max": 20
+    },
+    {
+      "id": "AVC_MED_005",
+      "especialidade": "MEDICO",
+      "dificuldade": "BASICO",
+      "enunciado": "Antes de trombólise, meta comum de PA:",
+      "opcoes": [
+        "<185/110 mmHg",
+        "<140/90 sempre",
+        "<220/140",
+        "<100/60"
+      ],
+      "correta": 0,
+      "explicacao": "Muitos protocolos exigem <185/110 para trombólise.",
+      "tempo_max": 20
+    },
+    {
+      "id": "AVC_MED_006",
+      "especialidade": "MEDICO",
+      "dificuldade": "INTERMEDIARIO",
+      "enunciado": "Trombectomia mecânica é considerada principalmente em:",
+      "opcoes": [
+        "Oclusão de grande vaso e critérios de imagem/tempo",
+        "Qualquer cefaleia",
+        "AVC hemorrágico",
+        "Hipoglicemia"
+      ],
+      "correta": 0,
+      "explicacao": "Indicação depende de oclusão de grande vaso e critérios.",
+      "tempo_max": 20
+    },
+    {
+      "id": "AVC_MED_007",
+      "especialidade": "MEDICO",
+      "dificuldade": "INTERMEDIARIO",
+      "enunciado": "Um diagnóstico diferencial que deve ser excluído rapidamente é:",
+      "opcoes": [
+        "Hipoglicemia",
+        "Otite",
+        "Sinusite crônica",
+        "Dermatite"
+      ],
+      "correta": 0,
+      "explicacao": "Hipoglicemia pode simular AVC.",
+      "tempo_max": 20
+    },
+    {
+      "id": "AVC_MED_008",
+      "especialidade": "MEDICO",
+      "dificuldade": "INTERMEDIARIO",
+      "enunciado": "Em AVC hemorrágico, prioridade inclui:",
+      "opcoes": [
+        "Controle de PA e avaliação neurocirúrgica conforme caso",
+        "Trombólise",
+        "AAS imediato",
+        "Heparina plena"
+      ],
+      "correta": 0,
+      "explicacao": "Hemorragia exige estratégia diferente de reperfusão.",
+      "tempo_max": 20
+    },
+    {
+      "id": "AVC_MED_009",
+      "especialidade": "MEDICO",
+      "dificuldade": "INTERMEDIARIO",
+      "enunciado": "Após trombólise, evitar antiagregantes/anticoagulantes por:",
+      "opcoes": [
+        "Risco de sangramento intracraniano",
+        "Falta de eficácia",
+        "Dor",
+        "Hipertensão"
+      ],
+      "correta": 0,
+      "explicacao": "Primeiras 24h costumam ser sem antiagregantes; segue protocolo.",
+      "tempo_max": 20
+    },
+    {
+      "id": "AVC_MED_010",
+      "especialidade": "MEDICO",
+      "dificuldade": "INTERMEDIARIO",
+      "enunciado": "O objetivo de fluxo porta-agulha costuma ser:",
+      "opcoes": [
+        "Minimizar (ex.: ≤60 min conforme metas locais)",
+        "Aumentar para 2h",
+        "Não importa",
+        "Somente após internação"
+      ],
+      "correta": 0,
+      "explicacao": "Metas de tempo melhoram desfechos.",
+      "tempo_max": 20
+    },
+    {
+      "id": "AVC_MED_011",
+      "especialidade": "MEDICO",
+      "dificuldade": "INTERMEDIARIO",
+      "enunciado": "Para elegibilidade de trombólise, é essencial conhecer:",
+      "opcoes": [
+        "Último horário normal (last known well)",
+        "Nome do acompanhante",
+        "Peso habitual",
+        "Altura"
+      ],
+      "correta": 0,
+      "explicacao": "Janela terapêutica depende do tempo de início.",
+      "tempo_max": 20
+    },
+    {
+      "id": "AVC_MED_012",
+      "especialidade": "MEDICO",
+      "dificuldade": "INTERMEDIARIO",
+      "enunciado": "Em paciente anticoagulado, trombólise depende de:",
+      "opcoes": [
+        "Tipo de anticoagulante, última dose e parâmetros laboratoriais/protocolo",
+        "Somente NIHSS",
+        "Somente idade",
+        "Somente sexo"
+      ],
+      "correta": 0,
+      "explicacao": "Anticoagulação impacta segurança/eligibilidade.",
+      "tempo_max": 20
+    },
+    {
+      "id": "AVC_MED_013",
+      "especialidade": "MEDICO",
+      "dificuldade": "INTERMEDIARIO",
+      "enunciado": "Quando suspeitar de grande vaso e indicar imagem vascular:",
+      "opcoes": [
+        "Déficit grave/súbito, afasia/hemiplegia, NIHSS alto",
+        "Dor lombar",
+        "Tosse",
+        "Prurido"
+      ],
+      "correta": 0,
+      "explicacao": "Clínica sugere oclusão e necessidade de CTA/MRA conforme fluxo.",
+      "tempo_max": 20
+    },
+    {
+      "id": "AVC_MED_014",
+      "especialidade": "MEDICO",
+      "dificuldade": "INTERMEDIARIO",
+      "enunciado": "Em AVC isquêmico sem reperfusão, PA pode ser manejada com:",
+      "opcoes": [
+        "Permissiva/criteriosa conforme protocolo",
+        "Baixar agressivamente sempre",
+        "Ignorar",
+        "Aumentar sempre"
+      ],
+      "correta": 0,
+      "explicacao": "Metas de PA variam; seguir protocolo.",
+      "tempo_max": 20
+    },
+    {
+      "id": "AVC_MED_015",
+      "especialidade": "MEDICO",
+      "dificuldade": "AVANCADO",
+      "enunciado": "Transformação hemorrágica é risco maior em:",
+      "opcoes": [
+        "Infarto extenso e reperfusão",
+        "Otite",
+        "Dermatite",
+        "Sinusite"
+      ],
+      "correta": 0,
+      "explicacao": "Infartos grandes têm maior risco de sangramento.",
+      "tempo_max": 20
+    },
+    {
+      "id": "AVC_MED_016",
+      "especialidade": "MEDICO",
+      "dificuldade": "AVANCADO",
+      "enunciado": "Piora neurológica súbita após trombólise exige:",
+      "opcoes": [
+        "Suspender infusão se em curso e investigar sangramento (TC)",
+        "Dar AAS",
+        "Alta",
+        "Esperar 6h"
+      ],
+      "correta": 0,
+      "explicacao": "Piora súbita: suspeitar hemorragia.",
+      "tempo_max": 20
+    },
+    {
+      "id": "AVC_MED_017",
+      "especialidade": "MEDICO",
+      "dificuldade": "AVANCADO",
+      "enunciado": "Controle de glicemia no AVC visa evitar:",
+      "opcoes": [
+        "Hipoglicemia e hiperglicemia significativas",
+        "Somente hipoglicemia",
+        "Somente hiperglicemia",
+        "Nada"
+      ],
+      "correta": 0,
+      "explicacao": "Extremos glicêmicos pioram desfecho.",
+      "tempo_max": 20
+    },
+    {
+      "id": "AVC_MED_018",
+      "especialidade": "MEDICO",
+      "dificuldade": "AVANCADO",
+      "enunciado": "A avaliação de disfagia é importante para prevenir:",
+      "opcoes": [
+        "Pneumonia aspirativa",
+        "AVC recorrente",
+        "Infarto",
+        "Fratura"
+      ],
+      "correta": 0,
+      "explicacao": "Disfagia é fator de risco para aspiração.",
+      "tempo_max": 20
+    },
+    {
+      "id": "AVC_MED_019",
+      "especialidade": "MEDICO",
+      "dificuldade": "AVANCADO",
+      "enunciado": "Em edema cerebral maligno, considerar:",
+      "opcoes": [
+        "Neurocirurgia/descompressão em casos selecionados",
+        "Trombólise",
+        "AAS imediato",
+        "Heparina plena"
+      ],
+      "correta": 0,
+      "explicacao": "Edema extenso pode exigir medidas avançadas.",
+      "tempo_max": 20
+    },
+    {
+      "id": "AVC_MED_020",
+      "especialidade": "MEDICO",
+      "dificuldade": "AVANCADO",
+      "enunciado": "Profilaxia de TEV em AVC depende de:",
+      "opcoes": [
+        "Tipo de AVC, risco de sangramento e protocolo",
+        "Somente idade",
+        "Somente NIHSS",
+        "Somente sexo"
+      ],
+      "correta": 0,
+      "explicacao": "Profilaxia é individualizada.",
+      "tempo_max": 20
+    },
+    {
+      "id": "AVC_MED_021",
+      "especialidade": "MEDICO",
+      "dificuldade": "AVANCADO",
+      "enunciado": "Em hemorragia intracerebral, reversão de anticoagulação pode ser necessária e depende de:",
+      "opcoes": [
+        "Droga usada e protocolos de reversão",
+        "Somente pressão",
+        "Somente febre",
+        "Somente lactato"
+      ],
+      "correta": 0,
+      "explicacao": "Reversão é crítica em alguns cenários.",
+      "tempo_max": 20
+    },
+    {
+      "id": "AVC_MED_022",
+      "especialidade": "MEDICO",
+      "dificuldade": "AVANCADO",
+      "enunciado": "Um erro de fluxo que piora desfecho é:",
+      "opcoes": [
+        "Não acionar Protocolo Ictus imediatamente",
+        "Fazer TC precoce",
+        "Checar glicemia",
+        "Avaliar NIHSS"
+      ],
+      "correta": 0,
+      "explicacao": "Atraso no acionamento aumenta tempos.",
+      "tempo_max": 20
+    },
+    {
+      "id": "AVC_MED_023",
+      "especialidade": "MEDICO",
+      "dificuldade": "AVANCADO",
+      "enunciado": "Trombectomia pode ser indicada em janela estendida quando:",
+      "opcoes": [
+        "Imagem mostra tecido viável/penumbra (critérios)",
+        "Sempre após 24h",
+        "Somente NIHSS baixo",
+        "Somente febre"
+      ],
+      "correta": 0,
+      "explicacao": "Seleção por imagem permite janela estendida em casos.",
+      "tempo_max": 20
+    },
+    {
+      "id": "AVC_MED_024",
+      "especialidade": "MEDICO",
+      "dificuldade": "AVANCADO",
+      "enunciado": "Para AVC hemorrágico, manejo inclui evitar:",
+      "opcoes": [
+        "Hipertensão não controlada e anticoagulantes",
+        "Controle de PA",
+        "Neuroimagem",
+        "Suporte"
+      ],
+      "correta": 0,
+      "explicacao": "Hemorragia exige evitar anticoagulação e controlar PA.",
+      "tempo_max": 20
+    },
+    {
+      "id": "AVC_MED_025",
+      "especialidade": "MEDICO",
+      "dificuldade": "AVANCADO",
+      "enunciado": "Após estabilização, prevenção secundária depende de:",
+      "opcoes": [
+        "Etiologia (FA, aterosclerose, etc.) e diretriz",
+        "Somente vitamina",
+        "Somente antibiótico",
+        "Somente diurético"
+      ],
+      "correta": 0,
+      "explicacao": "Estratégia muda conforme causa.",
+      "tempo_max": 20
+    },
+    {
+      "id": "AVC_TEC_001",
+      "especialidade": "TECNICO",
+      "dificuldade": "BASICO",
+      "enunciado": "Suspeita de AVC: primeira ação do técnico é:",
+      "opcoes": [
+        "Avisar equipe e iniciar sinais vitais/monitorização",
+        "Dar água",
+        "Esperar",
+        "Levar para caminhar"
+      ],
+      "correta": 0,
+      "explicacao": "Ativação rápida do fluxo é essencial.",
+      "tempo_max": 20
+    },
+    {
+      "id": "AVC_TEC_002",
+      "especialidade": "TECNICO",
+      "dificuldade": "BASICO",
+      "enunciado": "No transporte para TC, você deve garantir:",
+      "opcoes": [
+        "Identificação do paciente e segurança do trajeto",
+        "Retirar pulseira",
+        "Desconectar oxigênio",
+        "Levar sem monitor"
+      ],
+      "correta": 0,
+      "explicacao": "Segurança e identificação evitam eventos.",
+      "tempo_max": 20
+    },
+    {
+      "id": "AVC_TEC_003",
+      "especialidade": "TECNICO",
+      "dificuldade": "BASICO",
+      "enunciado": "Checar glicemia é importante porque:",
+      "opcoes": [
+        "Hipoglicemia pode simular AVC",
+        "Define tipo de AVC",
+        "Define tomografia",
+        "Define dieta"
+      ],
+      "correta": 0,
+      "explicacao": "Hipoglicemia é diagnóstico diferencial urgente.",
+      "tempo_max": 20
+    },
+    {
+      "id": "AVC_TEC_004",
+      "especialidade": "TECNICO",
+      "dificuldade": "BASICO",
+      "enunciado": "Em rebaixamento de consciência, prioridade é:",
+      "opcoes": [
+        "Proteger via aérea e avisar equipe",
+        "Ofertar água",
+        "Deixar dormir",
+        "Dar alimento"
+      ],
+      "correta": 0,
+      "explicacao": "Risco de aspiração exige prioridade.",
+      "tempo_max": 20
+    },
+    {
+      "id": "AVC_TEC_005",
+      "especialidade": "TECNICO",
+      "dificuldade": "BASICO",
+      "enunciado": "Sinal de alerta de AVC:",
+      "opcoes": [
+        "Boca torta/fraqueza unilateral",
+        "Dor no pé",
+        "Prurido",
+        "Dor lombar crônica"
+      ],
+      "correta": 0,
+      "explicacao": "Déficit focal súbito é típico.",
+      "tempo_max": 20
+    },
+    {
+      "id": "AVC_TEC_006",
+      "especialidade": "TECNICO",
+      "dificuldade": "INTERMEDIARIO",
+      "enunciado": "Durante observação, a piora neurológica deve ser:",
+      "opcoes": [
+        "Comunicada imediatamente e registrada com horário",
+        "Anotada depois",
+        "Ignorada",
+        "Apenas comentada"
+      ],
+      "correta": 0,
+      "explicacao": "Tempo e tendência são críticos.",
+      "tempo_max": 20
+    },
+    {
+      "id": "AVC_TEC_007",
+      "especialidade": "TECNICO",
+      "dificuldade": "INTERMEDIARIO",
+      "enunciado": "Após trombólise, você deve monitorar:",
+      "opcoes": [
+        "Sinais vitais e exame neurológico frequentes",
+        "Somente temperatura",
+        "Somente diurese",
+        "Somente dor"
+      ],
+      "correta": 0,
+      "explicacao": "Risco de sangramento/piora exige vigilância.",
+      "tempo_max": 20
+    },
+    {
+      "id": "AVC_TEC_008",
+      "especialidade": "TECNICO",
+      "dificuldade": "INTERMEDIARIO",
+      "enunciado": "No AVC com disfagia suspeita, conduta correta é:",
+      "opcoes": [
+        "Manter NPO até avaliação",
+        "Dar água para testar",
+        "Dieta normal",
+        "Canudo"
+      ],
+      "correta": 0,
+      "explicacao": "Evita aspiração.",
+      "tempo_max": 20
+    },
+    {
+      "id": "AVC_TEC_009",
+      "especialidade": "TECNICO",
+      "dificuldade": "INTERMEDIARIO",
+      "enunciado": "Uma checagem de segurança antes de medicações é:",
+      "opcoes": [
+        "Conferir alergias e identificação",
+        "Aplicar sem conferir",
+        "Trocar frascos",
+        "Ignorar prescrição"
+      ],
+      "correta": 0,
+      "explicacao": "Segurança do paciente.",
+      "tempo_max": 20
+    },
+    {
+      "id": "AVC_TEC_010",
+      "especialidade": "TECNICO",
+      "dificuldade": "INTERMEDIARIO",
+      "enunciado": "Durante deslocamento, se saturação cair, você deve:",
+      "opcoes": [
+        "Avisar equipe e ofertar suporte conforme rotina",
+        "Ignorar",
+        "Desconectar",
+        "Aguardar"
+      ],
+      "correta": 0,
+      "explicacao": "Hipóxia piora desfecho.",
+      "tempo_max": 20
+    },
+    {
+      "id": "AVC_TEC_011",
+      "especialidade": "TECNICO",
+      "dificuldade": "INTERMEDIARIO",
+      "enunciado": "Documentar o “último horário normal” ajuda porque:",
+      "opcoes": [
+        "Define janela de tratamento",
+        "Define dieta",
+        "Define alta",
+        "Define quarto"
+      ],
+      "correta": 0,
+      "explicacao": "Janela terapêutica depende do tempo.",
+      "tempo_max": 20
+    },
+    {
+      "id": "AVC_TEC_012",
+      "especialidade": "TECNICO",
+      "dificuldade": "AVANCADO",
+      "enunciado": "Se o paciente piora subitamente após trombólise, sua ação é:",
+      "opcoes": [
+        "Acionar equipe imediatamente e preparar para TC",
+        "Dar AAS",
+        "Alta",
+        "Esperar"
+      ],
+      "correta": 0,
+      "explicacao": "Suspeitar sangramento e investigar.",
+      "tempo_max": 20
+    },
+    {
+      "id": "AVC_TEC_013",
+      "especialidade": "TECNICO",
+      "dificuldade": "AVANCADO",
+      "enunciado": "Prevenção de queda em paciente com déficit motor deve ser:",
+      "opcoes": [
+        "Implementada imediatamente",
+        "Ignorada",
+        "Feita só na alta",
+        "Sem grades"
+      ],
+      "correta": 0,
+      "explicacao": "Déficit aumenta risco de queda.",
+      "tempo_max": 20
+    },
+    {
+      "id": "AVC_TEC_014",
+      "especialidade": "TECNICO",
+      "dificuldade": "AVANCADO",
+      "enunciado": "Para prevenir lesão por pressão, o cuidado inclui:",
+      "opcoes": [
+        "Mudança de decúbito e avaliação de pele",
+        "Somente curativo",
+        "Ignorar",
+        "Somente massagem"
+      ],
+      "correta": 0,
+      "explicacao": "Imobilidade aumenta risco.",
+      "tempo_max": 20
+    },
+    {
+      "id": "AVC_TEC_015",
+      "especialidade": "TECNICO",
+      "dificuldade": "AVANCADO",
+      "enunciado": "Em paciente agitado/confuso, prioridade é:",
+      "opcoes": [
+        "Segurança, reorientação e avisar equipe",
+        "Deixar sozinho",
+        "Retirar grades",
+        "Dar sedativo sem prescrição"
+      ],
+      "correta": 0,
+      "explicacao": "Segurança do paciente e investigação de causa.",
+      "tempo_max": 20
+    },
+    {
+      "id": "AVC_TEC_016",
+      "especialidade": "TECNICO",
+      "dificuldade": "AVANCADO",
+      "enunciado": "Se o paciente piora subitamente após trombólise, sua ação é: (variação)",
+      "opcoes": [
+        "Acionar equipe imediatamente e preparar para TC",
+        "Dar AAS",
+        "Alta",
+        "Esperar"
+      ],
+      "correta": 0,
+      "explicacao": "Suspeitar sangramento e investigar.",
+      "tempo_max": 20
+    },
+    {
+      "id": "AVC_TEC_017",
+      "especialidade": "TECNICO",
+      "dificuldade": "INTERMEDIARIO",
+      "enunciado": "Durante observação, a piora neurológica deve ser: (variação)",
+      "opcoes": [
+        "Comunicada imediatamente e registrada com horário",
+        "Anotada depois",
+        "Ignorada",
+        "Apenas comentada"
+      ],
+      "correta": 0,
+      "explicacao": "Tempo e tendência são críticos.",
+      "tempo_max": 20
+    },
+    {
+      "id": "AVC_TEC_018",
+      "especialidade": "TECNICO",
+      "dificuldade": "AVANCADO",
+      "enunciado": "Se o paciente piora subitamente após trombólise, sua ação é: (variação) (variação)",
+      "opcoes": [
+        "Acionar equipe imediatamente e preparar para TC",
+        "Dar AAS",
+        "Alta",
+        "Esperar"
+      ],
+      "correta": 0,
+      "explicacao": "Suspeitar sangramento e investigar.",
+      "tempo_max": 20
+    },
+    {
+      "id": "AVC_TEC_019",
+      "especialidade": "TECNICO",
+      "dificuldade": "AVANCADO",
+      "enunciado": "Se o paciente piora subitamente após trombólise, sua ação é: (variação)",
+      "opcoes": [
+        "Acionar equipe imediatamente e preparar para TC",
+        "Dar AAS",
+        "Alta",
+        "Esperar"
+      ],
+      "correta": 0,
+      "explicacao": "Suspeitar sangramento e investigar.",
+      "tempo_max": 20
+    },
+    {
+      "id": "AVC_TEC_020",
+      "especialidade": "TECNICO",
+      "dificuldade": "BASICO",
+      "enunciado": "Em rebaixamento de consciência, prioridade é: (variação)",
+      "opcoes": [
+        "Proteger via aérea e avisar equipe",
+        "Ofertar água",
+        "Deixar dormir",
+        "Dar alimento"
+      ],
+      "correta": 0,
+      "explicacao": "Risco de aspiração exige prioridade.",
+      "tempo_max": 20
+    },
+    {
+      "id": "AVC_TEC_021",
+      "especialidade": "TECNICO",
+      "dificuldade": "AVANCADO",
+      "enunciado": "Se o paciente piora subitamente após trombólise, sua ação é: (variação)",
+      "opcoes": [
+        "Acionar equipe imediatamente e preparar para TC",
+        "Dar AAS",
+        "Alta",
+        "Esperar"
+      ],
+      "correta": 0,
+      "explicacao": "Suspeitar sangramento e investigar.",
+      "tempo_max": 20
+    },
+    {
+      "id": "AVC_TEC_022",
+      "especialidade": "TECNICO",
+      "dificuldade": "INTERMEDIARIO",
+      "enunciado": "No AVC com disfagia suspeita, conduta correta é: (variação)",
+      "opcoes": [
+        "Manter NPO até avaliação",
+        "Dar água para testar",
+        "Dieta normal",
+        "Canudo"
+      ],
+      "correta": 0,
+      "explicacao": "Evita aspiração.",
+      "tempo_max": 20
+    },
+    {
+      "id": "AVC_TEC_023",
+      "especialidade": "TECNICO",
+      "dificuldade": "INTERMEDIARIO",
+      "enunciado": "Durante deslocamento, se saturação cair, você deve: (variação)",
+      "opcoes": [
+        "Avisar equipe e ofertar suporte conforme rotina",
+        "Ignorar",
+        "Desconectar",
+        "Aguardar"
+      ],
+      "correta": 0,
+      "explicacao": "Hipóxia piora desfecho.",
+      "tempo_max": 20
+    },
+    {
+      "id": "AVC_TEC_024",
+      "especialidade": "TECNICO",
+      "dificuldade": "INTERMEDIARIO",
+      "enunciado": "No AVC com disfagia suspeita, conduta correta é: (variação)",
+      "opcoes": [
+        "Manter NPO até avaliação",
+        "Dar água para testar",
+        "Dieta normal",
+        "Canudo"
+      ],
+      "correta": 0,
+      "explicacao": "Evita aspiração.",
+      "tempo_max": 20
+    },
+    {
+      "id": "AVC_TEC_025",
+      "especialidade": "TECNICO",
+      "dificuldade": "INTERMEDIARIO",
+      "enunciado": "Após trombólise, você deve monitorar: (variação)",
+      "opcoes": [
+        "Sinais vitais e exame neurológico frequentes",
+        "Somente temperatura",
+        "Somente diurese",
+        "Somente dor"
+      ],
+      "correta": 0,
+      "explicacao": "Risco de sangramento/piora exige vigilância.",
+      "tempo_max": 20
+    },
+    {
+      "id": "AVC_MUL_001",
+      "especialidade": "MULTI",
+      "dificuldade": "BASICO",
+      "enunciado": "No AVC agudo, a regra 'tempo é cérebro' significa:",
+      "opcoes": [
+        "Quanto mais rápido tratar, mais tecido é salvo",
+        "Aguardar melhora",
+        "Só vale para jovens",
+        "Só vale para hemorrágico"
+      ],
+      "correta": 0,
+      "explicacao": "Redução de tempos melhora desfechos.",
+      "tempo_max": 20
+    },
+    {
+      "id": "AVC_MUL_002",
+      "especialidade": "MULTI",
+      "dificuldade": "BASICO",
+      "enunciado": "Exame de imagem inicial mais comum:",
+      "opcoes": [
+        "TC de crânio sem contraste",
+        "USG abdome",
+        "Raio-X",
+        "ECG"
+      ],
+      "correta": 0,
+      "explicacao": "TC inicial exclui hemorragia.",
+      "tempo_max": 20
+    },
+    {
+      "id": "AVC_MUL_003",
+      "especialidade": "MULTI",
+      "dificuldade": "INTERMEDIARIO",
+      "enunciado": "Dois itens críticos do fluxo Ictus são:",
+      "opcoes": [
+        "Último horário normal e porta-TC rápido",
+        "Dieta e sono",
+        "Visitas e prontuário",
+        "Curativo e alta"
+      ],
+      "correta": 0,
+      "explicacao": "Tempo e documentação orientam terapia.",
+      "tempo_max": 20
+    },
+    {
+      "id": "AVC_MUL_004",
+      "especialidade": "MULTI",
+      "dificuldade": "INTERMEDIARIO",
+      "enunciado": "Hipoglicemia deve ser excluída porque:",
+      "opcoes": [
+        "Pode mimetizar AVC e é tratável rapidamente",
+        "Sempre causa AVC",
+        "Não interfere",
+        "Só em crianças"
+      ],
+      "correta": 0,
+      "explicacao": "Diagnóstico diferencial urgente.",
+      "tempo_max": 20
+    },
+    {
+      "id": "AVC_MUL_005",
+      "especialidade": "MULTI",
+      "dificuldade": "AVANCADO",
+      "enunciado": "Após reperfusão, vigilância visa detectar:",
+      "opcoes": [
+        "Sangramento e piora neurológica precoce",
+        "Aumento do apetite",
+        "Dor lombar",
+        "Dermatite"
+      ],
+      "correta": 0,
+      "explicacao": "Complicações precoces exigem vigilância.",
+      "tempo_max": 20
+    },
+    {
+      "id": "AVC_MUL_006",
+      "especialidade": "MULTI",
+      "dificuldade": "BASICO",
+      "enunciado": "Exame de imagem inicial mais comum: (variação)",
+      "opcoes": [
+        "TC de crânio sem contraste",
+        "USG abdome",
+        "Raio-X",
+        "ECG"
+      ],
+      "correta": 0,
+      "explicacao": "TC inicial exclui hemorragia.",
+      "tempo_max": 20
+    },
+    {
+      "id": "AVC_MUL_007",
+      "especialidade": "MULTI",
+      "dificuldade": "INTERMEDIARIO",
+      "enunciado": "Hipoglicemia deve ser excluída porque: (variação)",
+      "opcoes": [
+        "Pode mimetizar AVC e é tratável rapidamente",
+        "Sempre causa AVC",
+        "Não interfere",
+        "Só em crianças"
+      ],
+      "correta": 0,
+      "explicacao": "Diagnóstico diferencial urgente.",
+      "tempo_max": 20
+    },
+    {
+      "id": "AVC_MUL_008",
+      "especialidade": "MULTI",
+      "dificuldade": "INTERMEDIARIO",
+      "enunciado": "Hipoglicemia deve ser excluída porque: (variação)",
+      "opcoes": [
+        "Pode mimetizar AVC e é tratável rapidamente",
+        "Sempre causa AVC",
+        "Não interfere",
+        "Só em crianças"
+      ],
+      "correta": 0,
+      "explicacao": "Diagnóstico diferencial urgente.",
+      "tempo_max": 20
+    },
+    {
+      "id": "AVC_MUL_009",
+      "especialidade": "MULTI",
+      "dificuldade": "BASICO",
+      "enunciado": "No AVC agudo, a regra 'tempo é cérebro' significa: (variação)",
+      "opcoes": [
+        "Quanto mais rápido tratar, mais tecido é salvo",
+        "Aguardar melhora",
+        "Só vale para jovens",
+        "Só vale para hemorrágico"
+      ],
+      "correta": 0,
+      "explicacao": "Redução de tempos melhora desfechos.",
+      "tempo_max": 20
+    },
+    {
+      "id": "AVC_MUL_010",
+      "especialidade": "MULTI",
+      "dificuldade": "AVANCADO",
+      "enunciado": "Após reperfusão, vigilância visa detectar: (variação)",
+      "opcoes": [
+        "Sangramento e piora neurológica precoce",
+        "Aumento do apetite",
+        "Dor lombar",
+        "Dermatite"
+      ],
+      "correta": 0,
+      "explicacao": "Complicações precoces exigem vigilância.",
+      "tempo_max": 20
+    },
+    {
+      "id": "AVC_MUL_011",
+      "especialidade": "MULTI",
+      "dificuldade": "BASICO",
+      "enunciado": "Exame de imagem inicial mais comum: (variação)",
+      "opcoes": [
+        "TC de crânio sem contraste",
+        "USG abdome",
+        "Raio-X",
+        "ECG"
+      ],
+      "correta": 0,
+      "explicacao": "TC inicial exclui hemorragia.",
+      "tempo_max": 20
+    },
+    {
+      "id": "AVC_MUL_012",
+      "especialidade": "MULTI",
+      "dificuldade": "BASICO",
+      "enunciado": "No AVC agudo, a regra 'tempo é cérebro' significa: (variação)",
+      "opcoes": [
+        "Quanto mais rápido tratar, mais tecido é salvo",
+        "Aguardar melhora",
+        "Só vale para jovens",
+        "Só vale para hemorrágico"
+      ],
+      "correta": 0,
+      "explicacao": "Redução de tempos melhora desfechos.",
+      "tempo_max": 20
+    },
+    {
+      "id": "AVC_MUL_013",
+      "especialidade": "MULTI",
+      "dificuldade": "INTERMEDIARIO",
+      "enunciado": "Dois itens críticos do fluxo Ictus são: (variação)",
+      "opcoes": [
+        "Último horário normal e porta-TC rápido",
+        "Dieta e sono",
+        "Visitas e prontuário",
+        "Curativo e alta"
+      ],
+      "correta": 0,
+      "explicacao": "Tempo e documentação orientam terapia.",
+      "tempo_max": 20
+    },
+    {
+      "id": "AVC_MUL_014",
+      "especialidade": "MULTI",
+      "dificuldade": "AVANCADO",
+      "enunciado": "Após reperfusão, vigilância visa detectar: (variação)",
+      "opcoes": [
+        "Sangramento e piora neurológica precoce",
+        "Aumento do apetite",
+        "Dor lombar",
+        "Dermatite"
+      ],
+      "correta": 0,
+      "explicacao": "Complicações precoces exigem vigilância.",
+      "tempo_max": 20
+    },
+    {
+      "id": "AVC_MUL_015",
+      "especialidade": "MULTI",
+      "dificuldade": "INTERMEDIARIO",
+      "enunciado": "Hipoglicemia deve ser excluída porque: (variação)",
+      "opcoes": [
+        "Pode mimetizar AVC e é tratável rapidamente",
+        "Sempre causa AVC",
+        "Não interfere",
+        "Só em crianças"
+      ],
+      "correta": 0,
+      "explicacao": "Diagnóstico diferencial urgente.",
+      "tempo_max": 20
+    },
+    {
+      "id": "AVC_MUL_016",
+      "especialidade": "MULTI",
+      "dificuldade": "INTERMEDIARIO",
+      "enunciado": "Dois itens críticos do fluxo Ictus são: (variação)",
+      "opcoes": [
+        "Último horário normal e porta-TC rápido",
+        "Dieta e sono",
+        "Visitas e prontuário",
+        "Curativo e alta"
+      ],
+      "correta": 0,
+      "explicacao": "Tempo e documentação orientam terapia.",
+      "tempo_max": 20
+    },
+    {
+      "id": "AVC_MUL_017",
+      "especialidade": "MULTI",
+      "dificuldade": "INTERMEDIARIO",
+      "enunciado": "Dois itens críticos do fluxo Ictus são: (variação)",
+      "opcoes": [
+        "Último horário normal e porta-TC rápido",
+        "Dieta e sono",
+        "Visitas e prontuário",
+        "Curativo e alta"
+      ],
+      "correta": 0,
+      "explicacao": "Tempo e documentação orientam terapia.",
+      "tempo_max": 20
+    },
+    {
+      "id": "AVC_MUL_018",
+      "especialidade": "MULTI",
+      "dificuldade": "BASICO",
+      "enunciado": "Exame de imagem inicial mais comum: (variação)",
+      "opcoes": [
+        "TC de crânio sem contraste",
+        "USG abdome",
+        "Raio-X",
+        "ECG"
+      ],
+      "correta": 0,
+      "explicacao": "TC inicial exclui hemorragia.",
+      "tempo_max": 20
+    },
+    {
+      "id": "AVC_MUL_019",
+      "especialidade": "MULTI",
+      "dificuldade": "BASICO",
+      "enunciado": "No AVC agudo, a regra 'tempo é cérebro' significa: (variação)",
+      "opcoes": [
+        "Quanto mais rápido tratar, mais tecido é salvo",
+        "Aguardar melhora",
+        "Só vale para jovens",
+        "Só vale para hemorrágico"
+      ],
+      "correta": 0,
+      "explicacao": "Redução de tempos melhora desfechos.",
+      "tempo_max": 20
+    },
+    {
+      "id": "AVC_MUL_020",
+      "especialidade": "MULTI",
+      "dificuldade": "INTERMEDIARIO",
+      "enunciado": "Dois itens críticos do fluxo Ictus são: (variação)",
+      "opcoes": [
+        "Último horário normal e porta-TC rápido",
+        "Dieta e sono",
+        "Visitas e prontuário",
+        "Curativo e alta"
+      ],
+      "correta": 0,
+      "explicacao": "Tempo e documentação orientam terapia.",
+      "tempo_max": 20
+    },
+    {
+      "id": "AVC_MUL_021",
+      "especialidade": "MULTI",
+      "dificuldade": "INTERMEDIARIO",
+      "enunciado": "Dois itens críticos do fluxo Ictus são: (variação)",
+      "opcoes": [
+        "Último horário normal e porta-TC rápido",
+        "Dieta e sono",
+        "Visitas e prontuário",
+        "Curativo e alta"
+      ],
+      "correta": 0,
+      "explicacao": "Tempo e documentação orientam terapia.",
+      "tempo_max": 20
+    },
+    {
+      "id": "AVC_MUL_022",
+      "especialidade": "MULTI",
+      "dificuldade": "INTERMEDIARIO",
+      "enunciado": "Hipoglicemia deve ser excluída porque: (variação)",
+      "opcoes": [
+        "Pode mimetizar AVC e é tratável rapidamente",
+        "Sempre causa AVC",
+        "Não interfere",
+        "Só em crianças"
+      ],
+      "correta": 0,
+      "explicacao": "Diagnóstico diferencial urgente.",
+      "tempo_max": 20
+    },
+    {
+      "id": "AVC_MUL_023",
+      "especialidade": "MULTI",
+      "dificuldade": "BASICO",
+      "enunciado": "Exame de imagem inicial mais comum: (variação)",
+      "opcoes": [
+        "TC de crânio sem contraste",
+        "USG abdome",
+        "Raio-X",
+        "ECG"
+      ],
+      "correta": 0,
+      "explicacao": "TC inicial exclui hemorragia.",
+      "tempo_max": 20
+    },
+    {
+      "id": "AVC_MUL_024",
+      "especialidade": "MULTI",
+      "dificuldade": "AVANCADO",
+      "enunciado": "Após reperfusão, vigilância visa detectar: (variação)",
+      "opcoes": [
+        "Sangramento e piora neurológica precoce",
+        "Aumento do apetite",
+        "Dor lombar",
+        "Dermatite"
+      ],
+      "correta": 0,
+      "explicacao": "Complicações precoces exigem vigilância.",
+      "tempo_max": 20
+    },
+    {
+      "id": "AVC_MUL_025",
+      "especialidade": "MULTI",
+      "dificuldade": "INTERMEDIARIO",
+      "enunciado": "Dois itens críticos do fluxo Ictus são: (variação)",
+      "opcoes": [
+        "Último horário normal e porta-TC rápido",
+        "Dieta e sono",
+        "Visitas e prontuário",
+        "Curativo e alta"
+      ],
+      "correta": 0,
+      "explicacao": "Tempo e documentação orientam terapia.",
+      "tempo_max": 20
+    },
+    {
+      "id": "AVC_MUL_036",
+      "especialidade": "MULTI",
+      "dificuldade": "INTERMEDIARIO",
+      "enunciado": "O 'Teste de Copo d'água' para disfagia deve ser feito:",
+      "opcoes": [
+        "Com o paciente sentado a 90 graus",
+        "Com o paciente deitado em decúbito lateral",
+        "Apenas se o paciente estiver com muita sede",
+        "Apenas por médicos especialistas"
+      ],
+      "correta": 0,
+      "explicacao": "A posição sentada protege contra a broncoaspiração durante o teste.",
+      "tempo_max": 20
+    },
+    {
+      "id": "AVC_ENF_036",
+      "especialidade": "ENFERMEIRO",
+      "dificuldade": "INTERMEDIARIO",
+      "enunciado": "No monitoramento pós-trombólise, a frequência de sinais vitais na 1ª hora deve ser:",
+      "opcoes": [
+        "A cada 15 minutos",
+        "A cada 30 minutos",
+        "De hora em hora",
+        "Uma vez por turno"
+      ],
+      "correta": 0,
+      "explicacao": "Vigilância rigorosa é necessária para detectar sangramentos ou angioedema precocemente.",
+      "tempo_max": 20
+    },
+    {
+      "id": "AVC_MED_036",
+      "especialidade": "MEDICO",
+      "dificuldade": "AVANCADO",
+      "enunciado": "Qual medicação é a primeira escolha para baixar a PA visando a trombólise?",
+      "opcoes": [
+        "Labetalol ou Nitroprussiato de Sódio EV",
+        "Nifedipina sublingual",
+        "Enalapril por via oral",
+        "Anlodipino"
+      ],
+      "correta": 0,
+      "explicacao": "Drogas endovenosas permitem titulação rápida e segura da pressão arterial.",
+      "tempo_max": 25
+    },
+    {
+      "id": "AVC_TEC_036",
+      "especialidade": "TECNICO",
+      "dificuldade": "INTERMEDIARIO",
+      "enunciado": "Braço com plegia (paralisado) deve ser manipulado:",
+      "opcoes": [
+        "Sempre com suporte e alinhamento, evitando tração no ombro",
+        "Puxando pelo pulso para facilitar a mudança de decúbito",
+        "Deixando-o pendente para fora da cama",
+        "Amarrado para evitar quedas"
+      ],
+      "correta": 0,
+      "explicacao": "Tração no braço paralisado pode causar subluxação dolorosa do ombro.",
+      "tempo_max": 20
+    },
+    {
+      "id": "AVC_MUL_037",
+      "especialidade": "MULTI",
+      "dificuldade": "BASICO",
+      "enunciado": "Qual a principal diferença visual na TC entre AVC Isquêmico e Hemorrágico?",
+      "opcoes": [
+        "Hemorrágico brilha (branco); Isquêmico é escuro (ou normal no início)",
+        "Isquêmico brilha (branco); Hemorrágico é verde",
+        "Ambos são idênticos na TC sem contraste",
+        "O hemorrágico faz o cérebro diminuir de tamanho na hora"
+      ],
+      "correta": 0,
+      "explicacao": "Sangue agudo aparece como uma mancha branca (hiperatenuante) na TC.",
+      "tempo_max": 20
+    },
+    {
+      "id": "AVC_ENF_037",
+      "especialidade": "ENFERMEIRO",
+      "dificuldade": "AVANCADO",
+      "enunciado": "Angioedema de língua ou lábios durante infusão de rtPA exige:",
+      "opcoes": [
+        "Interromper infusão e administrar corticoides/anti-histamínicos",
+        "Apenas observar o paciente por 30 minutos",
+        "Aumentar a velocidade da infusão para acabar logo",
+        "Dar água gelada para o paciente"
+      ],
+      "correta": 0,
+      "explicacao": "Angioedema é uma reação adversa grave que pode obstruir as vias aéreas.",
+      "tempo_max": 25
+    },
+    {
+      "id": "AVC_MED_037",
+      "especialidade": "MEDICO",
+      "dificuldade": "INTERMEDIARIO",
+      "enunciado": "A escala ASPECTS é usada na TC de crânio para:",
+      "opcoes": [
+        "Avaliar a extensão de sinais isquêmicos precoces no território da ACM",
+        "Contar o número de hemorragias",
+        "Calcular a dose de insulina",
+        "Avaliar o risco de queda do paciente"
+      ],
+      "correta": 0,
+      "explicacao": "Um ASPECTS baixo (ex: < 6) indica infarto já estabelecido em grande área.",
+      "tempo_max": 25
+    },
+    {
+      "id": "AVC_TEC_037",
+      "especialidade": "TECNICO",
+      "dificuldade": "BASICO",
+      "enunciado": "Ao perceber que o paciente de AVC está com o 'olhar fixo' e não responde, você:",
+      "opcoes": [
+        "Aciona a equipe para descartar crise convulsiva ou piora neurológica",
+        "Acha que ele está apenas descansando",
+        "Fecha as cortinas para ele dormir",
+        "Aguarda o próximo horário de sinais vitais"
+      ],
+      "correta": 0,
+      "explicacao": "Alterações súbitas de consciência no AVC são emergências dentro da emergência.",
+      "tempo_max": 15
+    },
+    {
+      "id": "AVC_MUL_038",
+      "especialidade": "MULTI",
+      "dificuldade": "INTERMEDIARIO",
+      "enunciado": "O termo 'Wake-up Stroke' (AVC ao despertar) significa:",
+      "opcoes": [
+        "O paciente acordou já com os sintomas e o início é incerto",
+        "O paciente acordou e teve o AVC na frente da família",
+        "O paciente teve um pesadelo que causou o AVC",
+        "O paciente acordou curado do AVC"
+      ],
+      "correta": 0,
+      "explicacao": "Nesses casos, considera-se o último horário em que o paciente foi visto bem antes de dormir.",
+      "tempo_max": 20
+    },
+    {
+      "id": "AVC_ENF_038",
+      "especialidade": "ENFERMEIRO",
+      "dificuldade": "BASICO",
+      "enunciado": "Qual braço deve ser evitado para aferição de PA e punções?",
+      "opcoes": [
+        "O braço com déficit motor (plegia/paresia)",
+        "O braço direito, independente de qual lado é o AVC",
+        "O braço esquerdo, independente de qual lado é o AVC",
+        "Não há restrição de braço no protocolo de AVC"
+      ],
+      "correta": 0,
+      "explicacao": "Evita-se o membro afetado para prevenir lesões e garantir medidas de PA fidedignas.",
+      "tempo_max": 15
+    },
+    {
+      "id": "AVC_MED_038",
+      "especialidade": "MEDICO",
+      "dificuldade": "AVANCADO",
+      "enunciado": "A janela de 4,5h para rtPA IV pode ser estendida para até 24h para Trombectomia se:",
+      "opcoes": [
+        "Houver oclusão de grande vaso e mismatch em imagem avançada",
+        "O paciente for muito jovem",
+        "O paciente for diabético",
+        "A pressão arterial estiver muito baixa"
+      ],
+      "correta": 0,
+      "explicacao": "Critérios de imagem (perfusão) permitem tratar grandes oclusões em janelas estendidas.",
+      "tempo_max": 25
+    },
+    {
+      "id": "AVC_TEC_038",
+      "especialidade": "TECNICO",
+      "dificuldade": "BASICO",
+      "enunciado": "A mudança de decúbito no paciente com AVC serve para prevenir:",
+      "opcoes": [
+        "Lesões por pressão (escaras) e pneumonia",
+        "O paciente de ficar entediado",
+        "Aumento da fome",
+        "Crescimento de cabelo"
+      ],
+      "correta": 0,
+      "explicacao": "A imobilidade é um grande risco para pele e pulmões no paciente neurológico.",
+      "tempo_max": 15
+    },
+    {
+      "id": "AVC_MUL_039",
+      "especialidade": "MULTI",
+      "dificuldade": "INTERMEDIARIO",
+      "enunciado": "Qual destas é uma 'mímica' de AVC (Stroke Mimic)?",
+      "opcoes": [
+        "Hipoglicemia e Crise de Enxaqueca com aura",
+        "Fratura de fêmur",
+        "Dor de dente",
+        "Gripe comum"
+      ],
+      "correta": 0,
+      "explicacao": "Essas condições podem apresentar déficits neurológicos que parecem AVC, mas não são.",
+      "tempo_max": 20
+    },
+    {
+      "id": "AVC_ENF_039",
+      "especialidade": "ENFERMEIRO",
+      "dificuldade": "INTERMEDIARIO",
+      "enunciado": "Paciente negligencia o lado esquerdo do corpo. Isso sugere lesão em:",
+      "opcoes": [
+        "Hemisfério Cerebral Direito",
+        "Hemisfério Cerebral Esquerdo",
+        "Apenas na medula espinhal",
+        "Apenas no cerebelo"
+      ],
+      "correta": 0,
+      "explicacao": "A heminegligência é um sinal clássico de lesão no hemisfério direito (lado oposto ao déficit).",
+      "tempo_max": 20
+    },
+    {
+      "id": "AVC_MUL_040",
+      "especialidade": "MULTI",
+      "dificuldade": "BASICO",
+      "enunciado": "O objetivo principal da Unidade de AVC (U-AVC) é:",
+      "opcoes": [
+        "Reduzir mortalidade e sequelas através de cuidados especializados",
+        "Isolar o paciente da família",
+        "Reduzir o custo com alimentação",
+        "Realizar apenas exames de sangue"
+      ],
+      "correta": 0,
+      "explicacao": "Unidades especializadas comprovadamente melhoram o desfecho funcional dos pacientes.",
+      "tempo_max": 15
+    },
+
+    {
+      "id": "AVC_MUL_041",
+      "especialidade": "MULTI",
+      "dificuldade": "BASICO",
+      "enunciado": "O que significa a sigla SAMU no contexto do atendimento pré-hospitalar do AVC?",
+      "opcoes": [
+        "Serviço de Atendimento Móvel de Urgência",
+        "Sistema de Apoio Médico Unitário",
+        "Socorro Agudo de Mudança Urgente",
+        "Setor de Ambulâncias de Urgência"
+      ],
+      "correta": 0,
+      "explicacao": "O SAMU é o principal responsável pelo reconhecimento precoce e transporte rápido ao hospital de referência.",
+      "tempo_max": 15
+    },
+    {
+      "id": "AVC_ENF_041",
+      "especialidade": "ENFERMEIRO",
+      "dificuldade": "INTERMEDIARIO",
+      "enunciado": "Durante a infusão de rtPA, a monitorização de sangramentos deve incluir:",
+      "opcoes": [
+        "Gengivas, locais de punção, urina e fezes",
+        "Apenas o couro cabeludo",
+        "Apenas as unhas",
+        "Não é necessário monitorar sangramentos externos"
+      ],
+      "correta": 0,
+      "explicacao": "O trombolítico atua em todo o sistema circulatório, podendo causar sangramentos em diversos locais.",
+      "tempo_max": 20
+    },
+    {
+      "id": "AVC_MED_041",
+      "especialidade": "MEDICO",
+      "dificuldade": "INTERMEDIARIO",
+      "enunciado": "Qual o valor de glicemia que define a necessidade de tratamento imediato no AVC agudo (hiperglicemia)?",
+      "opcoes": [
+        "> 180 mg/dL (seguindo a maioria das diretrizes)",
+        "> 100 mg/dL",
+        "> 300 mg/dL",
+        "Somente acima de 500 mg/dL"
+      ],
+      "correta": 0,
+      "explicacao": "A hiperglicemia persistente está associada a piores desfechos e maior risco de transformação hemorrágica.",
+      "tempo_max": 20
+    },
+    {
+      "id": "AVC_TEC_041",
+      "especialidade": "TECNICO",
+      "dificuldade": "BASICO",
+      "enunciado": "Ao notar que o paciente com AVC está com febre (38.5°C), sua ação imediata é:",
+      "opcoes": [
+        "Avisar o enfermeiro/médico e registrar o horário",
+        "Apenas dar um banho frio",
+        "Cobrir o paciente com mais cobertores",
+        "Esperar 1 hora para ver se a febre baixa sozinha"
+      ],
+      "correta": 0,
+      "explicacao": "A febre aumenta o metabolismo cerebral e agrava a lesão isquêmica.",
+      "tempo_max": 15
+    },
+    {
+      "id": "AVC_MUL_042",
+      "especialidade": "MULTI",
+      "dificuldade": "BASICO",
+      "enunciado": "Qual destes hábitos ajuda a PREVENIR um novo AVC?",
+      "opcoes": [
+        "Praticar exercícios e não fumar",
+        "Comer alimentos muito salgados",
+        "Dormir menos de 3 horas por dia",
+        "Evitar beber água"
+      ],
+      "correta": 0,
+      "explicacao": "O controle de fatores de risco modificáveis é a base da prevenção secundária.",
+      "tempo_max": 15
+    },
+    {
+      "id": "AVC_ENF_042",
+      "especialidade": "ENFERMEIRO",
+      "dificuldade": "AVANCADO",
+      "enunciado": "Em caso de suspeita de hemorragia intracraniana pós-trombólise, a primeira medida é:",
+      "opcoes": [
+        "Suspender imediatamente a infusão do rtPA (se em curso)",
+        "Aplicar uma compressa quente na cabeça",
+        "Administrar AAS para a dor",
+        "Aumentar a infusão de soro fisiológico"
+      ],
+      "correta": 0,
+      "explicacao": "Interromper a droga é o passo número 1 antes de qualquer investigação de sangramento.",
+      "tempo_max": 20
+    },
+    {
+      "id": "AVC_MED_042",
+      "especialidade": "MEDICO",
+      "dificuldade": "AVANCADO",
+      "enunciado": "O uso de 'Aspirina' nas primeiras 24h pós-trombólise é geralmente:",
+      "opcoes": [
+        "Evitado (contraindicado pelo risco de sangramento)",
+        "Recomendado para todos os pacientes",
+        "Obrigatório para manter o vaso aberto",
+        "Dado apenas se o paciente tiver febre"
+      ],
+      "correta": 0,
+      "explicacao": "Aguarda-se 24h e uma TC de controle para iniciar antiagregantes após rtPA.",
+      "tempo_max": 25
+    },
+    {
+      "id": "AVC_TEC_042",
+      "especialidade": "TECNICO",
+      "dificuldade": "INTERMEDIARIO",
+      "enunciado": "Para evitar quedas do paciente de AVC no leito, as grades devem estar:",
+      "opcoes": [
+        "Sempre elevadas conforme protocolo de segurança",
+        "Sempre baixas para facilitar a saída do paciente",
+        "Apenas uma elevada",
+        "O paciente deve ser amarrado à cama"
+      ],
+      "correta": 0,
+      "explicacao": "Déficits motores e confusão mental aumentam drasticamente o risco de quedas.",
+      "tempo_max": 15
+    },
+    {
+      "id": "AVC_MUL_043",
+      "especialidade": "MULTI",
+      "dificuldade": "INTERMEDIARIO",
+      "enunciado": "O 'Hemi-corpo' afetado pelo AVC é geralmente o lado:",
+      "opcoes": [
+        "Oposto ao lado da lesão no cérebro",
+        "Igual ao lado da lesão no cérebro",
+        "Sempre o lado esquerdo",
+        "Sempre o lado direito"
+      ],
+      "correta": 0,
+      "explicacao": "As vias motoras se cruzam; logo, lesão no lado direito afeta o lado esquerdo do corpo.",
+      "tempo_max": 20
+    },
+    {
+      "id": "AVC_ENF_043",
+      "especialidade": "ENFERMEIRO",
+      "dificuldade": "BASICO",
+      "enunciado": "Qual destas escalas avalia o risco de lesão por pressão no paciente com AVC?",
+      "opcoes": [
+        "Escala de Braden",
+        "Escala de Glasgow",
+        "Escala de Borg",
+        "Escala de Framingham"
+      ],
+      "correta": 0,
+      "explicacao": "Braden é o padrão-ouro para avaliar risco de escaras em pacientes imóveis.",
+      "tempo_max": 20
+    },
+    {
+      "id": "AVC_MED_043",
+      "especialidade": "MEDICO",
+      "dificuldade": "INTERMEDIARIO",
+      "enunciado": "O diagnóstico de AVC hemorrágico subaracnoideo (HSA) costuma cursar com:",
+      "opcoes": [
+        "Cefaleia súbita e intensa ('a pior da vida')",
+        "Fraqueza apenas no pé",
+        "Coceira no corpo",
+        "Dor de estômago"
+      ],
+      "correta": 0,
+      "explicacao": "A HSA é marcada por uma cefaleia 'em trovoada' (thunderclap headache).",
+      "tempo_max": 25
+    },
+    {
+      "id": "AVC_TEC_043",
+      "especialidade": "TECNICO",
+      "dificuldade": "BASICO",
+      "enunciado": "Se o paciente com AVC está com dificuldade para falar (Afasia), você deve:",
+      "opcoes": [
+        "Ter paciência, usar frases curtas e aguardar a resposta",
+        "Gritar para ele entender melhor",
+        "Falar por ele o tempo todo",
+        "Ignorar o que ele tenta dizer"
+      ],
+      "correta": 0,
+      "explicacao": "A comunicação terapêutica exige calma para não frustrar o paciente com afasia.",
+      "tempo_max": 15
+    },
+    {
+      "id": "AVC_MUL_044",
+      "especialidade": "MULTI",
+      "dificuldade": "BASICO",
+      "enunciado": "O AVC pode ser causado por um coágulo ou pelo rompimento de um:",
+      "opcoes": [
+        "Aneurisma",
+        "Músculo",
+        "Osso",
+        "Ligamento"
+      ],
+      "correta": 0,
+      "explicacao": "O aneurisma é uma dilatação de um vaso que, se romper, causa AVC hemorrágico.",
+      "tempo_max": 15
+    },
+    {
+      "id": "AVC_ENF_044",
+      "especialidade": "ENFERMEIRO",
+      "dificuldade": "INTERMEDIARIO",
+      "enunciado": "Ao realizar higiene oral no paciente com AVC, deve-se ter cuidado com:",
+      "opcoes": [
+        "Risco de aspiração de líquidos",
+        "O tipo de escova de dentes",
+        "A cor da pasta de dente",
+        "Não há riscos na higiene oral"
+      ],
+      "correta": 0,
+      "explicacao": "O excesso de água na boca de quem não deglute bem pode causar pneumonia.",
+      "tempo_max": 20
+    },
+    {
+      "id": "AVC_MED_044",
+      "especialidade": "MEDICO",
+      "dificuldade": "AVANCADO",
+      "enunciado": "A 'Trombectomia Mecânica' é realizada através de qual via?",
+      "opcoes": [
+        "Cateterismo intra-arterial",
+        "Cirurgia aberta no crânio",
+        "Injeção intramuscular",
+        "Punção lombar"
+      ],
+      "correta": 0,
+      "explicacao": "É um procedimento endovascular realizado na hemodinâmica.",
+      "tempo_max": 25
+    },
+    {
+      "id": "AVC_TEC_044",
+      "especialidade": "TECNICO",
+      "dificuldade": "BASICO",
+      "enunciado": "A 'Hemiplegia' significa paralisia de:",
+      "opcoes": [
+        "Um lado inteiro do corpo (direito ou esquerdo)",
+        "Apenas as duas pernas",
+        "Apenas os dois braços",
+        "Apenas os músculos da face"
+      ],
+      "correta": 0,
+      "explicacao": "Hemi = metade; Plegia = paralisia.",
+      "tempo_max": 15
+    },
+    {
+      "id": "AVC_MUL_045",
+      "especialidade": "MULTI",
+      "dificuldade": "INTERMEDIARIO",
+      "enunciado": "A 'Fibrilação Atrial' aumenta o risco de AVC porque:",
+      "opcoes": [
+        "Favorece a formação de coágulos dentro do coração",
+        "Aumenta a força dos músculos",
+        "Diminui a visão",
+        "Causa dor nas articulações"
+      ],
+      "correta": 0,
+      "explicacao": "O sangue estagnado no átrio devido à arritmia pode coagular e viajar até o cérebro.",
+      "tempo_max": 20
+    },
+    {
+      "id": "AVC_ENF_045",
+      "especialidade": "ENFERMEIRO",
+      "dificuldade": "AVANCADO",
+      "enunciado": "Na alta hospitalar, o enfermeiro deve orientar o paciente sobre:",
+      "opcoes": [
+        "Sinais de alerta de um novo AVC e adesão aos medicamentos",
+        "Apenas sobre a dieta",
+        "Apenas sobre exercícios",
+        "Não é necessário orientar na alta"
+      ],
+      "correta": 0,
+      "explicacao": "A educação em saúde reduz a reincidência de eventos isquêmicos.",
+      "tempo_max": 25
+    },
+    {
+      "id": "AVC_MED_045",
+      "especialidade": "MEDICO",
+      "dificuldade": "BASICO",
+      "enunciado": "Qual o principal exame de laboratório antes da trombólise (se não houver atraso)?",
+      "opcoes": [
+        "Glicemia capilar",
+        "Creatinina",
+        "Troponina",
+        "Lactato"
+      ],
+      "correta": 0,
+      "explicacao": "A glicemia é o único que não pode ser aguardado se houver suspeita de hipoglicemia.",
+      "tempo_max": 15
+    },
+    {
+      "id": "AVC_MUL_046",
+      "especialidade": "MULTI",
+      "dificuldade": "BASICO",
+      "enunciado": "No estilo Arcade, o 'Combo' de sucesso no AVC é:",
+      "opcoes": [
+        "Reconhecimento rápido + Transporte rápido + Tratamento rápido",
+        "Aguardar + Dormir + Medicar",
+        "TC de crânio + Raio-X + Ultrassom",
+        "Dieta + Exercício + Sono"
+      ],
+      "correta": 0,
+      "explicacao": "A rapidez em todas as pontas da cadeia é o que salva o paciente.",
+      "tempo_max": 15
+    }
+  ]
+}

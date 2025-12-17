@@ -1,0 +1,21 @@
+COMO ADICIONAR SEUS ÁUDIOS:
+
+1. Esta pasta (public/audio) é onde seus arquivos de som devem ficar.
+2. Renomeie seus arquivos de áudio para os nomes exatos abaixo para que o jogo os reconheça:
+
+MÚSICAS (Musica de fundo em loop - .mp3):
+- bgm_menu.mp3          (Música do menu principal)
+- bgm_sepse.mp3         (Música durante jogo de Sepse)
+- bgm_avc.mp3           (Música durante jogo de AVC)
+- bgm_dor_toracica.mp3  (Música durante jogo de Dor Torácica)
+
+EFEITOS SONOROS (Sons curtos - .wav):
+- sfx_navigate.wav      (Mover cursor/setas)
+- sfx_select.wav        (Confirmar/Enter)
+- sfx_back.wav          (Voltar/Cancelar)
+- sfx_correct.wav       (Resposta Correta)
+- sfx_wrong.wav         (Resposta Errada)
+- sfx_win.wav           (Vitoria/Final da rodada)
+- sfx_timeout.wav       (Tempo esgotado)
+
+Observação: Se o navegador bloquear o áudio automático, interaja com a página (clique) para liberar o som.

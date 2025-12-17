@@ -1,0 +1,168 @@
+/* ================================
+   ARCADE BACKGROUND
+================================ */
+
+.arcade-bg {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  background: radial-gradient(circle at center, #0b0b18 0%, #02020a 70%);
+  overflow: hidden;
+}
+
+.arcade-bg .layer {
+  position: absolute;
+  inset: -30%;
+  background-repeat: repeat-x;
+  background-size: auto 120%;
+  will-change: transform;
+}
+
+/* 🔵 CAMADA DISTANTE */
+.arcade-bg .back {
+  background-image: url("/backgrounds/bg_back.png");
+  transform: translateX(calc(-1 * var(--bg-x-back, 0vw)));
+  opacity: 0.35;
+  filter: blur(1px);
+}
+
+/* 🟣 CAMADA MÉDIA */
+.arcade-bg .mid {
+  background-image: url("/backgrounds/bg_mid.png");
+  transform: translateX(calc(-1 * var(--bg-x-mid, 0vw)));
+  opacity: 0.65;
+}
+
+/* 🟡 CAMADA FRENTE */
+.arcade-bg .front {
+  background-image: url("/backgrounds/bg_front.png");
+  transform: translateX(calc(-1 * var(--bg-x-front, 0vw)));
+  opacity: 0.9;
+}
+
+/* VINHETA */
+.arcade-bg .vignette {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    ellipse at center,
+    transparent 0%,
+    rgba(0, 0, 0, 0.7) 75%,
+    rgba(0, 0, 0, 0.95) 100%
+  );
+}
+
+/* SCANLINES */
+.arcade-bg .scanlines {
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.03),
+    rgba(255, 255, 255, 0.03) 1px,
+    transparent 2px,
+    transparent 4px
+  );
+  opacity: 0.15;
+  pointer-events: none;
+}
+
+/* BRILHO ARCADE */
+.arcade-bg .glow {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at center,
+    rgba(120, 80, 255, 0.12),
+    transparent 70%
+  );
+}
+
+.arcade-bg{
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  background: radial-gradient(circle at center, #0f172a 0%, #020617 45%, #000 100%);
+}
+
+/* GRID NEON */
+.arcade-bg::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background-image:
+    linear-gradient(rgba(0,255,255,0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,255,255,0.08) 1px, transparent 1px);
+  background-size: 40px 40px;
+  animation: gridMove 20s linear infinite;
+  opacity: .55;
+}
+
+@keyframes gridMove{
+  from{ transform: translateY(0); }
+  to{ transform: translateY(40px); }
+}
+
+.layer{
+  position:absolute;
+  inset:-20%;
+  background-repeat: repeat-x;
+  background-size: 1200px 100%;
+  opacity:.55;
+}
+
+.layer.back{
+  background-image: linear-gradient(90deg, #020617, #0ea5e9, #020617);
+  filter: blur(10px);
+  animation: scrollBack 60s linear infinite;
+  opacity:.35;
+}
+
+.layer.mid{
+  background-image: linear-gradient(90deg, #020617, #22d3ee, #020617);
+  filter: blur(6px);
+  animation: scrollMid 35s linear infinite;
+  opacity:.45;
+}
+
+.layer.front{
+  background-image: linear-gradient(90deg, #38bdf8, #020617, #38bdf8);
+  animation: scrollFront 18s linear infinite;
+  opacity:.55;
+}
+
+@keyframes scrollBack{ from{ transform: translateX(0);} to{ transform: translateX(-50%);} }
+@keyframes scrollMid{ from{ transform: translateX(0);} to{ transform: translateX(-70%);} }
+@keyframes scrollFront{ from{ transform: translateX(0);} to{ transform: translateX(-90%);} }
+
+.vignette{
+  position:absolute;
+  inset:0;
+  background: radial-gradient(ellipse at center, transparent 55%, rgba(0,0,0,0.85) 100%);
+  pointer-events:none;
+}
+
+.scanlines{
+  position:absolute;
+  inset:0;
+  background: repeating-linear-gradient(
+    to bottom,
+    rgba(255,255,255,0.03),
+    rgba(255,255,255,0.03) 1px,
+    transparent 1px,
+    transparent 3px
+  );
+  mix-blend-mode: overlay;
+  pointer-events:none;
+  opacity:.35;
+}
+
+.glow{
+  position:absolute;
+  inset:0;
+  box-shadow:
+    inset 0 0 120px rgba(0,255,255,0.18),
+    inset 0 0 220px rgba(168,85,247,0.10);
+  pointer-events:none;
+}
