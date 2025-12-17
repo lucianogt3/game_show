@@ -27,11 +27,8 @@ const App: React.FC = () => {
 
   const [currentQuestion, setCurrentQuestion] = useState<Question | null>(null);
 
-  // selectedOption agora representa a escolha REAL do usuário (ou -1 = sem resposta)
   const [selectedOption, setSelectedOption] = useState<number>(0);
-
   const [showExplanation, setShowExplanation] = useState<boolean>(false);
-
   const [timeLeft, setTimeLeft] = useState<number>(20);
 
   const [stats, setStats] = useState<PlayerStats>({
@@ -44,10 +41,7 @@ const App: React.FC = () => {
     totalQuestions: 0,
   });
 
-  const [visualFeedback, setVisualFeedback] = useState<"idle" | "correct" | "wrong">(
-    "idle"
-  );
-
+  const [visualFeedback, setVisualFeedback] = useState<"idle" | "correct" | "wrong">("idle");
   const [autoNextTime, setAutoNextTime] = useState<number>(6);
   const [scoreAnimation, setScoreAnimation] = useState<number | null>(null);
 
@@ -155,7 +149,6 @@ const App: React.FC = () => {
 
   // ----------------------------
   // TIMER: QUESTION
-  // Start only when: PLAYING + currentQuestion exists + NOT showing explanation
   // ----------------------------
   useEffect(() => {
     clearQuestionTimer();
@@ -164,14 +157,13 @@ const App: React.FC = () => {
     if (!currentQuestion) return;
     if (showExplanation) return;
 
-    // garante reset 20s ao entrar em uma pergunta
     setTimeLeft(QUESTION_TIME_SECONDS);
 
     questionTimerRef.current = window.setInterval(() => {
       setTimeLeft((prev) => {
         if (prev <= 1) {
           clearQuestionTimer();
-          handleTimeout(); // sem resposta
+          handleTimeout();
           return 0;
         }
         return prev - 1;
@@ -179,12 +171,10 @@ const App: React.FC = () => {
     }, 1000);
 
     return () => clearQuestionTimer();
-    // IMPORTANTE: currentQuestion.id é suficiente
   }, [gameState, showExplanation, currentQuestion?.id]);
 
   // ----------------------------
   // TIMER: EXPLANATION (auto next)
-  // Start only when: PLAYING + showExplanation
   // ----------------------------
   useEffect(() => {
     clearAutoNextTimer();
@@ -235,7 +225,6 @@ const App: React.FC = () => {
   // GAME FLOW
   // ----------------------------
   const startGame = async (role: GameRole, topic: GameTopic) => {
-    // limpeza total de timers
     clearQuestionTimer();
     clearAutoNextTimer();
 
@@ -267,8 +256,7 @@ const App: React.FC = () => {
       const q = await getQuestion(topic, role);
       setCurrentQuestion(q);
 
-      // reset de seleção e estados
-      setSelectedOption(0); // cursor começa em A
+      setSelectedOption(0);
       setShowExplanation(false);
       setTimeLeft(QUESTION_TIME_SECONDS);
       setAutoNextTime(AUTO_NEXT_DELAY_SECONDS);
@@ -305,10 +293,8 @@ const App: React.FC = () => {
 
     clearQuestionTimer();
 
-    // marca como "sem resposta"
     setSelectedOption(-1);
-
-    audioService.playTimeout?.(); // se existir
+    audioService.playTimeout?.();
     audioService.playWrong();
 
     setVisualFeedback("wrong");
@@ -327,9 +313,7 @@ const App: React.FC = () => {
 
     clearQuestionTimer();
 
-    // ✅ salva a escolha real do usuário (isso corrige o "sempre A")
     setSelectedOption(choiceIndex);
-
     const isCorrect = choiceIndex === currentQuestion.correctIndex;
     const scoreToAdd = isCorrect ? 100 + stats.streak * 10 : 0;
 
@@ -358,6 +342,7 @@ const App: React.FC = () => {
 
     setShowExplanation(true);
   };
+
   const saveScore = async (snapshot: PlayerStats) => {
   const newEntry: ScoreEntry = {
     name: snapshot.name,
@@ -366,8 +351,17 @@ const App: React.FC = () => {
     date: new Date().toLocaleDateString("pt-BR"),
   };
 
-  const updated = await scoreService.saveScore(newEntry);
-  setHighScores(updated);
+  console.log("Tentando salvar score:", newEntry);
+  
+  try {
+    const updated = await scoreService.saveScore(newEntry);
+    setHighScores(updated);
+    console.log("Score salvo com sucesso, novo ranking:", updated);
+    return updated; // <-- ADICIONE ESTA LINHA
+  } catch (error) {
+    console.error("Erro ao salvar score:", error);
+    throw error; // <-- Lançar erro para ser capturado pelo caller
+  }
 };
 
   const nextRound = () => {
@@ -377,29 +371,33 @@ const App: React.FC = () => {
     const finished = prev.totalQuestions >= QUESTIONS_PER_ROUND;
 
     if (finished) {
-      // ✅ MOSTRA RESULT NA HORA (nunca trava)
       setGameState(GameState.RESULT);
 
-      // ✅ salva ranking sem bloquear UI
-      void (async () => {
-        try {
-          await saveScore(stats);
-          if (stats.correctAnswers >= QUESTIONS_PER_ROUND * 0.7) audioService.playWin();
-        } catch (e) {
-          console.error("Falha ao salvar score:", e);
+      // ✅ Salva ranking ASSINCRONAMENTE sem bloquear
+      saveScore(prev).then(() => {
+        console.log("✅ Score salvo após fim de jogo");
+        if (prev.correctAnswers >= QUESTIONS_PER_ROUND * 0.7) {
+          audioService.playWin();
         }
-      })();
+      }).catch(error => {
+        console.error("❌ Erro ao salvar score final:", error);
+      });
 
       return prev;
     }
 
-    // Se não terminou, carrega próxima questão
     void loadQuestion(selectedTopic, selectedRole);
     return prev;
   });
 };
 
-
+  // ----------------------------
+  // DEBUG EFFECTS
+  // ----------------------------
+  useEffect(() => {
+    console.log("Estado atualizado - stats:", stats);
+    console.log("Estado atualizado - gameState:", gameState);
+  }, [stats, gameState]);
 
   // ----------------------------
   // INPUT
@@ -530,16 +528,7 @@ const App: React.FC = () => {
         }
       }
     },
-    [
-      gameState,
-      menuIndex,
-      selectedRole,
-      selectedOption,
-      showExplanation,
-      selectedTopic,
-      stats.totalQuestions,
-      stats.correctAnswers,
-    ]
+    [gameState, menuIndex, selectedRole, selectedOption, showExplanation, selectedTopic]
   );
 
   useEffect(() => {
@@ -560,11 +549,8 @@ const App: React.FC = () => {
   }, [handleInput, gameState]);
 
   // ----------------------------
-  // RENDERS (mantive seus renders; só corrigi 2 detalhes abaixo)
-  // 1) quando showExplanation, usa selectedOption real (pode ser -1)
-  // 2) se selectedOption === -1 => não marca opção errada como "selecionada"
+  // RENDERS
   // ----------------------------
-
   const renderPressStart = () => (
     <div className="flex flex-col items-center justify-center h-full w-full select-none z-20">
       <div className="mb-16 text-center space-y-2 animate-float">
@@ -606,7 +592,7 @@ const App: React.FC = () => {
           onClick={() => { setGameState(GameState.NAME_ENTRY); audioService.playSelect(); }}
           className={`w-full p-4 border-4 text-center text-xl font-arcade transition-all cursor-pointer ${menuIndex === 0 ? 'border-green-400 text-green-400 bg-green-900/60 scale-105 shadow-[0_0_20px_rgba(74,222,128,0.5)]' : 'border-gray-700 text-gray-500 bg-black/50'}`}
         >
-          INICIAR SIMULAÇÃO
+          INICIAR GAME
         </button>
         <button
           onMouseEnter={() => { setMenuIndex(1); audioService.playNavigate(); }}
@@ -748,7 +734,6 @@ const App: React.FC = () => {
 
     return (
       <>
-        {/* Score Animation */}
         {scoreAnimation !== null && (
           <div className="fixed top-1/4 left-1/2 -translate-x-1/2 z-50 animate-bounce">
             <div className="text-5xl font-arcade text-yellow-400 glow-text shadow-lg">
@@ -760,7 +745,6 @@ const App: React.FC = () => {
         <div className={`absolute inset-0 pointer-events-none z-50 ${flashClasses}`} />
 
         <div className={containerClasses}>
-          {/* Top Header with Stats */}
           <div className="flex flex-wrap justify-between items-end border-b-2 border-gray-700 pb-4 mb-6 bg-gradient-to-r from-black/60 to-black/40 p-4 rounded-xl backdrop-blur-sm shadow-lg">
             <div className="flex flex-col">
               <div className="flex items-center gap-3">
@@ -794,7 +778,6 @@ const App: React.FC = () => {
             </div>
           </div>
 
-          {/* Timer Bar with improved animation */}
           <div className="relative mb-8">
             <div className="w-full h-8 bg-gray-900 rounded-full border-2 border-gray-700 overflow-hidden shadow-inner relative">
               <div 
@@ -811,7 +794,6 @@ const App: React.FC = () => {
               </div>
             </div>
             
-            {/* Timer markers */}
             <div className="flex justify-between w-full mt-2">
               {[20, 15, 10, 5, 0].map((mark) => (
                 <div key={mark} className="text-xs text-gray-500 font-arcade">
@@ -821,9 +803,7 @@ const App: React.FC = () => {
             </div>
           </div>
 
-          {/* Question Box with enhanced styling */}
           <div className="bg-gradient-to-br from-black/90 to-gray-900/90 border-4 border-blue-600 p-8 rounded-2xl mb-8 shadow-[0_0_40px_rgba(59,130,246,0.4)] min-h-[180px] flex items-center justify-center backdrop-blur-sm relative overflow-hidden">
-            {/* Decorative elements */}
             <div className="absolute top-0 left-0 w-32 h-32 bg-blue-500/10 rounded-full -translate-x-16 -translate-y-16"></div>
             <div className="absolute bottom-0 right-0 w-48 h-48 bg-purple-500/10 rounded-full translate-x-24 translate-y-24"></div>
             
@@ -852,7 +832,6 @@ const App: React.FC = () => {
             </div>
           </div>
 
-          {/* Options Grid with enhanced styling */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
             {currentQuestion.options.map((opt, idx) => {
               const optionLetter = ['A','B','C','D'][idx];
@@ -893,7 +872,6 @@ const App: React.FC = () => {
                   disabled={showExplanation}
                   className={`p-6 border-3 rounded-xl text-lg font-bold transition-all duration-200 text-left flex items-center cursor-pointer ${style} ${hoverStyle} group relative overflow-hidden`}
                 >
-                  {/* Hover effect */}
                   <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000"></div>
                   
                   <span className={`w-12 h-12 flex items-center justify-center border-2 border-current rounded-full mr-5 text-xl font-arcade font-bold shrink-0 ${letterBg} ${letterText} shadow-lg`}>
@@ -909,7 +887,6 @@ const App: React.FC = () => {
                     )}
                   </div>
                   
-                  {/* Selection indicator */}
                   {!showExplanation && idx === selectedOption && (
                     <div className="absolute -top-2 -right-2 w-6 h-6 bg-yellow-500 rounded-full animate-ping"></div>
                   )}
@@ -918,7 +895,6 @@ const App: React.FC = () => {
             })}
           </div>
 
-          {/* Quick Action Hints */}
           {!showExplanation && (
             <div className="flex justify-center gap-8 mt-4">
               <div className="flex items-center gap-2 text-sm text-gray-400 font-arcade">
@@ -936,13 +912,11 @@ const App: React.FC = () => {
             </div>
           )}
 
-          {/* Explanation Overlay */}
           {showExplanation && (
             <div 
               onClick={() => nextRound()}
               className="fixed inset-0 md:absolute md:inset-x-0 md:bottom-0 md:top-auto md:left-1/2 md:-translate-x-1/2 md:w-[800px] bg-gradient-to-b from-black to-gray-900 border-4 border-white p-8 z-50 shadow-[0_0_200px_rgba(0,0,0,1)] animate-pop-in rounded-2xl overflow-hidden cursor-pointer"
             >
-              {/* Background pattern */}
               <div className="absolute inset-0 opacity-10">
                 <div className="absolute top-10 left-10 w-32 h-32 bg-green-500 rounded-full blur-3xl"></div>
                 <div className="absolute bottom-10 right-10 w-48 h-48 bg-blue-500 rounded-full blur-3xl"></div>
@@ -977,7 +951,6 @@ const App: React.FC = () => {
                 </p>
               </div>
 
-              {/* Auto-next progress bar */}
               <div className="relative z-10">
                 <div className="flex justify-between text-sm text-gray-400 font-arcade mb-2">
                   <span>PRÓXIMA QUESTÃO</span>
@@ -1006,8 +979,7 @@ const App: React.FC = () => {
   return (
     <div className="flex flex-col items-center justify-center h-full w-full space-y-6 z-20 select-none">
       <h2 className="text-6xl text-white font-arcade glow-text">FIM DE JOGO</h2>
-
-      <div className="w-full max-w-lg bg-black/80 border-4 border-yellow-500 rounded-2xl p-8">
+        <div className="w-full max-w-lg bg-black/80 border-4 border-yellow-500 rounded-2xl p-8">
         <div className="text-gray-300 font-arcade text-sm">JOGADOR</div>
         <div className="text-white font-arcade text-3xl mb-4">{stats.name || playerName}</div>
 
@@ -1033,14 +1005,14 @@ const App: React.FC = () => {
 
       <div className="flex gap-4">
         <button
-          className="px-6 py-4 border-2 border-green-500 text-green-400 font-arcade bg-black/60"
+          className="px-6 py-4 border-2 border-green-500 text-green-400 font-arcade bg-black/60 hover:bg-green-900/60 transition-all"
           onClick={() => setGameState(GameState.HOME)}
         >
           MENU
         </button>
 
         <button
-          className="px-6 py-4 border-2 border-purple-500 text-purple-400 font-arcade bg-black/60"
+          className="px-6 py-4 border-2 border-purple-500 text-purple-400 font-arcade bg-black/60 hover:bg-purple-900/60 transition-all"
           onClick={() => setGameState(GameState.RANKING)}
         >
           RANKING
@@ -1050,13 +1022,10 @@ const App: React.FC = () => {
   );
 };
 
-
-    return (
+  return (
     <div className="w-full h-screen bg-transparent overflow-hidden flex flex-col relative font-sans selection:bg-transparent">
-      {/* 🎮 FUNDO ARCADE */}
       <ArcadeBackground />
 
-      {/* Overlay por estado / role */}
       <div
         className={`absolute inset-0 transition-colors duration-1000 z-10 pointer-events-none 
         ${gameState === GameState.PLAYING ? 
@@ -1067,7 +1036,6 @@ const App: React.FC = () => {
           : 'bg-black/10'}`}
       />
 
-      {/* Main Content */}
       <div className="relative z-20 w-full h-full">
         {gameState === GameState.PRESS_START && renderPressStart()}
         {gameState === GameState.HOME && renderHome()}
